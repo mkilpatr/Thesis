@@ -1,31 +1,65 @@
-\chapter{Search Region Design}
-\label{ch:SR}
+\chapter{Stop quark Production and Backgrounds}
+\label{ch:Search}
 
-Using MC simulations that model the SM background for this process we want to reduce the number of events in our Search region. This is an all hadronic search so we are looking at event with zero tagged leptons. Unfortunately, some can get in by not passing the kinematic cuts or just by the non 100 \% of the detector. There is a small nonzero inefficiency of mistagging a lepton as something else. 
+Why the stop quark? Also Stop quark or top squark?
 
-\section{Minimizing the ttZ background}
-\label{sec:ttZBack}
+\section{Production and Decay Modes}
+\label{sec:Production}
 
-For the ttZ interactions, we produce two top quarks that can then decay to two b quarks and two W bosons. A possible way to mimick our search region is two have multiple jets, i.e. b quarks that hadronize and W bosons that decay hadronically, but we also need missing energy. This will be in addition to the Z boson decaying into two neutrinos and thus creating a large amount of missing energy.
+Gluon fusion.
 
-We now try to look at the differing kinematic structure of the background, ttZ, and the signal region, stop quarks decaying. Under the assumption that the Z boson is created by radiated from the top quark the resulting decay to neutrinos should be close, small $\Delta\phi$, between the resulting jets. For the signal, the missing energy is produced by the neutralino. When the stop quark decays into top quark and neutralino the top quark should recoil off of neutralino to essentially be back-to-back. This will cause a large angle, $\delta\phi$, between them. We then want to use the kinematic variable, \dphisr, where 
+Main decay mode mode $\tilde{t}\rightarrow t+\tilde{\chi}^{0}_{1}$, $\tilde{t}\rightarrow b+\tilde{\chi}^{+}$. The top quark most likely decays into a b quark and W boson. 
 
-\section{Lost Lepton Application}
-\label{sec:ttbarsr}
+\section{Standard Model Background}
+\label{sec:SMBackground}
 
-Can we apply this to other backgrounds. For boosted tops the the missing energy caused by missing the lepton in the W boson decay. The variable \dphisr should also apply. Should work for wjts, tW, ttW.
+Signal events can be mimicked by SM events that have a large number of jets and missing energy. 
 
-\section{Search Regions}
-\label{sec:SR}
+Broken up into four major backgrounds, Lost Lepton (LL), Znunu, QCD, Rare decays
 
-The HM and LM Search regions should be defined and explained. Why are they defined the way they are?
+\subsection{Lost Lepton}
+\label{subsec:LL}
 
-\section{Search Region Optimization}
-\label{sec:dphisrapp}
+\ttbar{} production of ttbar via the same mechanism as stop-antistop which can be gluon fusion. They then decay the same why as explained above.
 
-Look for an optimized cust for \dphisr to maximize \srootb{} in each SR. Could have a different cut for each region, but a combination to make it all the same would be nice. Since the signal can decay in multiple ways we need to optimize for all possible scenarios. Explain why we are maximizing \srootb
+$W+$jets: Production of W bosons plus jets. Jets can be tagged as b jets. W boson decay hadronically or leptonically (where the lepton is missed)
 
-\section{Limits}
-\label{sec:LimitswCut}
+tW and ttW: Missed lepton
 
-Looking at the significance and limits for the mass regions of the stop quark decay. Using the Higgs Combined tool, which includes statistics with a "maximal likelihood" fit? The cut, \dphisr, would hopefully improve the values, but an optimized cut has not been chosen yet. 
+\subsubsection{Transfer Factors}
+\label{subsec:TF}
+
+We want to suppress signal contamination by requiring $M_{T}(l, \met) < 100$ GeV. This requirement confirms that it is orthogonal to the search reagions that are used in the search for direct top squark production in the single-lepton final state. Letting the two anaysis statistically combine the results in the future. 
+
+We are looking at the event count of data in each corresponding CR for the single-lepton sample. The prediction is allowed by means of a transfer factor (TF) which is obtained from simulation,
+
+\begin{equation}
+\label{eqn:LLTF}
+N_{pred}^{LL}=TF_{LL} \cdot N_{data}(1l).
+\end{equation}
+
+This allows us to have the same selection for the single-lepton control sample and the zero-lepton sample. The only exception is the number of top and W-tagged candidates? what is the difference betweeen a candidate and a particle?
+
+The LL estimation is dependent on the yield of data in the corresponding CR and the TF calculated by the single-lepton sample. The transfer factor is defined as, 
+
+\begin{equation}
+\label{eqn:TF}
+TF_{LL}=\frac{N_{MC}(0l)}{N_{MC}(1l)},
+\end{equation}
+
+where $N_{MC}(1l)$ is the event count observed in the corresponding CR and $N_{MC}(0l)$ use the event count in the corresponding SR. 
+
+\subsection{Z Boson Decay to Neutrinos}
+\label{subsec:Znunu}
+
+Znunu: production of a Z boson that decays into two nuetrinos which are then missed by the detector. Can have jets from other quarks/gluons in the interaction
+
+\subsection{Quantum Chromodynamic Events}
+\label{subsec:QCD}
+
+QCD: Events that of jets produced by QCD processes. The missing energy from from a mismeasurement of the jets in the event causing missing energy
+
+\subsection{Rare Interactions}
+\label{subsec:rare}
+
+ttZ, ttH, WW, WZ, ZZ, tZq, tWZ: rare processed that can have jets plus MET. Expand upon these later
