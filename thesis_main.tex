@@ -2,25 +2,20 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{latexsym}
-\usepackage{graphicx}
-\usepackage{adjustbox}
-\usepackage[showframe=false]{geometry}
-\usepackage{changepage}
+\usepackage{graphics}
 \usepackage{slashed}
 \usepackage{epsfig,epsf,rotating}
 \usepackage{subfigure}
 \usepackage{epsf}
 \usepackage{theorem}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{bm}
+\usepackage{pdfpages}
 \graphicspath{ {./plots/} }
 \newtheorem{proposition}{Proposition}
 
-\theoremheaderfont{\itshape} {\theoremstyle{break}
-\newtheorem{Fact}{Fact}[chapter]} \theoremstyle{break}
-\newtheorem{Lem}{Lemma}[chapter] \theoremstyle{break}
-\newtheorem{Thm}{Theorem}[chapter] {\theoremstyle{plain}
-  \theorembodyfont{\rmfamily}  \newtheorem{Prf}{Proof}[chapter]}
-{\theoremstyle{plain}
-  \theorembodyfont{\rmfamily}  \newtheorem{Def}{Definition}[chapter]}
+\setcounter{secnumdepth}{3} %numbering for subsubsections
 
 \title{Search for Stop Quark via All-Hadronic Decay Channels with Heavy Object Tagging}
 \ctitle{Search for Stop Quark via All-Hadronic Decay Channels with Heavy Object Tagging}
@@ -44,7 +39,7 @@
 
   \begin{frontmatter}
    \pagenumbering{roman}
-   %\makecover
+   \makecover
    \maketitle
    \include{abstract}
    %\include{ack}
@@ -55,7 +50,7 @@
   \end{frontmatter}
 \pagenumbering{arabic}
 
-\linespacing{1.7}
+\linespacing{1.5}
 
 \include{VariableNames}
 \include{chapter1}

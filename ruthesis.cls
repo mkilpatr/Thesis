@@ -142,10 +142,10 @@
 \def\l@subparagraph{\@dottedtocline{5}{12em}{6em}}
 
 \def\listoffigures{\@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
- \fi\chapter*{Illustrations\@mkboth
- {ILLUSTRATIONS}{ILLUSTRATIONS}} \thispagestyle{empty}
+ \fi\chapter*{Figures\@mkboth
+ {Figures}{Figures}} \thispagestyle{empty}
  \addcontentsline{toc}{frontmatter}{\protect\numberline
- {\hfil}List of Illustrations}\@starttoc{lof}\if@restonecol
+ {\hfil}List of Figures}\@starttoc{lof}\if@restonecol
  \twocolumn\fi}
 
 \def\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
@@ -190,7 +190,7 @@
 \renewcommand{\fnum@table}{Table \thetable \linespacing{1}}
 
 \newcommand{\ricelogo}{%
-  \includegraphics[scale=0.5]{/net/dsp1/tex/macros/rice-shield.ps}}
+  \includegraphics[width=1\textwidth]{plots/RiceShield.jpeg}}
 \newcommand{\art}{\@coverart}
 
 \def\makecover{%
