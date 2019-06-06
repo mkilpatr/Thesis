@@ -12,52 +12,170 @@ After decades of theoretical and experimental research the SM has been developed
 
  All the matter can be explained by three kinds of elementary particles: leptons, quarks, and gauge bosons. Each of these can be distinguished by various respective properties. The leptons and quarks are fermions which are particles that have half-integer spin. The leptons are particles that only interact with the EM force, while quarks interact with the EM and Strong force. The gauge bosons are the force carries for each respective force and have integer spin. 
  
- There are three generations of leptons and quarks which are differentiated by a charge $\pm e$, the charge of an electron. The leptons have three different charged particle: electron $(e)$, muon $(\mu)$, and tau $(\tau)$. With each charged particle having a corresponding neutrino $(\nu)$ of the same flavour, see fig \ref{SMParticles}. The quarks are also separated into three generations of doublets, the down-type $(-\frac{1}{3}e)$: down $(d)$, strange $(s)$, and bottom $(b)$ and up-type $(\frac{2}{3}e)$: up $(u)$, charm $(c)$, and top $(t)$. Each of the quarks has a color associated with it with is analogous to an electric charge, except there are three colors charges. 
+ There are three generations of leptons and quarks which are differentiated by a charge $\pm e$, the charge of an electron. The leptons have three different charged particle: electron $(e)$, muon $(\mu)$, and tau $(\tau)$. With each charged particle having a corresponding neutrino $(\nu)$ of the same flavour, see fig \ref{SMParticles}. The quarks are also separated into three generations of doublets, the down-type $(-\frac{1}{3}e)$: down $(d)$, strange $(s)$, and bottom $(b)$ and up-type $(\frac{2}{3}e)$: up $(u)$, charm $(c)$, and top $(t)$, see fig \ref{SMParticles}. Each of the quarks has a color associated with it with is analogous to an electric charge, except there are three colors charges: red, blue, and green.  
 
 \begin{figure}
  	\centering
-	\includegraphics[width=1\textwidth]{StandardModel.pdf}
- 	\caption{The fundamental particles of the Standard Model.}
+	\includegraphics[width=0.75\textwidth]{StandardModel.pdf}
+ 	\caption{The fundamental particles of the Standard Model. There are three generations of quarks and leptons. Along with the five bosons, where four of them relate to the interactions of the three forces included in the SM: Electromagnetism, the Weak force, and the Strong force and the final being the Higgs boson which give mass to particles. }
  	\label{SMParticles} 
 \end{figure}
  
  \section{Quantum Field Theory}
  \label{QFT}
  
- Since many of the elementary particles in the standard model, we are mainly interested in the interactions of fermions. This is described by the Dirac equation, 
+ The interactions of all of these particles are described by the interactions of quantized fields. These fields become operators that describe the creation and annihilation of particles. Each of the fields of the SM have a corresponding boson, see fig. \ref{SMParticles}. The most well known field being the Electromagnetic (EM) field and its interactions. 
  
-\begin{equation}
-(i\gamma^\mu\partial_\mu-m)\psi(x)=0\label{Dirac},
+ First, we start with the assumption that the wave function $\psi(x)$ should transform as,
+ 
+ \begin{equation}\label{U1gauge}
+ \psi(x)\rightarrow e^{i\alpha(x)}\psi(x),
+ \end{equation}
+ 
+ where $\alpha(x)$ has an arbitrary dependence on space and time. If one were to include this into the Dirac equation you would find that it is not invariant under such a local phase transformation. To include an invariace of the field, we must include a derivative, $D_\mu$, that is covariant under phase transformations,
+ 
+ \begin{equation}\label{QEDCovariantD}
+ D_\mu\equiv\partial_\mu-ieA_\mu.
+ \end{equation}
+ 
+ The covariant derivative must include the vector field $A_\mu$ which must also transform as,
+  
+ \begin{equation}\label{PhotonField}
+ A_\mu\rightarrow A_\mu+\frac{1}{e}\partial_\mu\alpha.
+ \end{equation}
+ 
+ So after requiring that there be a local gauge transformation, we were forced to introduce a vector field $A_\mu$, called the guage field, which couples to Dirac particles in the same way as the photon field. We will think of this new field as the real photon field, which means we need to add a kinematic energy portion to the lagrangian. This kinematic term will be invariant under Eqn. \ref{PhotonField} which leads us to final final representation of the QED lagrangian which can be written down concisely as, 
+ 
+ \begin{equation}\label{LagrangianQED}
+\mathcal{L}_{QED}=\overline{\psi}(i\gamma^\mu\partial_\mu-m)\psi+e\overline{\psi}\gamma^{\mu}A_{\mu}\psi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu},
+ \end{equation}
+
+where $\gamma^\mu$ are invariant tensors, $\partial_\mu$ is the partial derivative, $m$ is the mass of the particle, $\psi$ is the wave function of the particle, $A_{\mu}$ is the EM field operator, and $F^{\mu\nu}$ is the EM field tensor. Each of the parts of this equation are lorentz invariant which allows this to be true in all reference frames. This lagrangian describes the interactions of a particle and the EM field moving through spacetime. 
+
+After this we will transition from the description of the $U(1)$ EM field to the $SU(3)$ QCD field and the transformation of quark fields. A free moving quark is described by,
+
+\begin{equation}\label{LagrangianQCDVacuum}
+\mathcal{L}_{QCD}^{vac}=\overrightarrow{q}_j(i\gamma^\mu\partial\mu-m)q_j,
 \end{equation}
 
-where $\gamma^\mu$ are matrices and are invariant under rotations of vector and spinor indices, $\partial_\mu$ is the partial derivative, $m$ is the mass of the particle, and $\psi(x)$ is the wave function of the particle. The combination of $\gamma^\mu\partial_\mu$ is a Lorentz-invariant differential operator. From this we are able to write down the Lagrangian for the Dirac particle as, 
+where $q_1, q_2,$ and $q_3$ are the three color fields. From this we want the we want to require that the field is again invariant under another local phase transformation such as,
 
 \begin{equation}
-\mathcal{L}_{Dirac}=\overline{\psi}(i\gamma^\mu\partial_\mu-m)\psi,
+q(x)\rightarrow Uq(x)\equiv e^{i\alpha_a(x)T_a}q(x),
 \end{equation}
- 
- where $\overline{\psi}$ is the Hermitian conjugate of the wavefunction. This lagrangian describes the interactions of a particle moving through spacetime. 
 
-Why does the universe have to have this symmetry?
-Universe hase the inverse square law for gravity and EM.
+where $U$ is a $3\times3$ unitary matix, $T_a$ with $a=1,...,8$ are a set of linearly independent traceless $3\times3$ matrices, and $\alpha_a$ are the group parameters. Since the generators $T_a$ do not necessarily commute with each other, we can see that it is indeed non-Abelian and the commutator of can be represented as,
 
-More symmetry allows for a simpler description of the values. 
+\begin{equation}
+[T_a, T_b]=if_{abc}T_c,
+\end{equation}
 
-\section{Fundamental Problems in the standard model}
-\label{sec:Hierarchy}
+where $f_{abc}$ are constants. 
 
-Hierarchy problem?
-Dark Matter?
-Grand Unified Theory?
+We need to impose $SU(3)$ local gauge invariance on Eqn. \ref{LagrangianQCDVacuum}, we allow for the following phase transformations,
 
-Support material for each of these unknowns and how SUSY can solve them. Fine Tuning
+\begin{equation}
+\begin{split}
+& q(x)\rightarrow[1+i\alpha_a(x)T_a]q(x), \\
+& \partial_\mu q\rightarrow(1+i\alpha_aT_a)\partial_\mu q+iT_aq\partial_\mu\alpha_a.
+\end{split}
+\end{equation}
+
+From this is seems straight forward that we can proceed in exactly the same manner as QED, which is to add
+
+\begin{equation}
+G_\mu^a\rightarrow G_\mu^a-\frac{1}{g}\partial_\mu\alpha_a, 
+\end{equation}
+
+and a covariant derivative
+
+\begin{equation}
+D_\mu=\partial_\mu+igT_aG_\mu^a.
+\end{equation}
+
+This will give us a similar lagrangian to the QED one derived above, but this is not sufficient for a non-Abelian gauge transformation and is does not produce a gauge-invariant Lagrangian. One final transformation is required for the $G_\mu^a$ fields to achieve gauge invariance, 
+
+\begin{equation}
+G_\mu^a\rightarrow G_\mu^a-\frac{1}{g}\partial_\mu\alpha_a-f_{abc}\alpha_b G_\mu^c,
+\end{equation}
+
+This finally give us a gauge invariant kinetic energy term for all of the $G_\mu^a$ fields and thus we can write the QCD interactions as,
+
+\begin{equation}\label{LagrangianQCD}
+\mathcal{L}_{QCD}=\overline{q}(i\gamma^\mu\partial_\mu-m)q-g(\overline{q}\gamma^\mu T_a q)G^a_\mu-\frac{1}{4}G^a_{\mu\nu}G_a^{\mu\nu}.
+\end{equation}
+
+From all of this we seem to be missing a vital part of the SM, specifically a theory for the Weakly interacting processes which are mediated by the massive bosons, $W$ and $Z$ from fig. \ref{SMParticles}. This requires the Higgs Mechanism.
+
+\section{The Higgs Mechanism}
+
+We are interested in the spontaneous symmetry breaking of a local $SU(2)$ gauge symmetry. We are interested in the following $SU(2)$ Lagrangian,
+
+\begin{equation}\label{HiggsLagrangian}
+\mathcal{L}=(\partial_\mu\phi)^\dagger(\partial^\mu\phi)-\mu^2\phi^\dagger\phi-\lambda(\phi^\dagger\phi)^2,
+\end{equation}
+
+with $\phi$ being a $SU(2)$ doublet of complex scalar fields
+
+\begin{equation}
+\phi=\frac{1}{2}
+\begin{bmatrix}
+\phi_1+i\phi_2 \\
+\phi_3+i\phi_4
+\end{bmatrix}
+\end{equation} 
+
+and is invariant under global $SU(2)$ phase transformations $\phi\rightarrow e^{i\alpha_a\tau_a/2}\phi$
+
+\section{Fundamental Problems in the Standard Model}
+\label{sec:SMIssues}
+
+The SM has been able to accurately and precisely describe many facits of the universe. Whether is comes to predicting the existance of a sixth quark or the confirmation of the $g - 2$ of the muon to 9 orders of magnitude. Unfortunately, there is some evidence of matter or interactions that cannot be described such as dark matter, the Hierarch problem, or a possible grand unified theory. Let's look into each of these further.
+
+\subsection{Dark Matter}
+The amount of visible matter in the universe does not explain all of the measurable matter. This has most notibly been seen in the radial velocity of galaxies. In a universe which is solely made up of visible matter, matter that interacts with light, the radial velocity of stars should decrease the further away it is from the galactic nuclei. Though measurements show the velocity becoming constant as a function of radius. To reproduce these features in models, the mass of the galaxy must be significantly more that what is seen. This implies some unseen dark matter, that still interacts with the gravitational field but not with the EM field.There is currently no such particle that has these properties in the SM.
+
+\begin{figure}
+ 	\centering
+	\includegraphics[width=0.5\textwidth]{Hierarchy.pdf}
+ 	\caption{The loop corrections to the Higgs boson interacting with a top quark and its superpartner the top squark. This is only the NLO corrections to the Higgs boson mass.}
+ 	\label{HiggsMass} 
+\end{figure}
+
+\subsection{Hierarchy Problem} 
+The higgs boson is a beautiful solution to electroweak symmetry breaking and gives a method for particles to aqcuire mass and was discovery to have a measured mass, $m_{H}=125.15$ GeV. This value though is not predictable with the SM and leads to some inconsistencies when you include loop corrections. Since the higgs is strongly coupled to particles with large masses, the dominant loop correction will be due to interactions with $t$. These higher order loop corrections to the higgs mass, $m_H^2$, caused by the fermionic $t$ loop, see fig \ref{HiggsMass}, is
+
+\begin{equation} \label{HiggsDivergence}
+\Delta m_{H}^{2}=-\frac{|\lambda_{f}|^{2}}{8\pi^{2}}\Lambda_{UV}^{2}+\cdot\cdot\cdot,
+\end{equation}
+
+where $\lambda_f$ is the vertex factor for the respective fermion and $\Lambda_{UV}$ is the ultraviolet momentum cutoff. The higgs boson loop corrections are highly dependent on all virtual and real particles that couple to the higgs field. From this, we can see the corrections from Eqn. \ref{HiggsDivergence} for each fermion in the SM will cause a large divergence. The quadratic divergence of the higgs mass is only renormalizable with a fine tuning of the parameters $\lambda_f$ and $\Lambda_{UV}$. This means the only way for the SM to reconcile this unfortunate fact is to have a relatively luck cancellation of very large numbers of order $10^{32}$ with equally small numbers. If we look at the contribution with the addition a scalar partner to the fermion the higgs loop corrections reduce to,
+
+\begin{equation}
+\Delta m_{H}^{2}=\frac{\lambda_{S}}{16\pi^{2}}[\Lambda_{UV}^{2} - 2m_{S}^{2}ln(\Lambda_{UV}/m_{S})+\cdot\cdot\cdot].
+\label{HiggsRenormalization}
+\end{equation}
+
+With the introduction of a scalar partner to the $t$, there is a logarithmic divergence to the higgs boson mass and can be renormalized through the normal methods.
+
+\subsection{Grand Unified Theory}
+
+The SM is able to accurately describe three of the fundamental sources at typical energy scales, 1 to $10^{4}$ GeV, but idealy the forces would be able to merge into a single force at high energies. This has not been directly observed, but many theories, such as SUSY, predict its existance %\cite{martin_supersymmetry_1997}.
+
+\begin{figure}
+ 	\centering
+	\includegraphics[width=0.5\textwidth]{GUTRenormalization.png}
+ 	\caption{The energy dependence of the inverse gauge couple of each force in the SM (dashed line) and the MSSM (solid lines). The MSSM gives two thresholds for the sparticle mass 750 GeV and 2.5 TeV.}
+ 	\label{GUT} 
+\end{figure}
+
 
 \section{Superpartners}
 \label{sec:superpartners}
 
-Initial assumption that every fermion has a boson partner and vice versa. These partners are exactly the same but differ by half integer spin. Changes Higgs mass divergence from quadratic to logrithmic (renormalizable)
+With no additional information to hint at physics at scale about the TeV range, it seems that we need a new framework for physics at the reduced Planck scale $M_{P}=(8\pi G_{Newton})^{-1/2}=2.4\times10^{18}$ GeV, which is the scale at which quantum gravitational effects become important. The ratio of $M_p/M_W$ is a strong hint that there is more physics at scales beyond the SM. The Higgs field will become extremely important at these higher energy scales
 
-Must be broken such that the masses of these partners are larger.
+Supersymmetry is broken into Chiral supermultiplets, which are fields that contain equal numbers of fermions and bosons. Each of these supermultiplets can transform and interact with each other. 
 
 \subsection{Chirality}
 \label{subsec:chiral}

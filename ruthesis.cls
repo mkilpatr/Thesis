@@ -260,7 +260,7 @@
 \def\@school{Rice University}
 \def\@ctitle#1{\@title}
 \def\@department{Electrical and Computer Engineering}
-\def\@coverart{\includegraphics{/net/dsp1/tex/macros/rice-shield-big.ps}}
+%\def\@coverart{\includegraphics[width=1\textwidth]{plots/RiceShield.jpeg}}
 \def\@degree{Doctor of Philosophy}
 \def\@committee{member 1, Chairman \\ prof \and
  member 2 \\ prof \and member 3 \\ prof}
