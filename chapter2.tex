@@ -95,7 +95,7 @@ D_\mu=\partial_\mu+igT_aG_\mu^a.
 
 This will give us a similar lagrangian to the QED one derived above, but this is not sufficient for a non-Abelian gauge transformation and is does not produce a gauge-invariant Lagrangian. One final transformation is required for the $G_\mu^a$ fields to achieve gauge invariance, 
 
-\begin{equation}
+\begin{equation}\label{QCDGaugeTransform}
 G_\mu^a\rightarrow G_\mu^a-\frac{1}{g}\partial_\mu\alpha_a-f_{abc}\alpha_b G_\mu^c,
 \end{equation}
 
@@ -105,7 +105,7 @@ This finally give us a gauge invariant kinetic energy term for all of the $G_\mu
 \mathcal{L}_{QCD}=\overline{q}(i\gamma^\mu\partial_\mu-m)q-g(\overline{q}\gamma^\mu T_a q)G^a_\mu-\frac{1}{4}G^a_{\mu\nu}G_a^{\mu\nu}.
 \end{equation}
 
-From all of this we seem to be missing a vital part of the SM, specifically a theory for the Weakly interacting processes which are mediated by the massive bosons, $W$ and $Z$ from fig. \ref{SMParticles}. This requires the Higgs Mechanism.
+From all of this we seem to be missing a vital part of the SM, specifically a theory for the Weakly interacting processes which is mediated by the massive bosons, $W$ and $Z$ from fig. \ref{SMParticles}. This requires the Higgs Mechanism.
 
 \section{The Higgs Mechanism}
 
@@ -125,7 +125,95 @@ with $\phi$ being a $SU(2)$ doublet of complex scalar fields
 \end{bmatrix}
 \end{equation} 
 
-and is invariant under global $SU(2)$ phase transformations $\phi\rightarrow e^{i\alpha_a\tau_a/2}\phi$
+and is invariant under global the $SU(2)$ phase transformations $\phi\rightarrow e^{i\alpha_a\tau_a/2}\phi$. To allow for local invariance, we first allow for a covariant derivative
+
+\begin{equation}
+D_\mu=\partial_\mu+ig\frac{\tau_a}{2}W_\mu^a,
+\end{equation}
+
+where we now have three gauge fields, $W_\mu^a$ with $a=1,2,3$. If we assume an infanitesimal gauge transformation for the $SU(2)$ doublet $\phi(x)\rightarrow\phi'(x)=(1 +i\boldsymbol{\alpha}(x)\cdot\boldsymbol{\tau}/2)\phi(x)$, then the gauge fields will transform as
+
+\begin{equation}\label{HiggVectorTransform}
+\boldsymbol{W}_\mu\rightarrow\boldsymbol{W}_\mu-\frac{1}{g}\partial_\mu\boldsymbol{\alpha}-\boldsymbol{\alpha}\times\boldsymbol{W}_\mu,
+\end{equation}
+
+you can see that Eqn. \ref{HiggVectorTransform} is just the compact vector transform of Eqn. \ref{QCDGaugeTransform} where we have replaced the QCD gauge field with the three gauge fields $W_\mu^a$. If we include these locally invariant transformations into the above $SU(2)$ Lagrangian we get
+
+\begin{equation}\label{HiggsInvariantL}
+\mathcal{L}=(\partial_\mu\phi+ig\frac{1}{2}\boldsymbol{\tau}\cdot\boldsymbol{W}_\mu\phi)^\dagger(\partial^\mu\phi+ig\frac{1}{2}\boldsymbol{\tau}\cdot\boldsymbol{W}^\mu\phi)-\mu^2\phi^\dagger\phi+\lambda(\phi^\dagger\phi)^2-\frac{1}{4}\boldsymbol{W}_{\mu\nu}\cdot\boldsymbol{W}^{\mu\nu},
+\end{equation}
+
+where the inclusion of the gauge field kinetic term has been included at the end. The most interesting regions of this lagrangian is when $\mu^2<0$ and $\lambda>0$, where the potential has a minimum at $\phi^\dagger\phi=-\frac{\mu^2}{2\lambda}$. With this we will expand the potential around the minimum and require that
+
+\begin{equation}
+\phi_1=\phi_2=\phi_4=0, \phi_3^2=-\frac{\mu^2}{2\lambda}\equiv v^2.
+\end{equation}
+
+This is the spontaneous symmetry breaking of the $SU(2)$ symmetry, because of this we are able to substitute an expansion for the field
+
+\begin{equation}
+\phi=\sqrt{\frac{1}{2}}
+\begin{bmatrix}
+0 \\
+v+h(x)
+\end{bmatrix}
+\end{equation}
+
+With this specific transformation of the $SU(2)$ doublet and the simplification of Eqn. \ref{HiggsInvariantL}, the only remaining field is $h(x)$ which is refered to as the Higgs field. This is what is known as the Higgs Mechanism. 
+
+We want to include the methods of the Higgs Mechanism into the weak isospin and weak hypercharge,$SU(2)_L\times U(1)_Y$, transformations of electoweak interactions. First, we need to include the coupling of the weak currents $\boldsymbol{J}_\mu$ and the gauge field $\boldsymbol{W}^\mu$ such that,
+
+\begin{equation}
+-ig\boldsymbol{J}_\mu\cdot\boldsymbol{W}^\mu=-ig\overline{\chi}_L\gamma_\mu\boldsymbol{T}\cdot\boldsymbol{W}^\mu\chi_L
+\end{equation}
+
+which is the basic interaction for the $SU(2)_L$ symmetry. Then, we also need to include the weak hypercharge current with the fourth vector boson $B^\mu$,
+
+\begin{equation}
+-i\frac{g'}{2}j_\mu^YB^\mu=-ig'\overline{\psi}\gamma_\mu\frac{Y}{2}\psi B^\mu, 
+\end{equation}
+
+here the operators $\boldsymbol{T}$ and $Y$ are generators for the $SU(2)_L$ and $U(1)_Y$ gauge transformations, respectively. Now we combine the two symmetries with the transformations of the left and right hand components of $\psi$ as
+
+\begin{equation}
+\begin{split}
+\chi_L\rightarrow\chi'_L&=e^{i\boldsymbol{\alpha(x)\cdot T+i\beta(x)Y}}\chi_L, \\
+\psi_R\rightarrow\psi'_R&=e^{i\beta(x)Y}\psi_R
+\end{split}
+\end{equation}
+
+from this we can write down the contributions of the two gauge fields $\boldsymbol{W}_\mu^3$ and $B_\mu$ and the mising angle $\theta_W$ to find the interactions of the two neutral currents. The physical fields are thus,
+
+\begin{equation}
+-igJ_\mu^3W^{3\mu}-i\frac{g'}{2}j_\mu^YB^\mu=-iej_\mu^{em}\boldsymbol{A}^\mu-\frac{ie}{sin\theta_Wcos\theta_W}[J_\mu^3-sin^2\theta_Wj_\mu^{em}]Z^\mu.
+\end{equation}
+
+From this we can write down the Electroweak Lagrangian, for any fermion that interacts with the field. Moreover, we can formulate the Higgs mechanism, such that we can calculate the theoretical masses of the gauge bosons and fermions, such as, 
+
+\begin{equation}
+\begin{split}
+& M_W=\frac{1}{2}vg \\
+& M_Z=\frac{1}{2}v\sqrt{g^2+g'^2},
+\end{split}
+\end{equation}
+
+but these masses cannot be predicted since the depend on the values from the chosen Higgs field. 
+
+\subsection{The Standard Model Lagrangian}
+
+With the inclusion of the Higgs mechanism and the formulation of a local gauge invariant Lagrangian for the Electroweak and QCD fields, we have the complete SM Lagrangian as,
+
+\begin{equation}\label{SMLagrangian}
+\begin{split}
+\mathcal{L}=&-\frac{1}{4}\boldsymbol{W}_{\mu\nu}\boldsymbol{W}^{\mu\nu}-\frac{1}{4}B_{\mu\nu}B^{\mu\nu} \\
+&+\overline{L}\gamma^\mu(i\partial_\mu-g\frac{1}{2}\boldsymbol{\tau}\cdot\boldsymbol{W}_\mu-g'\frac{Y}{2}B_\mu)L \\
+&+\overline{R}\gamma^\mu(i\partial_\mu-g'\frac{Y}{2}B_\mu)R \\
+&+\lvert(i\partial_\mu-g\frac{1}{2}\boldsymbol{\tau}\cdot\boldsymbol{W}_\mu-g'\frac{Y}{2}B_\mu)\phi\lvert^2-V(\phi) \\
+&-(G_1\overline{L}\phi R+G_2\overline{L}\phi_cR+\text{hermitian conjugate}),
+\end{split}
+\end{equation}
+
+where the first terms are the kinetic energies and self-interations of the $W^\pm,Z, \text{and} \gamma$ bosons, the second and third terms are the kinetic energies and interactions of the leptons and quarks with the $W^\pm,Z, \text{and} \gamma$ bosons where $L$ is a left-handed fermion doublet and $R$ is a right-handed fermion singlet. This is because the weak force only couples to left-handed fermions. The fourth term is the $W^\pm,Z,\gamma$ and Higgs masses and couplings. The final term is the lepton and quark masses and couplings to the Higgs field.  
 
 \section{Fundamental Problems in the Standard Model}
 \label{sec:SMIssues}
