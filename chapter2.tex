@@ -26,6 +26,35 @@ After decades of theoretical and experimental research the SM has been developed
  
  The interactions of all of these particles are described by the interactions of quantized fields. These fields become operators that describe the creation and annihilation of particles. Each of the fields of the SM have a corresponding boson, see fig. \ref{SMParticles}. The most well known field being the Electromagnetic (EM) field and its interactions. 
  
+ Now we want to be able to write down a concise theory of the particles in the SM. The key symmetry and conservation law of the SM can be derived by starting with the Noether's Theorem.
+ 
+ \section{Noether's Theorem}
+ 
+ Noether's theorem states, "to each symmetry of a local Lagrangian, there corresponds a conserved current. This can be done by allowing for an infinitesimal symmetry variation. This requires the Lagrangian to be invariant under $\phi(x)\rightarrow\phi\prime(x)=\phi(x)+\alpha\Delta\phi(x)$, where $\alpha$ is infinitesimal real parameter and $\Delta\phi$ is a deformation to the field, up to a 4-divergance,
+ 
+ \begin{equation}\label{LagrangeFluctuation}
+ \mathcal{L}(x)\rightarrow\mathcal{L}(x)+\alpha\partial_\mu\mathcal{J}^\mu(x),
+ \end{equation}
+ 
+ where $\mathcal{J}^\mu$ is a current. If we apply the Euler-Lagrange equation,
+ 
+ \begin{equation}
+ \partial_\mu(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)})-\frac{\partial\mathcal{L}}{\partial\phi}=0,
+ \end{equation}
+ 
+ on Eqn. \ref{LagrangeFluctuation} with the addition of the fluctuation of the particle field. After some simplification we get a conserved current,
+ 
+ \begin{equation}
+ \begin{split}
+ & \partial_\mu j^\mu(x)=0, \text{ where}\\
+ & j^\mu(x)=\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\Delta\phi-\mathcal{J}^\mu
+ \end{split}
+ \end{equation}.
+ 
+ We see from the above equation that the current $j^\mu(x)$ of the Lagrangian is conserved. Now let's apply this to the particle fields of the SM.
+ 
+ \section{QED}
+ 
  First, we start with the assumption that the wave function $\psi(x)$ should transform as,
  
  \begin{equation}\label{U1gauge}
@@ -52,7 +81,9 @@ After decades of theoretical and experimental research the SM has been developed
 
 where $\gamma^\mu$ are invariant tensors, $\partial_\mu$ is the partial derivative, $m$ is the mass of the particle, $\psi$ is the wave function of the particle, $A_{\mu}$ is the EM field operator, and $F^{\mu\nu}$ is the EM field tensor. Each of the parts of this equation are lorentz invariant which allows this to be true in all reference frames. This lagrangian describes the interactions of a particle and the EM field moving through spacetime. 
 
-After this we will transition from the description of the $U(1)$ EM field to the $SU(3)$ QCD field and the transformation of quark fields. A free moving quark is described by,
+\section{QCD}
+
+Let's now transition from the description of the $U(1)$ EM field to the $SU(3)$ QCD field and the transformation of quark fields. A free moving quark is described by,
 
 \begin{equation}\label{LagrangianQCDVacuum}
 \mathcal{L}_{QCD}^{vac}=\overrightarrow{q}_j(i\gamma^\mu\partial\mu-m)q_j,
@@ -218,10 +249,12 @@ where the first terms are the kinetic energies and self-interations of the $W^\p
 \section{Fundamental Problems in the Standard Model}
 \label{sec:SMIssues}
 
-The SM has been able to accurately and precisely describe many facits of the universe. Whether is comes to predicting the existance of a sixth quark or the confirmation of the $g - 2$ of the muon to 9 orders of magnitude. Unfortunately, there is some evidence of matter or interactions that cannot be described such as dark matter, the Hierarch problem, or a possible grand unified theory. Let's look into each of these further.
+The SM is able to accurately and precisely describe many facits of the universe. Whether is comes to predicting the existance of a sixth quark or the confirmation of the $g - 2$ of the muon to 9 orders of magnitude. Unfortunately, there is some evidence of matter or interactions that cannot be described such as dark matter, the Hierarch problem, and a possible grand unified theory. Let's look into each of these further.
 
 \subsection{Dark Matter}
-The amount of visible matter in the universe does not explain all of the measurable matter. This has most notibly been seen in the radial velocity of galaxies. In a universe which is solely made up of visible matter, matter that interacts with light, the radial velocity of stars should decrease the further away it is from the galactic nuclei. Though measurements show the velocity becoming constant as a function of radius. To reproduce these features in models, the mass of the galaxy must be significantly more that what is seen. This implies some unseen dark matter, that still interacts with the gravitational field but not with the EM field.There is currently no such particle that has these properties in the SM.
+The main motivation for Dark Matter is the difference between the visible matter and the measureable matter in the universe. This has most notibly been seen in the radial velocity of galaxies. In a galaxy which is solely made up of visible matter, matter that interacts with light, the radial velocity of stars should decrease as $1/sqrt{r}$ the further away it is from the galactic nuclei. Though measurements show the velocity becoming constant as a function of radius.
+
+The original sutdy of this was from the galaxy NGC 1560, where the measure galactic velocity curve provided a result that was 400 times large than the visible matter in the cluster (A. H. Broeils Astron. and Astrophys. 256 19 (1992)).  To reproduce these features in models, the mass of the galaxy must be significantly more that what is seen. This implies some unseen dark matter, that still interacts with the gravitational field but not with the EM field.There is currently no such particle in the SM that has these properties.
 
 \begin{figure}
  	\centering
@@ -231,13 +264,13 @@ The amount of visible matter in the universe does not explain all of the measura
 \end{figure}
 
 \subsection{Hierarchy Problem} 
-The higgs boson is a beautiful solution to electroweak symmetry breaking and gives a method for particles to aqcuire mass and was discovery to have a measured mass, $m_{H}=125.15$ GeV. This value though is not predictable with the SM and leads to some inconsistencies when you include loop corrections. Since the higgs is strongly coupled to particles with large masses, the dominant loop correction will be due to interactions with $t$. These higher order loop corrections to the higgs mass, $m_H^2$, caused by the fermionic $t$ loop, see fig \ref{HiggsMass}, is
+The higgs boson is a beautiful solution to electroweak symmetry breaking and gives a method for particles to aqcuire mass, see Eqn. \ref{HiggsLagrangian},  and was discovery to have a measured mass, $m_{H}=125.15$ GeV. This value though is not predictable with the SM and leads to some inconsistencies when you include loop corrections. Since the higgs is strongly coupled to particles with large masses, the dominant loop correction is due to interactions with the $t$ quark. These higher order loop corrections to the higgs mass, $m_H^2$, caused by the fermionic $t$ loop, see fig \ref{HiggsMass}, are
 
 \begin{equation} \label{HiggsDivergence}
 \Delta m_{H}^{2}=-\frac{|\lambda_{f}|^{2}}{8\pi^{2}}\Lambda_{UV}^{2}+\cdot\cdot\cdot,
 \end{equation}
 
-where $\lambda_f$ is the vertex factor for the respective fermion and $\Lambda_{UV}$ is the ultraviolet momentum cutoff. The higgs boson loop corrections are highly dependent on all virtual and real particles that couple to the higgs field. From this, we can see the corrections from Eqn. \ref{HiggsDivergence} for each fermion in the SM will cause a large divergence. The quadratic divergence of the higgs mass is only renormalizable with a fine tuning of the parameters $\lambda_f$ and $\Lambda_{UV}$. This means the only way for the SM to reconcile this unfortunate fact is to have a relatively luck cancellation of very large numbers of order $10^{32}$ with equally small numbers. If we look at the contribution with the addition a scalar partner to the fermion the higgs loop corrections reduce to,
+where $\lambda_f$ is the vertex factor for the respective fermion and $\Lambda_{UV}$ is the ultraviolet momentum cutoff. The higgs boson loop corrections are highly dependent on all virtual and real particles that couple to the higgs field. From this, we can see the corrections from Eqn. \ref{HiggsDivergence} for each fermion in the SM will cause a large divergence. The quadratic divergence of the higgs mass is only renormalizable with a fine tuning of the parameters $\lambda_f$ and $\Lambda_{UV}$. This means the only way for the SM to reconcile this unfortunate fact is to have a relatively lucky cancellation of very large numbers of order $10^{32}$ with equally small numbers. Fortunately, if we add the contribution of a bosonic partner of the fermion the higgs loop corrections reduce to,
 
 \begin{equation}
 \Delta m_{H}^{2}=\frac{\lambda_{S}}{16\pi^{2}}[\Lambda_{UV}^{2} - 2m_{S}^{2}ln(\Lambda_{UV}/m_{S})+\cdot\cdot\cdot].
@@ -250,6 +283,8 @@ With the introduction of a scalar partner to the $t$, there is a logarithmic div
 
 The SM is able to accurately describe three of the fundamental sources at typical energy scales, 1 to $10^{4}$ GeV, but idealy the forces would be able to merge into a single force at high energies. This has not been directly observed, but many theories, such as SUSY, predict its existance %\cite{martin_supersymmetry_1997}.
 
+At standard energy for particle physics experiments the different in the strength of each force is quite noticeable. But it has been shown that in the SM the strengths of each force is dependent on the energy scale and it would be ideal that they converge to a single force at large energies, such as $10^16$ GeV. In fig. \ref{GUT}, we can see the extrapolated energy scales of the forces in the SM shown as the dotten line. These unfortunately, do not meet at a single point to become one force, but if we include supersymmetry into the model we get a nice convergence between the forces.
+
 \begin{figure}
  	\centering
 	\includegraphics[width=0.5\textwidth]{GUTRenormalization.png}
@@ -257,11 +292,17 @@ The SM is able to accurately describe three of the fundamental sources at typica
  	\label{GUT} 
 \end{figure}
 
+\section{Supersymmetry}
 
-\section{Superpartners}
+We have seen from the above three problems that there are still more to learn than just the particles of the SM. The unexpainable features of the universe; dark matter, the hierarchy problem, and a grand unified theory have not bee attained in the SM. Forturnately, some theories have allowed for such problem to be solved. Namely the theory of supersymmetry (SUSY) which essentially states that each particle in the SM has a superpartner that has only the spin changed.
+
+
+\subsection{Superpartners}
 \label{sec:superpartners}
 
-With no additional information to hint at physics at scale about the TeV range, it seems that we need a new framework for physics at the reduced Planck scale $M_{P}=(8\pi G_{Newton})^{-1/2}=2.4\times10^{18}$ GeV, which is the scale at which quantum gravitational effects become important. The ratio of $M_p/M_W$ is a strong hint that there is more physics at scales beyond the SM. The Higgs field will become extremely important at these higher energy scales
+With no additional information to hint at physics at scale about the TeV range, it seems that we need a new framework for physics at the reduced Planck scale $M_{P}=(8\pi G_{Newton})^{-1/2}=2.4\times10^{18}$ GeV, which is the scale at which quantum gravitational effects become important. The ratio of $M_p/M_W$ is a strong hint that there is more physics at scales beyond the SM. We saw from the Hierarchy problem that the addition of a bosonic partner to a fermion will allow for the loop corrections to be renormalizable without fine tuning. From this we can assume that in a theory called supersymmetry, that every fermion has a bosonic partner that has all the same parameters except the spin differ by $1/2$, and vice-versa.
+
+The partners to the fermions are donoted with a 's' in front of the name to denote it is the scalar form of the particle and the partners to the bosons have a 'ino' attached at the end, such as photino, gluino, wino, and higgsino. If the SUSY was unbroken the superpartners would have exactly the same properties as the SM pairs except their spin. This would cause a massless photino or a $m_{\tilde{e}}=0.511$ keV selectron. These particles would certainly have been seen at this point, which leads us to think that SUSY is a broken symmetry where all the superpartners have a mass that is significantly higher than their SM partners. 
 
 Supersymmetry is broken into Chiral supermultiplets, which are fields that contain equal numbers of fermions and bosons. Each of these supermultiplets can transform and interact with each other. 
 
