@@ -73,7 +73,7 @@ After decades of theoretical and experimental research the SM has been developed
  A_\mu\rightarrow A_\mu+\frac{1}{e}\partial_\mu\alpha.
  \end{equation}
  
- So after requiring that there be a local gauge transformation, we were forced to introduce a vector field $A_\mu$, called the guage field, which couples to Dirac particles in the same way as the photon field. We will think of this new field as the real photon field, which means we need to add a kinematic energy portion to the lagrangian. This kinematic term will be invariant under Eqn. \ref{PhotonField} which leads us to final final representation of the QED lagrangian which can be written down concisely as, 
+ So after requiring that there be a local gauge transformation, we were forced to introduce a vector field $A_\mu$, called the gauge field, which couples to Dirac particles in the same way as the photon field. We will think of this new field as the real photon field, which means we need to add a kinematic energy portion to the lagrangian. This kinematic term will be invariant under Eqn. \ref{PhotonField} which leads us to final final representation of the QED lagrangian which can be written down concisely as, 
  
  \begin{equation}\label{LagrangianQED}
 \mathcal{L}_{QED}=\overline{\psi}(i\gamma^\mu\partial_\mu-m)\psi+e\overline{\psi}\gamma^{\mu}A_{\mu}\psi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu},
@@ -294,39 +294,68 @@ At standard energy for particle physics experiments the different in the strengt
 
 \section{Supersymmetry}
 
-We have seen from the above three problems that there are still more to learn than just the particles of the SM. The unexpainable features of the universe; dark matter, the hierarchy problem, and a grand unified theory have not bee attained in the SM. Forturnately, some theories have allowed for such problem to be solved. Namely the theory of supersymmetry (SUSY) which essentially states that each particle in the SM has a superpartner that has only the spin changed.
+We have seen from the above three problems that there are still more to learn than just the particles of the SM. Some of the unexpainable features of the universe, such as; dark matter, the hierarchy problem, and a grand unified theory have not been explained by the SM. We saw from the Hierarchy problem that the addition of a bosonic partner to a fermion will allow for the loop corrections to be renormalizable without fine tuning. Forturnately, some theories have allowed for such problem to be solved. Namely the theory of supersymmetry (SUSY) which essentially states that each particle in the SM has a superpartner that has only the spin changed, that every fermion has a bosonic partner that has all the same parameters except the spin differ by $1/2$, and vice-versa.
 
+The partners to the fermions are donoted with a 's' in front of the name to notify that it is the scalar form of the particle and the partners to the bosons have a 'ino' attached at the end, such as photino, gluino, wino, and higgsino. So for the partners to the fermionic particles in the standard model we have: sup $(\widetilde{u})$, sdown $(\widetilde{d})$, scharm $(\widetilde{c})$, sstrange $(\widetilde{s})$, stop $(\st)$, and sbottom $(\widetilde{b})$ for the squarks and selectron $(\widetilde{e})$, smuon $(\widetilde{\mu})$, and stau $(\widetilde{\tau})$ for the charged sleptons. The partners to the neutrinos, which are always left-handed if you neglect the minimal masses, are sneutrinos $(\widetilde{\nu}_e, \widetilde{\nu}_\mu, \widetilde{\nu}_\tau)$, where whe have one for each flavor of lepton. 
 
-\subsection{Superpartners}
-\label{sec:superpartners}
+If the SUSY was unbroken the superpartners would have exactly the same properties as the SM pairs except their spin. This would cause a massless photino or a $m_{\widetilde{e}}=0.511$ keV selectron. These particles would certainly have been detected at this point, which leads us to think that SUSY is a broken symmetry where all the superpartners have a mass that is significantly higher than their SM partners. 
 
-With no additional information to hint at physics at scale about the TeV range, it seems that we need a new framework for physics at the reduced Planck scale $M_{P}=(8\pi G_{Newton})^{-1/2}=2.4\times10^{18}$ GeV, which is the scale at which quantum gravitational effects become important. The ratio of $M_p/M_W$ is a strong hint that there is more physics at scales beyond the SM. We saw from the Hierarchy problem that the addition of a bosonic partner to a fermion will allow for the loop corrections to be renormalizable without fine tuning. From this we can assume that in a theory called supersymmetry, that every fermion has a bosonic partner that has all the same parameters except the spin differ by $1/2$, and vice-versa.
-
-The partners to the fermions are donoted with a 's' in front of the name to denote it is the scalar form of the particle and the partners to the bosons have a 'ino' attached at the end, such as photino, gluino, wino, and higgsino. If the SUSY was unbroken the superpartners would have exactly the same properties as the SM pairs except their spin. This would cause a massless photino or a $m_{\tilde{e}}=0.511$ keV selectron. These particles would certainly have been seen at this point, which leads us to think that SUSY is a broken symmetry where all the superpartners have a mass that is significantly higher than their SM partners. 
-
-Supersymmetry is broken into Chiral supermultiplets, which are fields that contain equal numbers of fermions and bosons. Each of these supermultiplets can transform and interact with each other. 
-
-\subsection{Chirality}
+\subsection{Supermultiplets and Chirality}
 \label{subsec:chiral}
 
-Equal numbers of fermions and bosons. How does the spin change? 
+A supermultiplets is any symmetry where the number of bosonic degrees of freedom and fermionic degrees of freedom are equal, $n_B=n_F$. The simplest  way to achieve this is to have a combination of a single Weyl fermion, which has two spin helicity states, $n_F=2$, and two real scalars with each having $n_B=1$. It becomes convenient for the mathematics to combine the two real scalars into one complex scalar field. Now the combination of a complex scalar field and a Weyl fermion is known as a chiral supermultiplet. 
 
 \section{Minimal Supersymetric Standard Model}
 \label{sec:MSSM}
 
-Soft supersymetry breaking. 
+We have discussed how the fermions transform under the rules of SUSY, but how do the scalar field mediators translate into this new framework. First, lets look at the Higgs boson. We know that there is not only one chiral supermultiplets. If there was only one the electroweak gauge symmetry, with a Higgsino of spin-$1/2$, would not have the anomaly cancellation of the traces, $Tr[T^2_3Y]\neq0$ and $Tr[Y^3]\neq0$, where $T_3$ is the third component of weak isospin and $Y$ is the weak hypercharge. In the SM, the traces of these for the fermions are already satified. With the addition of a single chiral supermultiplet for the Higgsino it would not be satified.  We must include two chiral supermultiplets of the Higgsino, with $Y=\pm\frac{1}{2}$, see table \ref{ChiralSMultiplets}. 
+
+It turns out that this is also necessary for the Higgsino to give mass to different particles in the SM. A Higgs with $Y=1/2$ has the Yukawa couplings that allow it to interact with the up-type quarks $(u, c, t)$. Only a Higgs with $Y=-1/2$ has the correct Yukawa couplings to interact with the down-type quarks $(d, s, b)$ and the charged leptons $(e, \mu, \tau)$.
+
+\begin{table}
+ 	\centering
+	\includegraphics[width=0.7\textwidth]{ChiralSupermultiplets.png}
+ 	\caption{The chiral supermultiplets of the Minimal Supersymmetric Standard Model. Spin-0 fields are comples scalars and spin-$1/2$ fields are left-handed two component Weyl fermions. CITE SUSY PRIMER}
+ 	\label{ChiralSMultiplets} 
+\end{table}
+
+\begin{table}
+ 	\centering
+	\includegraphics[width=0.7\textwidth]{GaugeSupermultiplets.png}
+ 	\caption{The chiral supermultiplets of the Minimal Supersymmetric Standard Model. CITE SUSY PRIMER}
+ 	\label{GaugeSMultiplets} 
+\end{table}
+
+The SM vector boson will also have a corresponding gauge supermultiplet. They have fermionic superpartners that are referred to as gauginos. For the $SU(3)_C$ color gauge interactions of QCD, which are a spin-$1/2$ color-octet, has a partner called a gluino $(\widetilde{g})$. The electroweak gauge theory $SU(2)_L\times U(1)_Y$ has the superpartners $\widetilde{W}^+,\widetilde{W}^0, \widetilde{W}^-, \text{and } \widetilde{B}^0$ each with spin-$1/2$, called winos and bino, see table \ref{GaugeSMultiplets}. The gaugino mixtures of $\widetilde{W}^0$ and $\widetilde{B}^0$ give the corresponding zino $(\widetilde{Z}^0)$ and photino $(\widetilde{\gamma})$. The chiral supermultiplets shown in table \ref{ChiralSMultiplets} and \ref{GaugeSMultiplets} give the particles of the Minimal Supersymmetric Standard Model (MSSM). 
 
 \subsection{R Parity}
 \label{subsec:rparity}
 
-New conserved parameter known as R parity. With this is allows for a stable particle that is a dark matter candidate. Other consequences.
+$R$-parity or matter parity is the multiplicatively conserved quantum number defined as, 
+
+\begin{equation} \label{RParity}
+P_R=(-1)^{3(B-L)+2s}, 
+\end{equation}
+
+where $B$ is the baryon number, $L$ is the lepton number, and $s$ is the spin of the particle. From this we can find the $R$-parity of all of the particles in the SM and MSSM. The definition of $R$-parity is quite useful because all of the particle of the SM have an $R$-partity of $P_R=+1$, while all of the squarks, sleptons, gauginos, and higgsinos have $P_R=-1$.
+
+$R$-parity is thought to be exactly conserved in SUSY, where there is no mixing between particles that have $P_R=+1$ and $P_R=-1$ (sparticles). This leads to three important consequences:
+
+ \begin{itemize}
+	 \item The lightest sparticle that has $P_R=-1$ is called the "lightest supersymmetric particle" or LSP, which must be absolutely stable. If it is electrically neutral, it is an possible candidate for a non-baryonic dark matter candidate.
+	 \item Every sparticle, other than the LSP, must eventually decay into an odd number of LSPs.
+	 \item For collider experiments, sparticles will only be produced in even numbers.
+ \end{itemize}
+ 
+ We are going to be investigating a MSSM that conserves $R$-parity. This is quite well motivated by the possiblilty of a dark matter candidate and putting constraints on the proton decay. 
 
 \section{Mass Spectrums}
 
-Higgs boson corrections. spectrum of squarks. 
+The third family of squarks and sleptons should have quite different masses compared to their first- and second-family counterparts, which is cause by the large Yukawa $(y_t, y_b, y_\tau)$ and soft $(a_t, a_b, a_\tau)$ couplings. This causes significant mixing between the chiral superpartners $(\widetilde{t}_L, \widetilde{t}_R), (\widetilde{b}_L. \widetilde{b}_R)\text{, and } (\widetilde{\tau}_L, \widetilde{\tau}_R)$. 
 
-
-
-
-
-
+\begin{figure}
+\centering
+	\includegraphics[width=0.5\textwidth]{TopSquarkMass.png}
+ 	\caption{On the right we have the arbitrary masses of the top and charm quarks.}
+ 	\label{StopMass} 
+\end{figure}
