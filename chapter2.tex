@@ -226,20 +226,54 @@ b \\
 \end{bmatrix},
 \end{equation}
 
-where for example, $V_{ud}$ is the coupling of $u$ to $d$ which is exactly $(d\rightarrow u+\W^+)$. This matrix can be reduced to a form which has three generalized Cabibbo angles $(\theta_{12},\theta_{23},\theta_{13})$ and a phase factor $(\delta)$. The coupling between the third generation does not mix with the other two generations. From that we can recover the Cabibbo-GIM matrix[cite here]. For the moment, we can only experimentally determine the values from experiment. 
+where for example, $V_{ud}$ is the coupling of $u$ to $d$ which is exactly $(d\rightarrow u+\W^+)$. This matrix can be reduced to a form which has three generalized Cabibbo angles $(\theta_{12},\theta_{23},\theta_{13})$ and a phase factor $(\delta)$. The coupling between the third generation does not mix with the other two generations. From that we can recover the Cabibbo-GIM matrix[cite here]. For the moment, we can only determine the values from experiment. 
 
-The \Z boson is whats known as the neutral current. This boson mediates forces between particles and its respective antiparticles. This is mainly seen in the form of neutrino-nucleon scattering, which has to be a neutral interaction such as,
+\begin{figure}
+ 	\centering
+	\includegraphics[width=0.25\textwidth]{Zboson_interaction.png}
+ 	\caption{Feynman diagram for Neutral Weak interaction}
+ 	\label{ZbosonInteraction}
+\end{figure}
 
-\begin{equation}
+The \Z boson is whats known as the neutral current. This boson mediates forces between particles and its respective antiparticles, see fig. \ref{ZbosonInteraction}. This interaction for the neutral weak force is $\gamma^\mu(c_V^f-c_A^f\gamma^5)$ which is quite similar to the charged weak interaction. 
+
+\section{The Electroweak Lagrangian}
+
+The simplest group for the Electroweak interaction is $SU(2)_L\times U(1)_Y$ which will give the left-handed interactions in doublets with the addition of massive gauge bosons \W and \Z with a massless photon. We first consider the free Lagrangian
+
+\begin{equation}\label{WeakL}
+\mathcal{L}=\overline{\psi}_j\gamma^\mu\psi_j,
+\end{equation}
+
+where $j$ is the fermion wavefunction. We are not including the mass parameter because it would cause the left and right-handed parts to mix.  These are assumed to transform under the global invariant
+
+\begin{equation}\label{WeakGlobal}
 \begin{split}
-\overline{\nu}_\mu+N\rightarrow\overline{\nu}_\mu+X & \\
-\nu_\mu+N\rightarrow\nu_\mu+X &
+\chi_L\rightarrow\chi'_L&=e^{i\boldsymbol{\alpha(x)\cdot T+i\beta(x)Y}}\chi_L, \\
+\psi_R\rightarrow\psi'_R&=e^{i\beta(x)Y}\psi_R
 \end{split}
 \end{equation}
 
+where the transformation $e^{i\frac{\tau_i}{2}\alpha^i}$ is the $SU(2)_L$ transformation and only acts on the left-handed doublet. The next step is to require that the lagrangian is invariant under local $SU(2)_L\times U(1)_Y$. We allow for following covariant derivatives
 
+\begin{equation}
+\begin{split}
+D_\mu\psi_1&=[\partial_\mu-ig\frac{\tau_i}{2}W_\mu^i-ig^\prime y_1 B_\mu]\psi_1 \\
+D_\mu\psi_2&=[\partial_\mu-ig^\prime y_2 B_\mu]\psi_2 \\
+D_\mu\psi_3&=[\partial_\mu-ig^\prime y_3 B_\mu]\psi_3 \\
+\end{split}
+\end{equation}
 
-This requires the Higgs Mechanism.
+where $W_\mu^i$ and $B_\mu$ are four gauge bosons and can be the possible candidates for $\W^\pm$, \Z and $\gamma$.  Just like the above derivations the fields need to transform along with the wavefuntions and derivatives. These transformations are 
+
+\begin{equation}
+\begin{split}
+B_\mu\rightarrow&B^\prime_\mu=B_\mu+\frac{1}{g^\prime}\partial_\mu/beta \\
+W\mu\rightarrow&W^\prime_\mu=U_L W_\mu U^\dagger_L-\frac{1}{g}\partial_\mu U_L U_L^\dagger \\
+\end{split}
+\end{equation}
+
+where $U_L=e^{i\frac{\tau_i}{2}\alpha^i}$. These transformation are similar to the QED and QCD transformation. If we include all of these invariant in the free Weak lagrangian Eqn. \ref{WeakL} and we get a free invariant lagrangian, but this does not allow us to include a mass term for the fermions. Therefore this is not a viable procedure to include the Electroweak interactions into the model. In order to do this requires the Higgs Mechanism.
 
 \section{The Higgs Mechanism}
 
@@ -309,16 +343,7 @@ which is the basic interaction for the $SU(2)_L$ symmetry. Then, we also need to
 -i\frac{g'}{2}j_\mu^YB^\mu=-ig'\overline{\psi}\gamma_\mu\frac{Y}{2}\psi B^\mu, 
 \end{equation}
 
-here the operators $\boldsymbol{T}$ and $Y$ are generators for the $SU(2)_L$ and $U(1)_Y$ gauge transformations, respectively. Now we combine the two symmetries with the transformations of the left and right hand components of $\psi$ as
-
-\begin{equation}
-\begin{split}
-\chi_L\rightarrow\chi'_L&=e^{i\boldsymbol{\alpha(x)\cdot T+i\beta(x)Y}}\chi_L, \\
-\psi_R\rightarrow\psi'_R&=e^{i\beta(x)Y}\psi_R
-\end{split}
-\end{equation}
-
-from this we can write down the contributions of the two gauge fields $W_\mu^3$ and $B_\mu$ and the mising angle $\theta_W$ to find the interactions of the two neutral currents. The physical fields are thus,
+here the operators $\boldsymbol{T}$ and $Y$ are generators for the $SU(2)_L$ and $U(1)_Y$ gauge transformations, respectively. Now we combine the two symmetries with the transformations of the left and right hand components of $\psi$ as from this we can write down the contributions of the two gauge fields $W_\mu^3$ and $B_\mu$ and the mising angle $\theta_W$ to find the interactions of the two neutral currents. The physical fields are thus,
 
 \begin{equation}
 -igJ_\mu^3W^{3\mu}-i\frac{g'}{2}j_\mu^YB^\mu=-iej_\mu^{em}\boldsymbol{A}^\mu-\frac{ie}{sin\theta_Wcos\theta_W}[J_\mu^3-sin^2\theta_Wj_\mu^{em}]Z^\mu.
@@ -456,11 +481,38 @@ $R$-parity is thought to be exactly conserved in SUSY, where there is no mixing 
 
 \section{Mass Spectrums}
 
-The third family of squarks and sleptons should have quite different masses compared to their first- and second-family counterparts, which is cause by the large Yukawa $(y_t, y_b, y_\tau)$ and soft $(a_t, a_b, a_\tau)$ couplings. This causes significant mixing between the chiral superpartners $(\widetilde{t}_L, \widetilde{t}_R), (\widetilde{b}_L. \widetilde{b}_R)\text{, and } (\widetilde{\tau}_L, \widetilde{\tau}_R)$. 
-
 \begin{figure}
 \centering
 	\includegraphics[width=0.5\textwidth]{TopSquarkMass.png}
  	\caption{On the right we have the arbitrary masses of the top and charm quarks.}
  	\label{StopMass} 
 \end{figure}
+
+The third family of squarks and sleptons should have quite different masses compared to their first- and second-family counterparts, which is caused by the large Yukawa $(y_t, y_b, y_\tau)$ and soft $(a_t, a_b, a_\tau)$ couplings. This causes significant mixing between the chiral superpartners $(\widetilde{t}_L, \widetilde{t}_R), (\widetilde{b}_L. \widetilde{b}_R)\text{, and } (\widetilde{\tau}_L, \widetilde{\tau}_R)$. We will concentrate on how the mass of the stop quark, \st evolves in the MSSM. The are many contributions to the \st mass. Given many contributions to the top squark mass such as; squared-mass terms, 4-vertex interactions terms with the up-type Higgs, the 3-vertex interactions with the down-type Higgs, and scalar potential couplings. Accounting for all of these contributions, we have a square-mass matrix for the top squarks, 
+
+\begin{equation}
+\mathcal{L}_{\text{stop masses}}=-
+\begin{bmatrix}
+\st^*_L & \st^*_R \\
+\end{bmatrix}
+\boldsymbol{m_{\st}^2}
+\begin{bmatrix}
+\st_L \\
+\st_R \\
+\end{bmatrix}
+\end{equation}
+
+where 
+
+\begin{equation}
+\boldsymbol{m_{\st}^2}=
+\begin{bmatrix}
+m_{Q_3}^2+m_t^2+(\frac{1}{2}-\frac{2}{3}sin^2\theta_W)cos(2\beta)m_Z^2 & v(a_t^*sin\beta-\mu y_tcos\beta) \\
+v(a_tsin\beta-\mu^*y_tcos\beta) & m^2_{\overline{u}_3} +m_t^2+(\frac{2}{3}sin^2\theta_W)cos(2\beta)m^2_Z \\ 
+\end{bmatrix}.
+\end{equation}
+
+This is a hermitian matrix and can be diagonalized to give eigenstates $\st_1$ and $\st_2$ which are linear combinations of the left and right-handed \st, see fig. \ref{StopMass}. Now we get the eigenvalues for the mass states as $m_{\st_1}^2<m_{\st_2}^2$. From this models predict that the $\st_1$ is the lightest squark. 
+
+\section{Supersymmetry Searches}
+The SM of particle physics has been a powerful model for predicting interactions between quarks, leptons, and force carriers. With an accurate prediction for precision measurements, but has some faults such as, the Hierarch problem, dark matter, and a Grand Unified Theory. We have seen that including a supersymmetric theory can allow for possible solutions: a dark matter candidate as the LSP, bosonic-fermionic loop corrections for the Higgs boson mass, and a unification of the fundamental forces at large energies. Then once investigating the theory of supersymmetry we were able to determine that the top squark would be the light squark. Which allows us to develop multiple searches for this proposed theory. 

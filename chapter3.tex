@@ -4,15 +4,21 @@
 \section{Introduction}
 \label{sec:cmsIntro}
 
-Located near Geneva, switzerland as part of the CERN collaboration. LHC provides proton beams
+the CMS detector is a particle detector as part of the LHC which is located near Geneva, Switzerland as part of the CERN collaboration. The CMS detector is 21.6 m long, 15 m diameter, and 14,000 tons and is used to detect many different species of particles. It is separated into layers that, from the interaction vertex outward are, the silicon tracker, Electromagnetic Calorimeter (ECAL), Hadronic Calorimeter (HCAL), superconducting solenoid, and the muon chanbers, [Add a plot reference.]
+
+LHC provides proton beams
 
 General CMS facts. What kind of particles is it meant to detect? What are the subdetectors? Tracker, ECAL, HCAL, superconducting solenoid, muon chambers
 
 \section{Silicon Tracker}
 \label{sec:Tracker}
 
+the silicon pixel detector is the closest detector to the interaction vertex and has the highest particle flux at $10^7/cm^2/s$ at $r\equiv10$ cm. Here we have three barrel layers (BPIX) and two endcap layers (FPIX) of pixels which are $100\times150 \mu m^2$ for the phase 1 upgrade. From $20<r<100$ cm there is a silicon microstrip detector. This has a cell size ranging from $10 cm\times80 \mu m$ to $25 cm\times 180 \mu m$ since the particle flux decreases further away from the vertex, [MAYBE ANOTHER FIGURE]. The Inner Tracking System includes both the pixel tracker and the silicon microstrip tracker. It has a resolution of $23-24 \mu$m in $r-\phi$ and $23 \mu$m in $z$ for the microstrip tracker and $9.4 \mu$m in $r-\phi$ and $20-45 \mu$m in $z$ for the pixel tracker. 
+
 \subsection{Pixel Detector}
 \label{subsec:Pixel}
+
+The pixel detector is a 1 meter long silicon pixel detector. It contains two layers, a silicon layer and a readout chip that is bump bonded to the pixels. The silicon pixel system is set up as a reverse p-n junciton, where the pixels are in the n-type region. As a charged particle travels through the silicon it creates electron-hole pairs. A voltage difference is applied to the silicon such that the electrons will deposit onto the pixels. Since the detector is inside of the magnetic field, a lorentz drift will cause the electrons to reach more than one pixel and increase the resolution of the detector. As the pixel system continues to be irradiated with large quantities of particles the voltage in the silicon decreases. This will lead to less charge sharing between the pixels and a decrease in resolution of particle locations. The pixel upgrade has been tested to withstand the expected radiation from collisions until the phase 2 upgrade in 2025. 
 
 What is it?
 Newly installed pixel detector. Larger particle flux and data rate. What is the design of the modules? How do they work?
@@ -26,19 +32,27 @@ How is it different from the pixels?
 \section{Electromagnetic Calorimeter}
 \label{sec:ECAL}
 
+The ECAL is a homogeneous calorimeter made out of 61200 lead tungstate $(\text{PbWO}_4)$ crystals in the barrel and 7324 crystals in each endcap. An ECAL uses electromagnetic showers to detect charged particles or photons that interact electromagnetically. Electrons traveling through the material will radiate a photon via bremsstrahlung. A photon will pair produce two electrons. Combining these two processes leads to electromagnetic showers as the particles travel through the detector. The process will continue until a critical energy is reached such that an electron cannot radiate an will then lose energy via collisions. The resulting light is recorded by silicon avalanche photodiode (vaccuum phototriodes) in the barrel (endcap). 
+
 What kinds of particles does this detect? Mechanism?
 
 \section{Hadronic Calorimeter}
 \label{sec:HCAL}
+
+The HCAL is a hermetic calorimeter consisting of alternating layers of brass as the absorber material and a scintillator. Brass is chosen since it is non-magnetic and has a relatively short interaction length. In the scintillator, a portion of the energy from the hadron in converted into visible light which is then measured by a hybrid photodiode tube to measure the energy. 
 
 What kinds of particles does this detect? Mechanism?
 
 \section{Superconducting solenoid}
 \label{sec:Solenoid}
 
+Containing all of this is the superconducting solenoid which is 12.6 m long and a 5.9 m radius. The field strength is 3.8 T which has a stored energy of approximately 2.7 GJ. The magnet is designed such that a muon with momentum, $p=1$ TeV, will have a momentum resolution of $10\%$.
+
 Iron yoke? how strong? Purpose?
 
 \section{Muon Chambers}
 \label{sec:muCham}
+
+The muon system has three main detection systems that are use to identify a muon. In the barrel region, drift tube (DT) chambers are used since the neutron background, muon rate, and magnetic field are all small. In the endcaps, cathode strip chambers (CSC) are used since the relative values stated before are much larger. Included throughout the whole system are resistive plate chambers (RPC). A DT chamber is an array of anode wires in a gaseous medium where the walls are cathodes. A muon passing through the gas will ionize some atoms which are then forced towards the anode wires by an electric field. The drift time of the electrons con then be calculated to within a couple of ns such that a good spatial resolution is achieved. The CSC system uses the same concept as the DT system, but also includes a measurement of the ions that follow the electric field to the cathode strips. In this system the anode wires and the cathode strips are perpendicular so the collected charge on both provide a accurate position measurement. The RPC system contains two parallel plates, anode and cathode, the charge is measured by external metallic strips that can quickly measure the momentum of a muon and decide if the event is worth triggering.
 
 What kinds of particles does this detect? Mechanism?
