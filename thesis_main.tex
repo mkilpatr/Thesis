@@ -1,9 +1,11 @@
 \documentclass[12pt]{ruthesis}
+\usepackage{import}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{braket}
 \usepackage{latexsym}
 \usepackage{graphics}
+\usepackage{multirow}
 \usepackage{slashed}
 \usepackage{epsfig,epsf,rotating}
 \usepackage{subfigure}
@@ -13,7 +15,16 @@
 \usepackage{color}
 \usepackage{bm}
 \usepackage{pdfpages}
-\graphicspath{ {./plots/} }
+\usepackage{adjustbox}
+\usepackage[showframe=false]{geometry}
+\usepackage{changepage}
+\usepackage{longtable}
+\usepackage[onehalfspacing]{setspace}               
+\usepackage[T1]{fontenc}                            
+\usepackage[utf8, latin1]{inputenc}                 
+\usepackage{graphicx}
+
+\graphicspath{ {./plots/} {.../Research/SUSY/2019/} }
 \newtheorem{proposition}{Proposition}
 
 \setcounter{secnumdepth}{3} %numbering for subsubsections

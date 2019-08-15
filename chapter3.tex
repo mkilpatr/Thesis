@@ -138,7 +138,7 @@ The ability to identify secondary vertices is essential for search for the top s
 Initial-state radiation (ISR) may be clustered into one of the large-$R$ jets clustered with a distance parameter of $0.8$. We use the larger radius jets to be sensitive to ISR with gluon splitting. The ISR jet is identified as being the hardest of the large-$R$ jets with $p_T>200$ GeV which fails the loose b-tagging working point and is not identified as a top or W. 
 
 \subsection{Soft b-tagging} \label{softB}
-This search targets also models that produce very soft bottom or charm quarks. A typical $p_T$ spectrum of the \bquark quarks in three T2fbd signal models is shown in fig. 4. A large fraction of events contain b quarks with $p_T$ below the 20 GeV jet-$p_T$ threshold which may thus fail to be reconstructed as jets or become b-tagged. Identification of these soft quarks improves our ability to separate potential signal events from the SM background. We therefore aim to identify b/c quarks based on the presence of a secondary vertex (SV) reconstructed using the Inclusive Vertex Finder (IVF) algorithm. Additional requirements on SV observables are applied to suppress the background originating from light quarks. These selected SV may be referred to as soft b tags and are constructed to be orthogonal to the jets and b-tagged jet used in this analysis. 
+This search targets also models that produce very soft bottom or charm quarks. A typical $p_T$ spectrum of the \bquark quarks in three T2fbd signal models is shown in fig. . A large fraction of events contain b quarks with $p_T$ below the 20 GeV jet-$p_T$ threshold which may thus fail to be reconstructed as jets or become b-tagged. Identification of these soft quarks improves our ability to separate potential signal events from the SM background. We therefore aim to identify b/c quarks based on the presence of a secondary vertex (SV) reconstructed using the Inclusive Vertex Finder (IVF) algorithm. Additional requirements on SV observables are applied to suppress the background originating from light quarks. These selected SV may be referred to as soft b tags and are constructed to be orthogonal to the jets and b-tagged jet used in this analysis. 
 
 The requirements on each SV to pass the soft b-tagging definition are:
 \begin{itemize}
@@ -151,4 +151,78 @@ The requirements on each SV to pass the soft b-tagging definition are:
  \end{itemize}
  
  This definition leads to $\approx 50 \%$ efficiency to identify a soft b/c quark, for $\approx3\%$ fake rate.
+ 
+ \subsection{Lepton Identification}\label{EleMuonID}
+ There are two sets of selection criteria used in the analysis for electrons and muons. A set of veto criteria are used to efficiently reject events with an isolated electron of muon in the search region, while more stringent requirements are imposed in some control regions that require high purity samples of isolated leptons.
+ 
+ Electron candidates are identified via a set of selection criteria established by the EGamma POG based on "Spring16" simulated samples in the 25ns bunch spacing scenario. The corresponding thresholds imposed on relevant variables are summarized in Table . The "Veto" working point is used to keep events with electrons out of the final search region. The "Medium" working point is used for the selection of leptonic control regions. 
+ 
+ \begin{table}
+ \centering
+ \begin{tabular}{|*{5}{c|}}
+ \hline
+ \multirow{2}{*}{} & \multicolumn{2}{c}{Veto Working Point} & \multicolumn{2}{c}{Medium Working Point} \\
+ \hline
+ & Barrel & Endcap & Barrel & Endcap \\
+\hline
+$\sigma_{i\eta i \eta} (\text{full} 5 \times 5) <$ & 0.0114 & 0.0352 & 0.0101 & 0.0283 \\
+$|\Delta\eta_{\text{in}}|<$ & 0.0152 & 0.0113 & 0.0103 & 0.00733 \\
+$|\Delta\phi_{\text{in}}|<$ & 0.216 & 0.237 & 0.0336 & 0.114 \\
+$\frac{h}{E} <$ & 0.181 & 0.116 & 0.0876 & 0.0678 \\
+$\frac{1}{E}-\frac{1}{p}<$ & 0.207 & 0.174 & 0.0174 & 0.0898 \\
+$|d_0|<$ & 0.0564 & 0.222 & 0.0118 & 0.0739 \\
+$|d_z|<$ & 0.472 & 0.921 & 0.373 & 0.602 \\
+$N(\text{expected missing inner hits})\leq$ & 2 & 3 & 2 & 1 \\
+Conversion veto & pass & pass & pass & pass \\
+\hline
+ \end{tabular}
+ \caption{Electron identification requirements, defined separately for electrons in the ECAL barrel and endcap regions. The tabulated numbers for each working point are the thresholds applied to the corresponding quantities in the first column.}
+ \label{ElectronID}
+ \end{table}
+ 
+ The loose muon definition recommended by the Muon POG is used for the purposes of the muon veto. A loose muon is identified as a PF muon and can be either a global muon or an arbitrated tracker muon. Only candidates with transverse (longitudinal) impact parameter $|d_0|<0.2$ cm $(|d_z|<0.5 \text{cm},)$ with respect to the primary vertex, are considered. The muon selection in leptonic control regions relies on the medium working point defined by the Muon POG for higher purity. The medium muon requirements are summarized in Table . They are applied in addition to the loose muon requirements. Selected muons are required to have transverse (longitudinal) impact parameters $|d_0|<0.05$ cm $(|d_z|<0.1 \text{cm}),$ with respect to the primary vertex. 
+
+\begin{table}
+ \centering
+ \begin{tabular}{|*{2}{c|}}
+ \hline
+Loose muon selection & yes \\ 
+Fraction of valid tracker hits & $> 0.8$ \\
+\hline
+\hline
+\multicolumn{2}{c}{In addition, either of the following sets of requirements:} \\
+\hline
+Global muon & yes \\
+Normalized global-track $\chi^2$ & $< 3$ \\
+Tracker-Standalone position match & $< 12$ \\
+Track kink finder & $< 20$ \\
+Segment compatibility & $>0.303$ \\
+\hline
+\multicolumn{2}{c}{OR} \\
+\hline
+Segment compatibility & $> 0.451$ \\
+\hline
+ \end{tabular}
+ \caption{}
+ \label{MuonID}
+ \end{table}
+ 
+ The isolation requirements used in the selection of electrons and muons aim to achieve a high efficiency for correctly identifying events that contain prompt leptons (i.e. leptons that do not originate from heavy flavor decays) in the boosted topologies and busy hadronic environments that are typical for this analysis. They are based on the mini-isolation quantity, which is a measure of the lepton's local isolation. Mini-isolation is computed as the summed $p_T$ of PF candidates within a $\Delta R$ cone centered on the lepton candidate. The cone size depends on the lepton $p_T$ as indicated in Table  and is intended to be small enought to reduce overlaps with jets in the event while also being large enough to contain the products of leptonic b-decays. Higher values of instantaneous luminosity result in a reduced efficiency for the isolation requirement due to an increase in the number of particles originating from additional (pileup) interactions that enter the isolation cone. In order to minimize this effect, the calculated isolation quantity is corrected for the estimated contribution from pileup particles. The correction is applied by subtracting the product of the estimated average pileup density $(\rho)$ in the event with an effective area, $A_{eff}$, related to the geometrical size of the isolation cone. The residual dependence of the isolation quantity on $\rho$ for a given cone size is accounted for in $A_{eff}$, which is determined by taking the slope of a linear fit to the uncorrected isolation as a function of $\rho$. The correction factor is $\eta$-dependent, and calibrated separately for charged particles, neutral hadrons, and photons contributing to the isolation. 
+ 
+ Electrons and muons are considered to fulfill the veto isolation criteria if their mini-isolation is less than 0.1 or 0.2 respectrively, relative to the lepton $p_T$. The same thresholds are applied on the relative mini-isolation for electrons and muons in control samples. 
+ 
+\subsection{Tau Identification}\label{TauID}
+The Tau ID has been studies extensively. After multiple studies with looked into the custum MVA of the Analysis Note [] and the IsoTrack methods and Tau POG MVA method of Identifying Taus. 
+
+\section{Search Strategy}\label{BaselineSearch}
+\subsection{Trigger}
+
+
+\subsection{Baseline Selection} \label{Baseline}
+
+Following the same methods as above, we have a loose pre-selection which is refered to as the baseline selection. This will place a selection on jets and \met which is used to eliminate a large fraction of background events. We define the baseline selection as:
+
+\begin{itemize}
+	\item $N_{e/\mu}, (p_T>5 \GeV, |\eta|<2.4)$
+\end{itemize}
 
