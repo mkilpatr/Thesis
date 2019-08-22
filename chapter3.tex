@@ -15,7 +15,7 @@ The Compact Muon Solenoid (CMS) is a particle detector as part of the Large Hadr
 
 The CMS detector is designed to detect the decay products of most of the particles of the SM, except for neutrinos since they are weakly interacting and will almost certainly pass through the entire earth without an interaction. A defining feature of CMS is the 12.6-m long, 5.9 m inner diameter, 3.8 T superconducting solenoid. This is used to bend the trajectory of charged particles thoughout the detector, such that we can reconstruct the momentum and charge of the particles. The LHC provides a 13 TeV proton-proton beam (4.5 TeV heavy ion) beam with a bunch crossing every 25 ns (50 ns) to produce interaction at luminosities of $2.5\times10^{34} \cm^{-2}s^{-1}$. 
 
-The coordinate system of CMS has the origin at the nominal collision point in the center of the detector. The $y$-axis points vertically upward, $x$-axis points radially inward toward the center of the LHC, and $z$-axis points along the beam directions towards the Jura mountains from LHC Point 5. The polar angle $\theta$ is measured from the $z$-axis and the azimuthal angle $\phi$ is measured in the $x-y$ plane from the $x$-axis. The pseudorapidity of a particle is defined as $\eta=-\ln\tan(\theta/2)$ where two notable values are $\eta=0$ at $\theta=\pi/2$ and $\eta=\inf$ at $\theta=0$. The transverse components of momentum, $p_T$, and energy, $E_T$, are computed using the $x$ and $y$ components of the particles. 
+The coordinate system of CMS has the origin at the nominal collision point in the center of the detector. The $y$-axis points vertically upward, $x$-axis points radially inward toward the center of the LHC, and $z$-axis points along the beam directions towards the Jura mountains from LHC Point 5. The polar angle $\theta$ is measured from the $z$-axis and the azimuthal angle $\phi$ is measured in the $x-y$ plane from the $x$-axis. The pseudorapidity of a particle is defined as $\eta=-\ln\tan(\theta/2)$ where $\theta$ is the angle between the particle momentum and the positive direction of the beam axis, two notable values are $\eta=0$ at $\theta=\pi/2$ and $\eta=\inf$ at $\theta=0$. Pseudorapidity is quite useful since the difference of pseudorapidities is Lorentz invariant. The transverse components of momentum, $p_T$, and energy, $E_T$, are computed using the $x$ and $y$ components of the particles. 
 
 \subsection{Tracker}
 \label{sec:Tracker}
@@ -96,4 +96,9 @@ The DT consists on 250 chambers in 4 barrel layers at a radii of 4.0, 4.9, 5.9, 
 The CSC system uses the same concept as the DT system, but also includes a measurement of the ions that follow the electric field to the cathode strips. In this system the anode wires and the cathode strips are perpendicular so the collected charge on both provide a accurate position measurement. 
 
 The RPC system contains two parallel plates, anode and cathode, the charge is measured by external metallic strips that can quickly measure the momentum of a muon and decide if the event is worth triggering.
+
+\section{Detector Methods}
+\label{sec:DetMethods}
+
+Using the objects and information from each of the subdetectors we can measure the important information required for the \st search. Since the search is dependent on large missing energies it is dependent on measuring all forms of energy in the standard model and checking for any inefficiencies. 
 
