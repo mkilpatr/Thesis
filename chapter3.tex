@@ -58,14 +58,22 @@ The data, from the pixels, is sent via optical fiber to the FED where is decoded
 \label{subsec:Strips}
 
 The silicon strips have a 200 m$^2$ active region with 15,148 modules that are distributed in 10 barrel layers and $9+3$ endcap disks.
-This has a cell size ranging from $10 \cm \times80$ \mum{} to $25 \cm \times 180$ \mum{} since the particle flux decreases further away from the vertex, [MAYBE ANOTHER FIGURE]. It has a resolution of $23-24$ \mum{} in $r-\phi$ and $23$ \mum{} in $z$ for the microstrip tracker
+This has a cell size ranging from $10 \text{ cm } \times80$ \mum{} to $25 \text{ cm } \times 180$ \mum{} since the particle flux decreases further away from the vertex, Fig. \ref{SiliconStrips}. It has a resolution of $23-24$ \mum{} in $r-\phi$ and $23$ \mum{} in $z$ for the microstrip tracker.
 
-How is it different from the pixels?
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.75\textwidth]{StripTrackerModule.png}
+	\includegraphics[width=0.75\textwidth]{StripTrackerModuleAngled.png}
+	\caption[Strip Tracker Module]{The top module is a single sided reverse p-n silicon sensor. The bottom is two silicon sensors mounted back-to-back at a 100 mrad angle.}
+ 	\label{SiliconStrips} 
+\end{figure}
+
+There are two types of silicon strip module, see Fig. \ref{SiliconStrips}, which are in the layour shown in Fig. \ref{CMSTracker}. The orange modules are single sided reverse p-n silicon sensors, while the blue modules are double sided by having two single modules mounted back-to-back at a 100 mrad angle. This improves the 3D tracking, but unlike the pixel detector this is an analog readout system. 
 
 \subsection{Electromagnetic Calorimeter}
 \label{sec:ECAL}
 
-The ECAL is a homogeneous calorimeter made out of 61,200 lead tungstate $(\text{PbWO}_4)$ crystals in the barrel and 7,324 crystals in each endcap. The barrel region has an inner radius of 129 cm and covers a pseudorapidity range of $0<|\eta|<1.479$. The encaps are 314 cm from the interaction point and cover a range $1.479<|\eta|<3.0$ in pseudorapidity. Lead tungstate was chosen for the crystals since it has a short radiation length, $X_0=0.89 \cm$, fast with 80\% of the light being emitted within 25 ns, and it's radiation hard. Each crystal in the barrel has a cross-section of $\approx22\times22 \text{mm}^2$ and length of 230 mm, while the endcap crystals are $28.6\times28.6 \text{mm}^2$ and length of 220 mm corresponding to $25.8X_0$ and $24.7X_0$, respectively. An ECAL uses electromagnetic showers to detect particles that interact electromagnetically. Electrons traveling through the material will radiate a photon via bremsstrahlung. A photon will pair produce two electrons. Combining these two processes leads to electromagnetic showers as the particles travel through the detector. The process will continue until a critical energy is reached such that an electron cannot radiate any further and will then lose energy via collisions. The resulting light is recorded by silicon avalanche photodiode (vaccuum phototriodes) in the barrel (endcap). 
+The ECAL is a homogeneous calorimeter made out of 61,200 lead tungstate $(\text{PbWO}_4)$ crystals in the barrel and 7,324 crystals in each endcap. The barrel region has an inner radius of 129 cm and covers a pseudorapidity range of $0<|\eta|<1.479$. The encaps are 314 cm from the interaction point and cover a range $1.479<|\eta|<3.0$ in pseudorapidity. Lead tungstate was chosen for the crystals since it has a short radiation length, $X_0=0.89 \text{ cm }$, fast with 80\% of the light being emitted within 25 ns, and it's radiation hard. Each crystal in the barrel has a cross-section of $\approx22\times22 \text{ mm}^2$ and length of 230 mm, while the endcap crystals are $28.6\times28.6 \text{ mm}^2$ and length of 220 mm corresponding to $25.8X_0$ and $24.7X_0$, respectively. An ECAL uses electromagnetic showers to detect particles that interact electromagnetically. Electrons traveling through the material will radiate a photon via bremsstrahlung then the photon will pair produce two electrons. Combining these two processes leads to electromagnetic showers as the particles travel through the detector. The process will continue until a critical energy is reached such that an electron cannot radiate any further and will then lose energy via collisions. The hadrons that are created in the collisions will also interact in this way, but because of their large mass the penetrate through the entire ECAL. The resulting light is recorded by silicon avalanche photodiode (vaccuum phototriodes) in the barrel (endcap). 
 
 \subsection{Hadronic Calorimeter}
 \label{sec:HCAL}
@@ -82,7 +90,7 @@ Surrounding most of this is the superconducting solenoid which is 12.6 m long wi
 \subsection{Muon Chambers}
 \label{sec:muCham}
 
-The muon system has three main detection systems that are used to identify a muon candidate. In the barrel region, drift tube (DT) chambers are used since the neutron background, muon rate, and magnetic field are all small. In the endcaps, cathode strip chambers (CSCs) are used since the relative values stated before are much larger. Included throughout the whole system are resistive plate chambers (RPC). 
+The muon system has three main detection systems that are used to identify a muon candidate. In the barrel region, drift tube (DT) chambers are used since the neutron background, muon rate, and magnetic field are all small. In the endcaps, cathode strip chambers (CSCs) are used since the relative values stated before are much larger. The neutron background is largely radially dependent so the CSCs will recieve a larger flux, while the muon rate is dominated by low $p_T$ muons which will interact in the endcap regions. Included throughout the whole system are resistive plate chambers (RPC). 
 
 \begin{figure}
  	\centering
@@ -93,12 +101,9 @@ The muon system has three main detection systems that are used to identify a muo
 
 The DT consists on 250 chambers in 4 barrel layers at a radii of 4.0, 4.9, 5.9, and 7.0 m from the beam axis. A DT chamber is an array of anode wires in a gaseous medium where the walls are cathodes. A muon passing through the gas will ionize some atoms which are then forced towards the anode wires by the electric field. The drift time of the electrons can then be calculated to within a couple of ns such that a good spatial resolution is achieved. The maximum designed drift length is 2.0 cm. Each station of the DT will give muon vector for each candidate with a $\phi$ precision of 100 \mum{} in postion and 1 mrad in direction. 
 
-The CSC system uses the same concept as the DT system, but also includes a measurement of the ions that follow the electric field to the cathode strips. In this system the anode wires and the cathode strips are perpendicular so the collected charge on both provide a accurate position measurement. 
-
-The RPC system contains two parallel plates, anode and cathode, the charge is measured by external metallic strips that can quickly measure the momentum of a muon and decide if the event should be triggered.
+The CSC system uses the same concept as the DT system, but also includes a measurement of the ions that follow the electric field to the cathode strips. In this system the anode wires and the cathode strips are perpendicular so the collected charge on both provide a accurate position measurement. The RPC system contains two parallel plates, anode and cathode, the charge is measured by external metallic strips that can quickly measure the momentum of a muon and decide if the event should be triggered.
 
 \section{Detector Methods}
 \label{sec:DetMethods}
 
-Using the objects and information from each of the subdetectors we can measure the important information required for the \st{} search. Since the search is dependent on large missing energies it is dependent on measuring all forms of energy in the standard model and checking for any inefficiencies. 
-
+Using the objects and information from each of the subdetectors we can measure the important information required for doing innovative physics analysis, such as, the \st{} search. Since the search is dependent on large missing energies it is dependent on measuring all forms of energy in the standard model and checking for any inefficiencies. The CMS detector is designed to be an all encompassing detector to measure multiple processes in the SM and beyond. 
