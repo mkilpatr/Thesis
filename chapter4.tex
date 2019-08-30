@@ -90,13 +90,13 @@ Initial-state radiation (ISR) may be clustered into one of the large-$R$ jets cl
  \subsection{Lepton Identification}\label{EleMuonID}
  There are two sets of selection criteria used in the analysis for electrons and muons. A set of veto criteria are used to efficiently reject events with an isolated electron of muon in the search region, while more stringent requirements are imposed in some control regions that require high purity samples of isolated leptons.
  
- Electron candidates are identified via a set of selection criteria established by the EGamma POG based on "Spring16" simulated samples in the 25ns bunch spacing scenario. The corresponding thresholds imposed on relevant variables are summarized in Table . The "Veto" working point is used to keep events with electrons out of the final search region. The "Medium" working point is used for the selection of leptonic control regions. 
+ Electron candidates are identified via a set of selection criteria established by the EGamma POG based on "Spring16" simulated samples in the 25ns bunch spacing scenario. The corresponding thresholds imposed on relevant variables are summarized in Table \ref{ElectronID}. The "Veto" working point is used to keep events with electrons out of the final search region. The "Medium" working point is used for the selection of leptonic control regions. 
  
  \begin{table}
  \centering
  \begin{tabular}{|*{5}{c|}}
  \hline
- \multirow{2}{*}{} & \multicolumn{2}{c}{Veto Working Point} & \multicolumn{2}{c}{Medium Working Point} \\
+ \multirow{2}{*}{} & \multicolumn{2}{c}{Veto Working Point} & \multicolumn{2}{|c|}{Medium Working Point} \\
  \hline
  & Barrel & Endcap & Barrel & Endcap \\
 \hline
@@ -111,11 +111,11 @@ $N(\text{expected missing inner hits})\leq$ & 2 & 3 & 2 & 1 \\
 Conversion veto & pass & pass & pass & pass \\
 \hline
  \end{tabular}
- \caption[Electron Identification Parameters]{Electron identification requirements, defined separately for electrons in the ECAL barrel and endcap regions. The tabulated numbers for each working point are the thresholds applied to the corresponding quantities in the first column.}
+ \caption[Electron Identification Parameters]{Electron identification requirements, defined separately for electrons in the ECAL barrel and endcap regions. The tabulated numbers for each working point are the thresholds applied to the corresponding quantities in the first column. THESE NUMBERS NEED TO BE UPDATED!!!}
  \label{ElectronID}
  \end{table}
  
- The loose muon definition recommended by the Muon POG is used for the purposes of the muon veto. A loose muon is identified as a PF muon and can be either a global muon or an arbitrated tracker muon. Only candidates with transverse (longitudinal) impact parameter $|d_0|<0.2$ cm $(|d_z|<0.5 \text{cm},)$ with respect to the primary vertex, are considered. The muon selection in leptonic control regions relies on the medium working point defined by the Muon POG for higher purity. The medium muon requirements are summarized in Table . They are applied in addition to the loose muon requirements. Selected muons are required to have transverse (longitudinal) impact parameters $|d_0|<0.05$ cm $(|d_z|<0.1 \text{cm}),$ with respect to the primary vertex. 
+ The loose muon definition recommended by the Muon POG is used for the purposes of the muon veto. A loose muon is identified as a PF muon and can be either a global muon or an arbitrated tracker muon. Only candidates with transverse (longitudinal) impact parameter $|d_0|<0.2$ cm $(|d_z|<0.5 \text{cm},)$ with respect to the primary vertex, are considered. The muon selection in leptonic control regions relies on the medium working point defined by the Muon POG for higher purity. The medium muon requirements are summarized in Table \ref{MuonID}. They are applied in addition to the loose muon requirements. Selected muons are required to have transverse (longitudinal) impact parameters $|d_0|<0.05$ cm $(|d_z|<0.1 \text{cm}),$ with respect to the primary vertex. 
 
 \begin{table}
  \centering
@@ -124,8 +124,7 @@ Conversion veto & pass & pass & pass & pass \\
 Loose muon selection & yes \\ 
 Fraction of valid tracker hits & $> 0.8$ \\
 \hline
-\hline
-\multicolumn{2}{c}{In addition, either of the following sets of requirements:} \\
+\multicolumn{2}{|c|}{In addition, either of the following sets of requirements:} \\
 \hline
 Global muon & yes \\
 Normalized global-track $\chi^2$ & $< 3$ \\
@@ -133,21 +132,21 @@ Tracker-Standalone position match & $< 12$ \\
 Track kink finder & $< 20$ \\
 Segment compatibility & $>0.303$ \\
 \hline
-\multicolumn{2}{c}{OR} \\
+\multicolumn{2}{|c|}{OR} \\
 \hline
 Segment compatibility & $> 0.451$ \\
 \hline
  \end{tabular}
- \caption[Muon Identification Parameters]{The requirements for a particle trajectory to be tagged as a muon. }
+ \caption[Muon Identification Parameters]{The requirements for a particle trajectory to be tagged as a muon. THESE NUMBERS NEED TO BE UPDATED!!!}
  \label{MuonID}
  \end{table}
  
- The isolation requirements used in the selection of electrons and muons aim to achieve a high efficiency for correctly identifying events that contain prompt leptons (i.e. leptons that do not originate from heavy flavor decays) in the boosted topologies and busy hadronic environments that are typical for this analysis. They are based on the mini-isolation quantity, which is a measure of the lepton's local isolation. Mini-isolation is computed as the summed \pt of PF candidates within a $\Delta R$ cone centered on the lepton candidate. The cone size depends on the lepton \pt as indicated in Table  and is intended to be small enought to reduce overlaps with jets in the event while also being large enough to contain the products of leptonic b-decays. Higher values of instantaneous luminosity result in a reduced efficiency for the isolation requirement due to an increase in the number of particles originating from additional (pileup) interactions that enter the isolation cone. In order to minimize this effect, the calculated isolation quantity is corrected for the estimated contribution from pileup particles. The correction is applied by subtracting the product of the estimated average pileup density $(\rho)$ in the event with an effective area, $A_{eff}$, related to the geometrical size of the isolation cone. The residual dependence of the isolation quantity on $\rho$ for a given cone size is accounted for in $A_{eff}$, which is determined by taking the slope of a linear fit to the uncorrected isolation as a function of $\rho$. The correction factor is $\eta$-dependent, and calibrated separately for charged particles, neutral hadrons, and photons contributing to the isolation. 
+% The isolation requirements used in the selection of electrons and muons aim to achieve a high efficiency for correctly identifying events that contain prompt leptons (i.e. leptons that do not originate from heavy flavor decays) in the boosted topologies and busy hadronic environments that are typical for this analysis. They are based on the mini-isolation quantity, which is a measure of the lepton's local isolation. Mini-isolation is computed as the summed \pt of PF candidates within a $\Delta R$ cone centered on the lepton candidate. The cone size depends on the lepton \pt as indicated in Table  and is intended to be small enought to reduce overlaps with jets in the event while also being large enough to contain the products of leptonic b-decays. Higher values of instantaneous luminosity result in a reduced efficiency for the isolation requirement due to an increase in the number of particles originating from additional (pileup) interactions that enter the isolation cone. In order to minimize this effect, the calculated isolation quantity is corrected for the estimated contribution from pileup particles. The correction is applied by subtracting the product of the estimated average pileup density $(\rho)$ in the event with an effective area, $A_{eff}$, related to the geometrical size of the isolation cone. The residual dependence of the isolation quantity on $\rho$ for a given cone size is accounted for in $A_{eff}$, which is determined by taking the slope of a linear fit to the uncorrected isolation as a function of $\rho$. The correction factor is $\eta$-dependent, and calibrated separately for charged particles, neutral hadrons, and photons contributing to the isolation. 
  
  Electrons and muons are considered to fulfill the veto isolation criteria if their mini-isolation is less than 0.1 or 0.2 respectrively, relative to the lepton \pt. The same thresholds are applied on the relative mini-isolation for electrons and muons in control samples. 
  
 \subsection{Tau Identification}\label{TauID}
-The Tau ID has been studied extensively. After multiple studies which looked into the custum MVA similar to the one used in [], the IsoTrack methods, and Tau POG MVA method of Identifying Taus. The methods which provide the best improvement to the efficiency of identifying taus with a small fake rate is the combination of IsoTrack and Tau POG MVA. With the inclusion of the combined method for identifying hadronically decaying taus the efficiency should improve greatly. 
+The Tau ID has been studied extensively. After multiple studies which looked into the custum MVA \cite{roe_boosted_2004, hoecker_tmva_2007} similar to the one used in Ref. \cite{noauthor_search_nodate}, the cut-based IsoTrack method, and Tau POG MVA method of Identifying Taus. The methods which provide the best improvement to the efficiency of identifying taus with a small fake rate is the combination of IsoTrack and Tau POG MVA. With the inclusion of the combined method for identifying hadronically decaying taus, the veto percentage is $\approx29.0\%(7.2\%)$ with a efficiency of the veto efficiency of $\approx49.1\%(22.6\%)$ for SM background (signal), see Appendix. BLANK. 
 
 \section{Search Strategy}\label{BaselineSearch}
 
@@ -169,16 +168,18 @@ There is an addition ecalBadCalibFilter for 2017 and 2018 eras only.
 
 Following the same methods as above, we have a loose pre-selection which is refered to as the baseline selection. This will place a selection on jets and \met which is used to eliminate a large fraction of background events. We define the baseline selection as:
 \begin{itemize}
-	\item $N_{e,(\mu)} = 0, (\pt>5$ \GeV, $|\eta|<2.5(2.4))$
-	\item $N_{iso} = 0, (\pt > 5 (10)$ \GeV, ISO $< 0.2(0.1) \text{ for electron/muons(pions)})$
-	\item $N_{tau} = 0, (\pt > 20$ \GeV, $|\eta|<2.4)$
+	\item $N_{e,(\mu)} = 0, (\pt>5$ \GeV, $|\eta|<2.5(2.4), \text{miniISO}<0.1(0.2))$
+	\item $N_{isoTrk} = 0, (\pt > 5 (10)$ \GeV, ISO $< 0.2(0.1) \text{ for electron/muons(pions)})$
+	\item $N_{tauPOG} = 0, (\pt > 20$ \GeV, $|\eta|<2.4)$, medium working point
 	\item $N_{j} \geq 2, (\pt >20$ \GeV, $|\eta|<2.4)$
 	\item $\met >250$ \GeV, to reach the plateau of the trigger efficiency
+	\item $\Ht>300$ \GeV
+	\item HEM Veto for part of 2018 data: $-3\leq\eta\leq-1.4, -1.57\leq\phi\leq-0.87$
 \end{itemize}
 In Addition to this, we allow for two separte sets of additional selections to apply to the low and high \dm{} search regions to further reduce background. The high \dm{} baseline selection includes the baseline selection and additionally,
 \begin{itemize}
 	\item $N_j\geq 5, (\pt >20$ \GeV, $|\eta|<2.4)$
-	\item $N_b\geq 1, (\pt >20$ \GeV, $|\eta|<2.4)$
+	\item $N_b\geq 1, (\pt >20$ \GeV, $|\eta|<2.4)$, medium DeepCSV
 	\item $\text{Min}[|\Delta\phi(\met,j_1)|,|\Delta\phi(\met,j_2)|,|\Delta\phi(\met,j_3)|,|\Delta\phi(\met,j_4)|]\equiv\Delta\phi_{1234}>0.5$, where $j_1, j_2, j_3, j_4$ are the four leading jets in $p_T$. This requirement is to reduce the QCD multijet background. 
 \end{itemize}
 Next, the low \dm{} baseline selection has the following addition selections,
@@ -189,4 +190,6 @@ Next, the low \dm{} baseline selection has the following addition selections,
 	\item $|\Delta\phi(\met,j_1)|>0.5, |\Delta\phi(\met,j_{2,3})|>0.15$, where $j_1,j_2,j_3$ are the three leading jets in \pt. 
 \end{itemize}
 \input{searchregions}
+
+\section{Search Regions}
 
