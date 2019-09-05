@@ -55,6 +55,15 @@ where $N_{MC}(1l)$ is the event count observed in the corresponding CR and $N_{M
 \subsection{Z Boson Decay to Neutrinos}
 \label{subsec:Znunu}
 
+An important source of background for the zero-lepton search is from events in which a \Z{} boson, produced in association with jets, decays to neutrinos that result in a significant amount of missing energy in the event. Two methods are traditionally used to estimate the \Znunu{} background. The first method makes use of a sample dominated by \Zll+jets events. This approach comes with the advantage of very similar kinematics (after correcting for the difference in acceptance between charged lepton pairs and pairs of neutrinos), but is statistically limited, especially in the tight search regions used in SUSY searches. The second method utilizes a $\gamma+$jets sample. The $\gamma+$jets process has a factor of 5 or more larger cross section than the \Zll+jets process, and has similar leading order Feynman diagrams to \Z+jets events. However, there are two main differences between the two processes that must be taken into account, namely, different quark-boson couplings and the fact that the \Z{} boson is very massive. Both of these effects become less important with higher boson \pt, which is the kinematic region we are probing with this search. The \met{} of the $\gamma+$jets process is calculated after removing the photon from the event to mimic the \Znunu{} process.
+
+Based on the above, we use a hybrid method to estimate the \Znunu{} background that makes use of both the $\gamma+$jets and the \Zll+jets processes. The photon and the dilepton system are removed from the events before calculating \met{} and other kinematic variables related to \met, and the modified \met{} is denoted by $\met^\gamma$ and $\met^{ll}$ for $\gamma+$jets and the \Zll+jets processes, respectively. We utilize the \Zll+jets sample to measure the normalization of the \Znunu{} process in different ranges of \nb{} and \nsv, andwe take advantage of the much higher statistics of the $\gamma+$jets sample to extract shape corrections. As discussed in Sec. , the good agreement we observe between data and simulation in the Lost Lepton background leads us to integrate the control regions used in the estimation of the \Znunu{} background in the number of $t$ and \W{} tags to increase the statistical power of the prediction. We then extrapolate into tagged regions using simulation, corrected with the appropriate $t$ and \W{} tagging data-to-simulation scale factors.
+
+The prediction of the \Znunu{} background is given by:
+\begin{equation}
+N_{pred}^{\Znunu}=N_{MC}^{\Znunu} \cdot R_Z \cdot S_\gamma
+\end{equation}
+
 Znunu: production of a Z boson that decays into two nuetrinos which are then missed by the detector. Can have jets from other quarks/gluons in the interaction
 
 \subsection{Quantum Chromodynamic Events}
