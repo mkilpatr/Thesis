@@ -83,6 +83,8 @@ The requirements on each SV to pass the soft b-tagging definition are:
 	 \item The \pt{} of the SV is less than 20 GeV.
 \end{itemize}
 
+CONFIRM THAT THIS IS CORRECT!!!!!!!
+
 \subsection{Initial-state Radiation}\label{ISRpt}
 
 Initial-state radiation (ISR) may be clustered into one of the large-$R$ jets clustered with a distance parameter, $\Delta R=0.8$. We use the larger radius jets to be sensitive to ISR with gluon splitting, when a jet radiates a qluon that pair produces two quarks. The ISR jet is identified as being the hardest of the large-$R$ jets with $\pt>200$ GeV which fails the loose b-tagging working point and is not identified as a top or W. 
@@ -192,8 +194,27 @@ Next, the low \dm{} baseline selection has the following addition selections,
 	\item $\met/\sqrt{H_{T}}\equiv S_{\met}>10$, where $H_T$ is calculated as the scalar sum of the \pt of jets with $\pt >20$ \GeV{} and $|\eta|<2.4.$
 	\item $|\Delta\phi(\met,j_1)|>0.5, |\Delta\phi(\met,j_{2,3})|>0.15$, where $j_1,j_2,j_3$ are the three leading jets in \pt. 
 \end{itemize}
-\input{searchregions}
 
 \section{Search Regions}
+
+After applying the baseline selection criteria, we categorize events in the search sample into exclusive search regions that exploit the kinematic properties of different signal topologies. 
+
+For the search regions that mainly target high \dm{} signal models, we define two event categories in \mtb, a variable defined as
+\begin{equation}
+\mtb\equiv
+\begin{cases}
+\begin{split}
+m_T(b,\met), &\nb=1 \\
+\text{Min}[m_T(b_1, \met),m_T(b_2,\met)], &\nb\geq2 \\
+\end{split}
+\end{cases}
+\end{equation}
+where $b_1, b_2$ are the two selected b-tagged jets with the highest values of the DeepCSV discriminator. In \ttbar{} events where one of the \W{} bosons undergoes a leptonic decay and the lepton is missed, leading to \met{}, the transverse mass of \met{} and the b-quark from the same top decay as the missed lepton has a kinematic endpoint at the mass of the top-quark. We therefore define two event categories: $\mtb>175~\GeV$ (\ttbar-depleted) and $< 175~\GeV$ (\ttbar-enhanced). In the low-\mtb category, to target signal models with moderate values of \dm, we define search regions by requiring $\nj\geq7$ to benefit from potential ISR in signal events while suppressing the SM background, and $\nrt\geq1$. Events are then subdiveded according to the number of b-tagged jets $(\nb=1,\geq2)$ and different \met{} thresholds. The same subdivision is performed for events in the high-\mtb{} catefory with $\nj\geq7$, but containing no top- or W-tagged candidateds. We then target signal models with sufficiently boosted top quarks or W bosons by defining categories in the high-\mtb region that require the presence of at least one top- or W-tagged candidate. These categories do not have any further \nj{} requirement beyond that of the high \dm{} baseline selection, and are further subdivided according to $\nb, \met,$ and the number of each kind of top- and W-tagged candidate. Table ? summarizes the definitions of the 151 disjoint search regions targeting high \dm{} signal models.
+
+Events originating from low \dm{} signal models are likely to have lower values of \mtb. We therefore only use the low-\mtb{} category, and events with no b-tagged jets, to define search regions targeting these signal models. These search regions are further defined by the number of b-tagged jets, the number of identified secondary vertices \nsv, the ISR jet \pt, and \met. Events in the $\nb=0$ category, which targets very compressed signal models, are further subdivided according to \nj. Only events with very high ISR $\pt(>500~\GeV)$ are selected in this category, which is also categorized by the presence or absence of soft b-tagged secondary vertices. Events in the $\nb=1$ category are further characterized according to the \pt{} of the b-tagged jet into two sub-categories, while those in the $\nb\geq2$ are subdivided based on \ptbonetwo{} into three sub-categories, in order to take advantage of the softer b jet \pt{} spectrum expected in signal events compared to the SM background. 
+
+Orthogonality to the high \dm{} event categories is achieved mostly by the \mtb{} categorization. Events with $\nb=0$, which cannot be categorized by \mtb, may enter only the low \dm{} event categories by virtue of the requirement $\nb\geq1$ of the high \dm{} baseline seleciton. Events with $\mtb<175~\GeV$ may enter high-\dm{} category only if they satisfy $\nrt\geq1$, and therefore do not pass the low-\dm{} baseline selection with its veto of top and W candidates. 
+
+Table ? summarizes the definitions of the 53 disjoint search regions targeting low \dm{} signal models. The expected event yields of the main SM processes in each search region of the low \dm{} search are summarized in Table ?, wheras for the high \dm{} search are summarized in Table ?. Benchmarch models have been included. The numbers are based on simulation and correspond to an integrated luminosity of 137 \fb.
 
 \input{searchregions}
