@@ -120,8 +120,11 @@ Write smearing method here.
 Figures ? and ? show the \met{} distribution in data and simulation in the QCD control regions for the high \dm{} and lowd \dm{} selections, respectively. The stacked plot labeled "Non-QCD bkg" is the distribution of the non-QCD events as predicted with the estimation methods detailed in this note. The other stacked plot, labeled "Smeared QCD MC" is the smeared QCD simulation yield after applying the $r_{jet}$ corrections. The other two lines show a combination of the predicted non-QCD SM yields and one of two scenarios. "Without $r_{jet}$ corr" is the smeared QCD simulation without the $r_{jet}$ correction and "With orig. QCD MC" is the standard QCD simulation without this correction. There are three important trends in this figure. The first is the purity of the control regions, which gives confidence in using them to predict QCD yields. The second is that the "Without $r_{jet}$ corr" estimation is nearly equivalent to "With orig. QCD MC" in the regions where there are enough statistics to have a meaningful comparison. This improves our confidence in the use of the smeared QCD simulation. Finally, the $r_{jet}$ correction improves the agreement between data simulation, which is a useful validation of this correction. Due to the nature of the background estimation method applied in the high \dm{} search, control regions are utilized for the prediciton of multiple search regions. 
 
 Tables ? and ? summarize the yields in data, the derived transfer factors, and the resulting QCD predictions for the high \dm{} and low \dm{} search regions respectively. The transfer factors in the high \dm{} region actually account for two levels of extrapolation, i.e., the extrapolation from the control regions to the search regions without the requirement of top and W tags, and the extrapolation in top and W tags in the search regions after correcting the top- and W-tagging efficiencies:
-\begin{equation}
-TF_{QCD}=TF_{QCD}^{CR-SR}\times TF_{QCD}^{SR-extrap}=\frac{N_{MC}(SR)(N_j,N_b,\met)}{N_{MC}(\qcdcr)(N_j,N_b,\met)}\times\frac{N_{MC}(SR)(N_j,N_b,\met,N_t,N_{res},N_W)}{N_{MC}(SR)(N_j,N_b,\met)}
+\begin{equation}\label{QCDTFExtrapolation}
+\begin{split}
+TF_{QCD}&=TF_{QCD}^{CR-SR}\times TF_{QCD}^{SR-extrap} \\
+&=\frac{N_{MC}(SR)(\nj,\nb,\met)}{N_{MC}(\qcdcr)(\nj,\nb,\met)}\times\frac{N_{MC}(SR)(\nj,\nb,\met,\nt,\nrt,\nw)}{N_{MC}(SR)(\nj,\nb,\met)}
+\end{split}
 \end{equation}
 
 \subsection{Rare Interactions}
