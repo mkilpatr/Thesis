@@ -24,6 +24,10 @@ The contribution from the \ttbar{} and \W+jets processes arises from leptonic de
 
 Studies in simulation indicate that the event kinematics for different lepton flavors are similar enough to allow us to estimate them collectively from a single control sample in data that has event characteristics similar to those of the search sample. Because of this, we use the single-lepton control sample to estimate the LL background, using the method descrived in detail in Ref. [18]. The single-lepton sample consists of events that have one lepton satisfying the lepton-veto criteria. In order to suppress potential signal contamination, we require $M_T(l,\met)<100 \GeV$. If there is more than one selected lepton, we randomly select which lepton is chosen to determine the $M_T(l,\met)$. The requirement of low $M_T(l,\met)$ also ensures orthogonality to the search regions used in the search for direct top squark production in the single-lepton final state, making it possible to statistically combine the results of the two searches. The selection applied to the single-lepton control sample follows the same selection on the search variables as in the zero-lepton selection with the exception of classification according to the number of top and \W-tagged candidates. 
 
+\subsection{Combining All Run 2 Eras}\label{sec:LLCombination}
+Firstly, for this analysis we are interested in the possibility in combining the yields of each era into one estimation. This is initially done by looking at the \met{} distributions in each era, see Fig. \ref{fig:llb-1lcr-datavsmc-lm-inclusive} and \ref{fig:llb-1lcr-datavsmc-hm-inclusive}. These all have a good agreement between Data and MC. 
+\input{LostLepton_Inclusive_Combination.tex}
+
 \subsubsection{Transfer Factors}
 \label{subsec:TF}
 
@@ -39,13 +43,14 @@ We want to suppress signal contamination by requiring $M_{T}(l, \met) < 100$ GeV
 This allows us to have the same selection for the single-lepton control sample and the zero-lepton sample. The only exception is the number of top and W-tagged candidates? what is the difference betweeen a candidate and a particle?
 
 The LL estimation is dependent on the yield of data in the corresponding CR and the TF calculated by the single-lepton sample. The transfer factor is defined as, 
-
 \begin{equation}
 \label{eqn:TF}
 TF_{LL}=\frac{N_{MC}(0l)}{N_{MC}(1l)},
 \end{equation}
-
 where $N_{MC}(1l)$ is the event count observed in the corresponding CR and $N_{MC}(0l)$ use the event count in the corresponding SR. 
+
+We now want to consider how the transfer factor for each era relates to the total transfer factor. 
+\input{LostLepton_TransferFactor_Comparison.tex}
 
 \input{../Research/SUSY/2019/LLB/lepcr_allEras/yields/yields_llb_all_lm.tex}
 \input{../Research/SUSY/2019/LLB/lepcr_allEras/yields/yields_llb_all_hm.tex}
