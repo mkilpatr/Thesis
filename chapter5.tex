@@ -103,7 +103,7 @@ For the estimation of the QCd contribution in the high \dm{} search regions, the
 A similar approach is utilized for the estimation of the QCD contribution in the low \dm{} search regions. The QCD control regions are binned in the same variables and ranges as of the search regions, but the QCD purity is low for the low \dm{} control regions with one or more b-tags (the high \dm{} control regions are integrated with respect to top and \W-tags and therefore have sufficient statistics in spite of the number of b-tags). Except for a normalization factor, the MC is generally consistent with data as function of \met{} for each of the control regions. Therefore, these low \dm{} control region \met{} bins are combined in order to increase the precision of the prediction in these search region bins. A systematic uncertainty on this integration is obtained by comparing the MC \met{} shape to the data shape for the two $N_b=0$ control regions in which no integration is applied. For each control region, the data to MC ratio for each \met{} bin is compared to the fully integrated ratio. The maximum difference, $51\%$ is the systematic uncertainty.
 
 QCD events fail the \qcdhighdm{} or \qcdlowdm{} selection cuts, for the high and low \dm{} regions respectively, and enter the search region due to a leading jet undergoing such severe mis-measurement that it is reconstructed as one of the sub-leading jets. Mis-measurement is parameterized by the jet response, defined as:
-\begin{equation}
+\begin{equation}\label{jetres}
 r_{jet}=\frac{(\pt)_{reco}}{(\pt)_{gen}}.
 \end{equation}
 
@@ -112,8 +112,8 @@ A much larger proportion of events in the search region that the control region 
 The statistical uncertainty on $TF_{QCD}$ is reduced by increasing the effective luminosity of the QCD multijet sample with a method referring to as "local smearing." The method relies on the parametrization of $r_{jet}$, which is only dependent on jet properties.
 
 \subsubsection{QCD Local Smearing}\label{Smearing}
-
-Write smearing method here.
+The local smearing methods for QCD use a parameterization of the reconstructed(reco) jet. The reco jet is used when defining the jet response, see Eqn. \ref{jetres}. The analysis of the jet response spans many order of mangitude and is binned in \pt{} and jet flavor, see Fig. \label{jetRes}. 
+\input{QCD_jetResponse.tex}
 
 \subsubsection{QCD Corrections}
 
