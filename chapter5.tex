@@ -49,7 +49,19 @@ TF_{LL}=\frac{N_{MC}(0l)}{N_{MC}(1l)},
 \end{equation}
 where $N_{MC}(1l)$ is the event count observed in the corresponding CR and $N_{MC}(0l)$ use the event count in the corresponding SR. 
 
-We now want to consider how the transfer factor for each era relates to the total transfer factor. 
+The main motivation behind this approach is to increase the statistical precision of the background estimation. The performance of the $t$ and \W{} taggers is studied in data and MC samples. Reasonably good agreement is observed allowing us to procedd with this approach. Data-to-MC scale factors are extracted and applied to MC to account for residual differences of the tagging performance in data. Detailed studies comparing the performance of the $t$ and \W{} taggers in data and MC are documented in App. BLANK and BLANK.
+
+The control regions utilized to predict the LL background are displayed in Fig. \ref{fig:llb-1lcr-datavsmc-lm-nb0} to \ref{fig:llb-1lcr-datavsmc-hm-nb3-2}. The figures \ref{fig:llb-1lcr-datavsmc-lm-nb0} to \ref{fig:llb-1lcr-datavsmc-lm-nb1} display the control regions specific to the low \dm{} selection, where the regions are binned following the search region definition. Figures \ref{fig:llb-1lcr-datavsmc-hm-nt0-nrt0-nw0} to \ref{fig:llb-1lcr-datavsmc-hm-nb3-2} display the control regions dedicated for the high \dm{} selection. Due to the nature of the background estimation method applied in the high \dm{} search, control regions are utilized for the prediction of multiple search regions. 
+
+Tables \ref{tab:0l-llb-pred-lm} to \ref{tab:0l-llb-pred-hm-3} summarize the yields in data observed in the single-lepton sample, the derived transfer factor, and the resulting LL predictions for the low \dm{} and high \dm{} search regions respectively. The transfer factors in the high \dm{} region actually account for two levels of extrapolation, i.e., the extrapolation from the control regions to the search regions without the requirement of $t$ and \W{} tags, and extrapolation in top and \W{} tags in the search regions after correcting the top- and W-tagging efficiencies:
+\begin{equation}\label{TFExtrapolation}
+\begin{split}
+TF_{LL}=& TF_{LL}^{CR-SR}\times TF_{LL}^{SR-extrap} \\
+=& \frac{N_{MC}(0l)(\nj,\nb,\met)}{N_{MC}(1l)(\nj,\nb,\met)}\times\frac{N_{MC}(0l)(\nj,\nb,\met,\nt,\nrt,\nw)}{N_{MC}(0l)(\nj,\nb,\met)}.
+\end{split}
+\end{equation}
+
+We now want to consider how the transfer factor for each era relates to the total transfer factor. In Fig. \ref{fig:llb-1lcr-datavsmc-total-tf} and \ref{fig:llb-1lcr-datavsmc-sep-tf}, we see the comparison the the total $TF$ for each era of the data and simulation. these are all in quite good agreement, but we see are large peak near zero. Once we alter the comparison for the $TF$ for the CR-to-SR and the SR-to-Extrapolation. We see a much better agreement when we do not include the cuts on top/W tagging. These are improved because of the better statistics in the region. 
 \input{LostLepton_TransferFactor_Comparison.tex}
 
 \input{../Research/SUSY/2019/LLB/lepcr_allEras/yields/yields_llb_all_lm.tex}
