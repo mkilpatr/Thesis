@@ -3,8 +3,8 @@ The primary dataset used for this analysis is the MET dataset.
 % Are the datasets described online somewhere? Put a citation link pointing to it. You could even add a footnote like \footnote{All of the datasets discussed in this section are described in more detail at \href{http://www.link}{link}. Include \usepackage{hyperref}
 % Actually, there is no convenient link for Run 2 datasets, just a pdf for now. This should be updated once there is something better available.
 % ~\footnote{All of the datasets discussed in this section are described in more detail at \href{http://hermine.web.cern.ch/hermine/CMS/CMS_PDs_733ntuples_7e33menu_HKWoehri.pdf}{\emph{2015 Primary Dataset Definitions}}.}
-It contains events triggered by the HLT paths HLT\_PFMETx\_PFMHTx\_IDTight and HLT\_PFMETNoMux\_PFMHTNoMux\_IDTight where x = 100, 110, 120, 130, and 140. The logical OR of these triggers is used to select the search sample. 
- For studies of single- and dilepton control regions, we use the SingleMuon, SingleElectron, DoubleMuon, and DoubleEG datasets. The JetHT dataset is also used for studies of \W/topq-tagging. The SinglePhoton dataset is used to define a control region with a selected photon that is used together with \Zll~  samples for the prediction of the SM background originating from \Znunu~events. Table~\ref{tab:datasets} lists all datasets together with the specific HLT paths of the triggers that were used for the selection of events. In cases where there are inefficiencies due to the use of isolated triggers, a suite of triggers is used to recover efficiency wherever possible. The datasets correspond to the full Run 2 dataset: the ``Run2016B", ``Run2016C", ``Run2016D", ``Run2016E", ``Run2016F", ``Run2016G", ``Run2016H", ``Run2017B", ``Run2017C", ``Run2017D", ``Run2017E", ``Run2017F", ``Run2018A", ``Run2018B", ``Run2018C", and ``Run2018D" acquisition eras.
+It contains events triggered by the HLT paths HLT\_PFMETx\_PFMHTx\_IDTight and HLT\_PFMET\\*NoMux\_PFMHTNoMux\_IDTight where x = 100, 110, 120, 130, and 140. The logical OR of these triggers is used to select the search sample. 
+ For studies of single- and dilepton control regions, we use the SingleMuon, SingleElectron, DoubleMuon, and DoubleEG datasets. The JetHT dataset is also used for studies of \W/topq-tagging. The SinglePhoton dataset is used to define a control region with a selected photon that is used together with \Zll~  samples for the prediction of the SM background originating from \Znunu~events. Table~\ref{tab:datasets} lists all datasets together with the specific HLT paths of the triggers that were used for the selection of events. In cases where there are inefficiencies due to the use of isolated triggers, a suite of triggers is used to recover efficiency wherever possible. The datasets correspond to the full Run 2 dataset are: ``Run2016B", ``Run2016C", ``Run2016D", ``Run2016E", ``Run2016F", ``Run2016G", ``Run2016H", ``Run2017B", ``Run2017C", ``Run2017D", ``Run2017E", ``Run2017F", ``Run2018A", ``Run2018B", ``Run2018C", and ``Run2018D" acquisition eras with a total luminosity of \datalumi, Table \ref{tab:datasets}.
 
 \begin{table}[!ht]
 \begin{center}
@@ -20,38 +20,41 @@ Primary dataset & HLT path \\
 \hline
 \multicolumn{2}{|c|}{Search sample} \\
 \hline
-MET & HLT\_PFMET100\_PFMHT100\_IDTight OR HLT\_PFMETNoMu100\_PFMHTNoMu100\_IDTight OR \\
-MET & HLT\_PFMET110\_PFMHT110\_IDTight OR HLT\_PFMETNoMu110\_PFMHTNoMu110\_IDTight OR \\
-MET & HLT\_PFMET120\_PFMHT120\_IDTight OR HLT\_PFMETNoMu120\_PFMHTNoMu120\_IDTight OR \\
-MET & HLT\_PFMET130\_PFMHT130\_IDTight OR HLT\_PFMETNoMu130\_PFMHTNoMu130\_IDTight OR \\
-MET & HLT\_PFMET140\_PFMHT140\_IDTight OR HLT\_PFMETNoMu140\_PFMHTNoMu140\_IDTight OR \\
-MET & HLT\_PFMET100\_PFMHT100\_IDTight\_PFHT60 OR HLT\_PFMETNoMu100\_PFMHTNoMu100\_IDTight\_PFHT60 OR \\
-MET & HLT\_PFMET110\_PFMHT110\_IDTight\_PFHT60 OR HLT\_PFMETNoMu110\_PFMHTNoMu110\_IDTight\_PFHT60 OR \\
-MET & HLT\_PFMET120\_PFMHT120\_IDTight\_PFHT60 OR HLT\_PFMETNoMu120\_PFMHTNoMu120\_IDTight\_PFHT60 OR \\
-MET & HLT\_PFMET130\_PFMHT130\_IDTight\_PFHT60 OR HLT\_PFMETNoMu130\_PFMHTNoMu130\_IDTight\_PFHT60 OR \\
-MET & HLT\_PFMET140\_PFMHT140\_IDTight\_PFHT60 OR HLT\_PFMETNoMu140\_PFMHTNoMu140\_IDTight\_PFHT60 \\
+\multirow{10}{*}{MET} & HLT\_PFMET100\_PFMHT100\_IDTight OR HLT\_PFMETNoMu100\_PFMHTNoMu100\_IDTight OR \\
+ & HLT\_PFMET110\_PFMHT110\_IDTight OR HLT\_PFMETNoMu110\_PFMHTNoMu110\_IDTight OR \\
+ & HLT\_PFMET120\_PFMHT120\_IDTight OR HLT\_PFMETNoMu120\_PFMHTNoMu120\_IDTight OR \\
+ & HLT\_PFMET130\_PFMHT130\_IDTight OR HLT\_PFMETNoMu130\_PFMHTNoMu130\_IDTight OR \\
+ & HLT\_PFMET140\_PFMHT140\_IDTight OR HLT\_PFMETNoMu140\_PFMHTNoMu140\_IDTight OR \\
+ & HLT\_PFMET100\_PFMHT100\_IDTight\_PFHT60 OR HLT\_PFMETNoMu100\_PFMHTNoMu100\_IDTight\_PFHT60 OR \\
+ & HLT\_PFMET110\_PFMHT110\_IDTight\_PFHT60 OR HLT\_PFMETNoMu110\_PFMHTNoMu110\_IDTight\_PFHT60 OR \\
+ & HLT\_PFMET120\_PFMHT120\_IDTight\_PFHT60 OR HLT\_PFMETNoMu120\_PFMHTNoMu120\_IDTight\_PFHT60 OR \\
+ & HLT\_PFMET130\_PFMHT130\_IDTight\_PFHT60 OR HLT\_PFMETNoMu130\_PFMHTNoMu130\_IDTight\_PFHT60 OR \\
+ & HLT\_PFMET140\_PFMHT140\_IDTight\_PFHT60 OR HLT\_PFMETNoMu140\_PFMHTNoMu140\_IDTight\_PFHT60 \\
 \hline
 \multicolumn{2}{|c|}{Single-lepton control sample} \\
 \hline
-SingleMuon & HLT\_IsoMu20 OR HLT\_IsoTkMu20 OR HLT\_IsoMu22 OR HLT\_IsoTkMu22 OR HLT\_IsoMu24 OR HLT\_IsoTkMu24 OR \\ 
-SingleMuon & HLT\_IsoMu27 OR HLT\_IsoTkMu27 OR HLT\_IsoMu22\_eta2p1 OR HLT\_IsoMu24\_eta2p1 OR \\
-SingleMuon & HLT\_IsoTkMu22 OR HLT\_IsoTkMu24 OR HLT\_Mu50 OR HLT\_Mu55 OR \\ 
-SingleElectron & HLT\_Ele105\_CaloIdVT\_GsfTrkIdT OR HLT\_Ele115\_CaloIdVT\_GsfTrkIdT OR HLT\_Ele135\_CaloIdVT\_GsfTrkIdT OR HLT\_Ele145\_CaloIdVT\_GsfTrkIdT OR \\
-SingleElectron & HLT\_Ele25\_eta2p1\_WPTight\_Gsf OR HLT\_Ele20\_eta2p1\_WPLoose\_Gsf OR HLT\_Ele27\_eta2p1\_WPLoose\_Gsf OR \\ 
-SingleElectron & HLT\_Ele27\_WPTight\_Gsf OR HLT\_Ele35\_WPTight\_Gsf OR HLT\_Ele20\_WPLoose\_Gsf OR HLT\_Ele45\_WPLoose\_Gsf OR\\
-SingleElectron & Ele23\_Ele12\_CaloIdL\_TrackIdL\_IsoVL OR Ele23\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ OR \\
-SingleElectron & DoubleEle33\_CaloIdL\_GsfTrkIdVL OR DoubleEle33\_CaloIdL\_GsfTrkIdVL\_MW OR DoubleEle25\_CaloIdL\_MW OR DoubleEle33\_CaloIdL\_MW\\
-MET & HLT\_PFMET110\_PFMHT110\_IDTight OR HLT\_PFMETNoMu110\_PFMHTNoMu110\_IDTight \\
-MET & HLT\_PFMET120\_PFMHT120\_IDTight OR HLT\_PFMETNoMu120\_PFMHTNoMu120\_IDTight \\
+\multirow{3}{*}{SingleMuon} & HLT\_IsoMu20 OR HLT\_IsoTkMu20 OR HLT\_IsoMu22 OR HLT\_IsoTkMu22 OR HLT\_IsoMu24 OR HLT\_IsoTkMu24 OR \\ 
+ & HLT\_IsoMu27 OR HLT\_IsoTkMu27 OR HLT\_IsoMu22\_eta2p1 OR HLT\_IsoMu24\_eta2p1 OR \\
+ & HLT\_IsoTkMu22 OR HLT\_IsoTkMu24 OR HLT\_Mu50 OR HLT\_Mu55 OR \\ 
+ \hline
+\multirow{5}{*}{SingleElectron} & HLT\_Ele105\_CaloIdVT\_GsfTrkIdT OR HLT\_Ele115\_CaloIdVT\_GsfTrkIdT OR HLT\_Ele135\_CaloIdVT\_GsfTrkIdT OR HLT\_Ele145\_CaloIdVT\_GsfTrkIdT OR \\
+ & HLT\_Ele25\_eta2p1\_WPTight\_Gsf OR HLT\_Ele20\_eta2p1\_WPLoose\_Gsf OR HLT\_Ele27\_eta2p1\_WPLoose\_Gsf OR \\ 
+ & HLT\_Ele27\_WPTight\_Gsf OR HLT\_Ele35\_WPTight\_Gsf OR HLT\_Ele20\_WPLoose\_Gsf OR HLT\_Ele45\_WPLoose\_Gsf OR\\
+ & Ele23\_Ele12\_CaloIdL\_TrackIdL\_IsoVL OR Ele23\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ OR \\
+ & DoubleEle33\_CaloIdL\_GsfTrkIdVL OR DoubleEle33\_CaloIdL\_GsfTrkIdVL\_MW OR DoubleEle25\_CaloIdL\_MW OR DoubleEle33\_CaloIdL\_MW\\
+ \hline
+\multirow{2}{*}{MET} & HLT\_PFMET110\_PFMHT110\_IDTight OR HLT\_PFMETNoMu110\_PFMHTNoMu110\_IDTight \\
+ & HLT\_PFMET120\_PFMHT120\_IDTight OR HLT\_PFMETNoMu120\_PFMHTNoMu120\_IDTight \\
+ \hline
 JetHT & HLT\_CaloJet500\_NoJetID \\
 DoubleEG & HLT\_ECALHT800 \\
 \hline
 \multicolumn{2}{|c|}{Dilepton control sample} \\
 \hline
-DoubleMuon & (all eras) kHLT\_Mu30\_TkMu11 \\
-DoubleMuon & (Before era H) HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL OR HLT\_Mu17\_TrkIsoVVL\_TkMu8\_TrkIsoVVL \\
-DoubleMuon & (Era H) HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_DZ OR HLT\_Mu17\_TrkIsoVVL\_TkMu8\_TrkIsoVVL\_DZ \\
-DoubleMuon & (Era H) HLT\_TkMu17\_TrkIsoVVL\_TkMu8\_TrkIsoVVL\_DZ \\
+\multirow{4}{*}{DoubleMuon} & (all eras) kHLT\_Mu30\_TkMu11 \\
+ & (Before era H) HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL OR HLT\_Mu17\_TrkIsoVVL\_TkMu8\_TrkIsoVVL \\
+ & (Era H) HLT\_Mu17\_TrkIsoVVL\_Mu8\_TrkIsoVVL\_DZ OR HLT\_Mu17\_TrkIsoVVL\_TkMu8\_TrkIsoVVL\_DZ \\
+ & (Era H) HLT\_TkMu17\_TrkIsoVVL\_TkMu8\_TrkIsoVVL\_DZ \\
 SingleMuon & HLT\_Mu50 OR HLT\_TkMu50\\
 DoubleEG & HLT\_Ele23\_Ele12\_CaloIdL\_TrackIdL\_IsoVL\_DZ OR HLT\_DoubleEle33\_CaloIdL\_GsfTrkIdVL\_MW \\
 SingleElectron & HLT\_Ele115\_CaloIdVT\_GsfTrkIdT \\
@@ -63,7 +66,7 @@ SinglePhoton & HLT\_Photon175 OR HLT\_Photon200 \\
 \end{tabular}
 }
 \end{center}
-\caption{\label{tab:datasets}Primary datasets used for the analysis and the HLT paths of the corresponding triggers. Datasets from eras B through G are ``ReReco" datasets from the 23Sep2016 re-reconstruction, while those from era H are ``PromptReco". The re-reconstruction addressed tracking inefficiency mitigations (eras B through F) and updated calibrations. Era H datasets use the same updated calibrations.}
+\caption[Data Samples]{\label{tab:datasets}Primary datasets used for the analysis and the HLT paths of the corresponding triggers. Datasets from Run2016 are ``ReReco" legacy datasets from the 17Jul2018 re-reconstruction, Run2017 is from 31Mar2018 re-reconstruction, and Run2018 Run ``A" to ``C" are re-reconstruction while Run ``D" is promptreco.}
 \end{table}
 
 The simulated samples used in this analysis, all of which are listed in Table~\ref{tab:samples} and \ref{tab:signals}, were produced as part of the ``Summer16", ``Fall17", and ``Autumn18" Monte Carlo production campaign for Run 2 in the ``NanoAOD" data format.
@@ -168,7 +171,7 @@ DY+jets & \textsc{madgraph}, HT bins & /DYJetsToLL\_M-50\_HT-70to100\_TuneCUETP8
 \end{tabular}
 }
 \end{center}
-\caption{\label{tab:samples}Simulated event samples used for this analysis and the corresponding theoretical cross sections for the processes indicated. The QCD GenJets5 samples are produced with a filter requiring $\geq 5$ jets clustered from generator particles with the anti-$k_{\rm T}$ ($R=0.4$) algorithm, with $\pt > 20$~\GeV and $|\eta| < 2.4$. For some samples produced at leading order (LO), an additional multiplicative $k$-factor is applied to the LO total cross section to account for the difference with the next-to-leading order (NLO) cross section. Note that $<$proc$>$ stands for the string ``RunIISummer16MiniAODv2-PUMoriond17\_80X\_mcRun2\_asymptotic\_2016\_TrancheIV\_v6-v*/MINIAODSIM" for samples produced with the full detector simulation (FullSim), while $<$fast\_proc$>$ is the corresponding shorthand for ``RunIISpring16MiniAODv2-PUSpring16Fast\_80X\_mcRun2\_asymptotic\_2016\_miniAODv2\_v0-v*/MINIAODSIM" used for samples produced with the fast simulation (FastSim).}
+\caption[Standard Model Samples]{\label{tab:samples}Simulated event samples used for this analysis and the corresponding theoretical cross sections for the processes indicated. For some samples produced at leading order (LO), an additional multiplicative $k$-factor is applied to the LO total cross section to account for the difference with the next-to-leading order (NLO) cross section. Note that $<$proc$>$ stands for the string ``RunIISummer16MiniAODv3", ``RunIIFall17MiniAODv2", and ``RunIIAutumn18MiniAOD" for samples produced with the full detector simulation.}
 \end{table}
 \begin{table}[!htp]
 \begin{center}
@@ -209,5 +212,5 @@ T2tb, FastSim & \textsc{madgraph} & /SMS-T2bt\_TuneCUETP8M1\_13TeV-madgraphMLM-p
 \end{tabular}
 }
 \end{center}
-\caption{\label{tab:signals}Simulated event samples used for this analysis and the corresponding theoretical cross sections for the processes indicated. The QCD GenJets5 samples are produced with a filter requiring $\geq 5$ jets clustered from generator particles with the anti-$k_{\rm T}$ ($R=0.4$) algorithm, with $\pt > 20$~\GeV and $|\eta| < 2.4$. For some samples produced at leading order (LO), an additional multiplicative $k$-factor is applied to the LO total cross section to account for the difference with the next-to-leading order (NLO) cross section. Note that $<$proc$>$ stands for the string ``RunIISummer16MiniAODv2-PUMoriond17\_80X\_mcRun2\_asymptotic\_2016\_TrancheIV\_v6-v*/MINIAODSIM" for samples produced with the full detector simulation (FullSim), while $<$fast\_proc$>$ is the corresponding shorthand for ``RunIISpring16MiniAODv2-PUSpring16Fast\_80X\_mcRun2\_asymptotic\_2016\_miniAODv2\_v0-v*/MINIAODSIM" used for samples produced with the fast simulation (FastSim).}
+\caption[Signal Samples]{\label{tab:signals}Simulated event samples used for this analysis and the corresponding theoretical cross sections for the processes indicated. For some samples produced at leading order (LO), an additional multiplicative $k$-factor is applied to the LO total cross section to account for the difference with the next-to-leading order (NLO) cross section. Note that $<$proc$>$ stands for the string ``RunIISummer16MiniAODv3", ``RunIIFall17MiniAODv2", and ``RunIIAutumn18MiniAOD" for samples produced with the full detector simulation.}
 \end{table}
