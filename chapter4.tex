@@ -18,7 +18,7 @@ In an interaction whenever a quark is made it comes in pairs $(q\overline{q})$ s
 Since this search is looking for a massive particle which then decays to slightly less massive particles we need to be able to identify and distinguish between them. We use various algorithms and neural networks to identify jets from $b$ quarks, $t$ quarks, or from \W {} bosons. 
 
 \subsubsection{B-Tagging}\label{Btagging}
-Firstly, \B-tagged jets which are jets that are likely to have originated from a \B{} quark. For \B{} quarks with large transverse momentum, we use a Deep Combined Secondary Vertex (DeepCSV) algorithm that involves neural networks. \bjet s{} are identified using the Run 2 version of the Deep Combined Secondary Vertex (DeepCSV) algorithm. The medium working point recommended by the B-tag POG, corresponding to a threshold of 0.6324m 0.4941, and 0.4184 for the 2016, 2017, and 2018 respectively \cite{noauthor_btagrecommendation2016legacy_nodate, noauthor_btagrecommendation94x_nodate, noauthor_btagrecommendation102x_nodate}.
+Firstly, \B-tagged jets which are jets that are likely to have originated from a \B{} quark. For \B{} quarks with large transverse momentum, we use a Deep Combined Secondary Vertex (DeepCSV) algorithm that involves neural networks. \bjet s{} are identified using the Run 2 version of the Deep Combined Secondary Vertex (DeepCSV) algorithm \cite{noauthor_performance_nodate}. The medium working point recommended by the B-tag POG, corresponding to a threshold of 0.6324m 0.4941, and 0.4184 for the 2016, 2017, and 2018 respectively \cite{noauthor_btagrecommendation2016legacy_nodate, noauthor_btagrecommendation94x_nodate, noauthor_btagrecommendation102x_nodate}. The medium working point is defined such that the percentage of a light jet being misidentified as a \bjet{} is 1\%.
 
 \begin{figure}
  	\centering
@@ -31,7 +31,7 @@ Firstly, \B-tagged jets which are jets that are likely to have originated from a
 The anti-kt algorithm using a distance parameter, $\Delta R=0.8$, is expected to contain the energy clusters of all of the decay product of boosted $t$ quarks, see Fig. \ref{TopDecays}, with $\pt>300$ \GeV{} or \W{} bosons with $\pt>200$ \GeV. The requirements are:
 \begin{itemize}
 	\item Medium working point $>0.937, 0.895, 0.895 (0.973, 0.991, 0.991)$ for boosted $t$ $(W)$ for the separate 2016, 2017, and 2018 eras, respectively.
-	\item Reconstructed soft drop mass: $105<m_t<210$ \GeV{} and $65<m_W<105$ \GeV.
+	\item Reconstructed soft drop\cite{noauthor_soft_nodate} mass: $105<m_t<210$ \GeV{} and $65<m_W<105$ \GeV.
 	\item Boosted tops: $\pt=300$ \GeV, $|\eta|<2.0$ and $W$: $\pt=200$ \GeV, $|\eta|<2.0$
 \end{itemize}
 
@@ -80,7 +80,7 @@ The requirements on each SV to pass the soft b-tagging definition are:
 	 \item The number of tracks associated to the SV is greater or equal to 3.
 	 \item The \pt{} of the SV is less than 20 GeV.
 \end{itemize}
-Identification of soft b-quarks is necessary for potential signal region where the stop does not directly decay into a top quark. This parameter is essential for some of our search region bins. 
+Identification of soft b-quarks is necessary for potential signal region where the stop does not directly decay into a top quark and is essential for some of our search region bins. 
 
 \subsection{Transverse Energy between $b$ quarks and \met}
 We will end up dividing the search regions we are interested in into two different groups. They will be distinguished by a parameter known as the transverse mass between the leading \bjet{} and \met{} defined as:
@@ -122,7 +122,7 @@ Conversion veto & pass & pass & pass & pass \\
  \label{ElectronID}
  \end{table}
  
- The loose muon definition recommended by the Muon POG is used for the purposes of the muon veto. A loose muon is identified as a PF muon and can be either a global muon or an arbitrated tracker muon. Only candidates with transverse (longitudinal) impact parameter $|d_0|<0.2$ cm $(|d_z|<0.5 \text{cm},)$ with respect to the primary vertex, are considered. The muon selection in leptonic control regions relies on the medium working point defined by the Muon POG for higher purity. The medium muon requirements are summarized in Table \ref{MuonID}. They are applied in addition to the loose muon requirements. Selected muons are required to have transverse (longitudinal) impact parameters $|d_0|<0.05$ cm $(|d_z|<0.1 \text{cm}),$ with respect to the primary vertex. 
+ The loose muon definition recommended by the Muon POG is used for the purposes of the muon veto. A loose muon is identified as a Particle Flow\cite{noauthor_cms_nodate} muon and can be either a global muon or an arbitrated tracker muon. Only candidates with transverse (longitudinal) impact parameter $|d_0|<0.2$ cm $(|d_z|<0.5 \text{cm},)$ with respect to the primary vertex, are considered. The muon selection in leptonic control regions relies on the medium working point defined by the Muon POG for higher purity. The medium muon requirements are summarized in Table \ref{MuonID}. They are applied in addition to the loose muon requirements. Selected muons are required to have transverse (longitudinal) impact parameters $|d_0|<0.05$ cm $(|d_z|<0.1 \text{cm}),$ with respect to the primary vertex. 
 
 \begin{table}
  \centering
@@ -172,7 +172,7 @@ The following filters, recommended by the JetMET POG, are applied to 2016, 2017,
 \end{itemize}
 There is an addition ecalBadCalibFilter for 2017 and 2018 eras only.
 
-\subsection{Baseline Selection} \label{Baseline}
+\section{Baseline Selection} \label{sec:Baseline}
 
 Following the same methods as above, we have a loose pre-selection which is refered to as the baseline selection. This will place a selection on jets and \met which is used to eliminate a large fraction of background events. We define the baseline selection as:
 \begin{itemize}
@@ -198,7 +198,7 @@ Next, the low \dm{} baseline selection has the following addition selections,
 	\item $|\Delta\phi(\met,j_1)|>0.5, |\Delta\phi(\met,j_{2,3})|>0.15$, where $j_1,j_2,j_3$ are the three leading jets in \pt. 
 \end{itemize}
 
-\section{Search Regions}\label{SearchRegions}
+\subsection{Search Regions}\label{SearchRegions}
 
 After applying the baseline selection criteria, we categorize events in the search sample into exclusive search regions that exploit the kinematic properties of different signal topologies. 
 
