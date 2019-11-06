@@ -1,7 +1,7 @@
 \chapter{Supersymmetry and the Standard Model}
 \label{ch:SUSY}
 
-The fundamental theory of particle physics, known as the Standard Model (SM) can predict precise interactions between the fundamental particles in our universe. With these predictions we can confirm processes, but there are some aspects of the universe that have not yet been explained. In this Chapter, we will analyze the Standard Model, look at some specific shortcomings, and introduce supersymmetry as a possible solution.
+The fundamental theory of particle physics, known as the Standard Model (SM) can predict interactions between the fundamental particles in our universe. With these predictions we can look for and confirm these processes, but there are some aspects of the universe that have not yet been explained. In this Chapter, we will analyze the Standard Model, look at some specific shortcomings, and introduce supersymmetry as a possible solution.
 
 \section{The Standard Model}
 \label{sec:SM}
@@ -10,9 +10,9 @@ After decades of theoretical and experimental research the SM has been developed
 
 \subsection{The Fundamental Particles}
 
- All visable matter can be explained by three kinds of elementary particles: leptons, quarks, and gauge bosons. Each of these can be distinguished by various quantum properties. The leptons and quarks are fermions, which are particles that have half-integer spin. Leptons are particles that only interact with the EM and Weak force, while quarks interact with all three forces of the SM. The gauge bosons are the force carries for each respective force and have integer spin. 
+ All matter can be explained by three kinds of elementary particles: leptons, quarks, and gauge bosons. Each of these can be distinguished by various quantum properties. The leptons and quarks are fermions, which are particles that have half-integer spin. Leptons are particles that only interact with the EM and Weak force, while quarks interact with all three forces of the SM. The gauge bosons are the force carries for each respective force and have integer spin. 
  
- There are three generations of leptons and quarks which are differentiated by a charge $\pm e$, the charge of an electron. Leptons have three different charged particles: electron $(e)$, muon $(\mu)$, and tau $(\tau)$, with each charged particle having a corresponding neutrino $(\nu)$ of the same flavor, see fig \ref{SMParticles}. Quarks are also separated into three generations of doublets, the down-type $(-\frac{1}{3}e)$: down $(d)$, strange $(s)$, and bottom $(b)$ and up-type $(\frac{2}{3}e)$: up $(u)$, charm $(c)$, and top $(t)$, see fig \ref{SMParticles}. Each of the quarks has a color associated with it which is analogous to an electric charge, except there are three colors charges: red, blue, and green.  
+ There are three generations of leptons and quarks which are differentiated by a charge $\pm e$, the charge of an electron, and the mass of the respective lepton. Leptons have three different charged particles: electron $(e)$, muon $(\mu)$, and tau $(\tau)$, with each charged particle having a corresponding neutrino $(\nu)$ of the same flavor, see fig \ref{SMParticles}. Quarks are also separated into three generations of doublets, the down-type $(-\frac{1}{3}e)$: down $(d)$, strange $(s)$, and bottom $(b)$ and up-type $(\frac{2}{3}e)$: up $(u)$, charm $(c)$, and top $(t)$, see fig \ref{SMParticles}. Each of the quarks has a color associated with it which is analogous to an electric charge, except there are three colors charges: red, blue, and green.  
 
 \begin{figure}
  	\centering
@@ -24,7 +24,7 @@ After decades of theoretical and experimental research the SM has been developed
  \subsection{Quantum Field Theory}
  \label{QFT}
  
- The interactions of all these particles are described by quantized fields whose operators describe the creation and annihilation of particles. Each of the fields of the SM have a corresponding gauge boson, see fig. \ref{SMParticles}. The most well-known being the EM field and its interactions. In order to write a concise theory of the particles in the SM, the symmetry and conservation laws of the SM can be derived by starting with Noether's Theorem.
+ The interactions of all these particle fields are described by quantized fields whose operators describe the creation and annihilation of particles. Each of the particle fields of the SM have a corresponding gauge boson which is described by a quantized gauge field, see fig. \ref{SMParticles}. The most well-known being the EM field and its interactions. In order to write a concise theory of the particles in the SM, the symmetry and conservation laws of the SM can be derived by starting with Noether's Theorem.
  
  \subsection{Noether's Theorem}
  
@@ -105,7 +105,7 @@ To allow for the field to be invariant, we must include a derivative, $D_\mu$, t
 \begin{equation}\label{LagrangianQED}
 \mathcal{L}_{QED}=\overline{\psi}(i\gamma^\mu\partial_\mu-m)\psi+e\overline{\psi}\gamma^{\mu}A_{\mu}\psi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu},
 \end{equation}
-where $A_{\mu}$ is the EM field operator and $F^{\mu\nu}$ is the EM field tensor. This Lagrangian describes the interactions between spin-$1/2$ charged particles and the $U(1)$ EM force. Each of the parts of this equation are Lorentz invariant which allows this to be true in all reference frames. 
+where $A_{\mu}$ is the EM field operator and $F^{\mu\nu}$ is the EM field tensor. This Lagrangian describes the interactions between spin-$1/2$ charged particles and the $U(1)$ EM force. Each of the parts of this equation is Lorentz invariant which allows this to be true in all reference frames. 
 
 \begin{figure}
  	\centering
@@ -122,7 +122,7 @@ Let's now transition from the description of the $U(1)$ EM field to the $SU(3)$ 
 \begin{equation}\label{LagrangianQCDVacuum}
 \mathcal{L}_{QCD}^{vac}=\overline{q}_j(i\gamma^\mu\partial\mu-m)q_j,
 \end{equation}
-where $q_1, q_2,$ and $q_3$ are the three color fields. From this we want to require that the field is again invariant under another local phase transformation such as,
+where $q_1, q_2,$ and $q_3$ are quark fields with three possible color charges. From this we want to require that the field is again invariant under another local phase transformation such as,
 \begin{equation}
 q(x)\rightarrow Uq(x)\equiv e^{i\alpha_a(x)T_a}q(x),
 \end{equation}
@@ -143,7 +143,7 @@ From this is seems straight forward that we can proceed in exactly the same mann
 \begin{equation}
 D_\mu=\partial_\mu+ig_Q T_aG_\mu^a.
 \end{equation}
-where the field $G_\mu^a$ transforms as, 
+where the field $G_\mu^a$, which are the gluons, transforms as, 
 \begin{equation}
 G_\mu^a\rightarrow G_\mu^a-\frac{1}{g_Q}\partial_\mu\alpha_a,
 \end{equation}
@@ -159,7 +159,7 @@ G_\mu^a\rightarrow G_\mu^a-\frac{1}{g_Q}\partial_\mu\alpha_a-f_{abc}\alpha_b G_\
 	\minipage{0.5\textwidth}
 	  \includegraphics[width=\linewidth]{QCDGluonRules.png}
 	\endminipage\hfill
-	\caption[QCD Feynman Diagrams]{The possible feynman diagrams in QCD. Each vertex needs to be color neutral. Here is just an example of a red-blue vertex. QCD also includes a 3- and 4-vertex with gluons.}
+	\caption[QCD Feynman Diagrams]{The possible feynman diagrams in QCD where each vertex needs to conserve color chargel. Here is just an example of a red-blue vertex. QCD also includes a 3- and 4-vertex with gluons.}
  	\label{QCDRules} 
 \end{figure}
 
@@ -167,18 +167,18 @@ This finally gives us a gauge invariant kinetic energy term for all the $G_\mu^a
 \begin{equation}\label{LagrangianQCD}
 \mathcal{L}_{QCD}=\overline{q}(i\gamma^\mu\partial_\mu-m)q-g_Q(\overline{q}\gamma^\mu T_a q)G^a_\mu-\frac{1}{4}G^a_{\mu\nu}G_a^{\mu\nu}.
 \end{equation}
-From the QCD Lagrangian Eqn. \ref{LagrangianQCD}, we can see that it includes all of the same interactions we showed for QED, but must be color neutral. However, QCD also included a 3- and 4-vertex interaction between the gluons, which arises due to the non-abelian nature of the force. From this, it is easy to tell that QCD is a much more complicated theory. We seem to be missing a vital part of the SM, specifically a theory for the Weakly interacting processes which is mediated by the massive bosons, \W{} and \Z{} from fig. \ref{SMParticles}. 
+From the QCD Lagrangian Eqn. \ref{LagrangianQCD}, we can see that it includes all of the same interactions we showed for QED, but also includes a $SU(3)$ interaction due to the quark-gluon interactions with a certain color charge. However, QCD also included a 3- and 4-vertex interaction between the gluons, which arises due to the non-abelian nature of the force. From this, it is easy to tell that QCD is a much more complicated theory. We seem to be missing a vital part of the SM, specifically a theory for the Weakly interacting processes which is mediated by the massive bosons, \W{} and \Z{} from fig. \ref{SMParticles}. 
 
 \subsection{Weak Force}
 \label{WeakForce}
 
-The Weak force is responsible for nuclear decay. The Weak force has an interaction of the type $\frac{1}{2}\gamma^\mu(1-\gamma^5)$ so it is a V-A interaction with $SU(2)$ symmetry. From this, we can conclude that it violates Parity. Parity is a transformation from $(x, y, z)\rightarrow(-x,-y,-z)$ or space inversion. Since it violates Parity, the next step is to consider a conservation of $CP$, where $C$ is charge conjugation (particle-to-antiparticle). 
+The Weak force is responsible for nuclear decay. The Weak force has an interaction of the type $\frac{1}{2}\gamma^\mu(1-\gamma^5)$ so it is a $V-A$ interaction with $SU(2)$ symmetry. From this, we can conclude that it violates Parity. Parity is a transformation from $(x, y, z)\rightarrow(-x,-y,-z)$ or space inversion. Since it violates Parity, the next step is to consider a conservation of $CP$, where $C$ is charge conjugation (particle-to-antiparticle). 
 
-The main experimental implications of this proposed conservation comes from the decay of the neutral Kaon, $K^0(\overline{s}d) \text{ and } \overline{K}^0(s\overline{d})$. These have two $CP$ states which are, $CP\ket{K^0}=-\ket{\overline{K}^0},$ and $CP\ket{\overline{K}^0}=-\ket{K^0}$. Once we normalize these eigenstates of $CP$ we get the corresponding wave functions,
-\begin{equation}\label{KaonEigenstate}
-\ket{K_1}=\left(\frac{1}{\sqrt{2}}\right)(\ket{K^0}-\ket{\overline{K}^0}) \text{ and } \ket{K_2}=\left(\frac{1}{\sqrt{2}}\right)(\ket{K^0}+\ket{\overline{K}^0}),
-\end{equation}
-where each has the invariance $CP\ket{K_1}=\ket{K_1}$ and $CP\ket{K_2}=-\ket{K_2}$. The two Kaon states are expected to decay into either two pions or three pions for $\ket{K_1}$ and $\ket{K_2}$, respectively. Since there is a greater energy release in the $\ket{K_1}$ state the lifetime of that particle is thought to be less than $\ket{K_2}$. After experimenting on the purity of Kaon decays after a long distance away from an interaction point, we have found that it is possible for the $\ket{K_1}$ to decay into three pions. This is direct evidence of Weak decays violating $CP$ conservation. 
+%The main experimental implications of this proposed conservation comes from the decay of the neutral Kaon, $K^0(\overline{s}d) \text{ and } \overline{K}^0(s\overline{d})$. These have two $CP$ states which are, $CP\ket{K^0}=-\ket{\overline{K}^0},$ and $CP\ket{\overline{K}^0}=-\ket{K^0}$. Once we normalize these eigenstates of $CP$ we get the corresponding wave functions,
+%\begin{equation}\label{KaonEigenstate}
+%\ket{K_1}=\left(\frac{1}{\sqrt{2}}\right)(\ket{K^0}-\ket{\overline{K}^0}) \text{ and } \ket{K_2}=\left(\frac{1}{\sqrt{2}}\right)(\ket{K^0}+\ket{\overline{K}^0}),
+%\end{equation}
+%where each has the invariance $CP\ket{K_1}=\ket{K_1}$ and $CP\ket{K_2}=-\ket{K_2}$. The two Kaon states are expected to decay into either two pions or three pions for $\ket{K_1}$ and $\ket{K_2}$, respectively. Since there is a greater energy release in the $\ket{K_1}$ state the lifetime of that particle is thought to be less than $\ket{K_2}$. After experimenting on the purity of Kaon decays after a long distance away from an interaction point, we have found that it is possible for the $\ket{K_1}$ to decay into three pions. This is direct evidence of Weak decays violating $CP$ conservation. 
 
 Now the Weak force is mediated by two vector bosons, \W{} and \Z, see fig. \ref{SMParticles}. These are unlike the other forces because these vector bosons have a large mass of $m_\W=80.379\pm0.012$ GeV and $m_Z=91.1876\pm0.0021$ GeV. The \W{} boson is a charged particle and interacts with many nuclear decays. 
 
@@ -220,7 +220,7 @@ where for example, $V_{ud}$ is the coupling of $u$ to $d$ which is exactly $(d\r
  	\label{WeakRules} 
 \end{figure}
 
-The \Z{} boson is known as the neutral current. This boson mediates forces between particles and their respective antiparticles, see fig. \ref{ZbosonInteraction}. This interaction for the neutral weak force is $\gamma^\mu(c_V^f-c_A^f\gamma^5)$ which is quite similar to the charged weak interaction, but differs by the constants $c_V^f$ and $c_A^f$. The Weak interactions are shown in Fig. \ref{WeakRules}. We see the charged \W{} boson interactions with the charged leptons and their respective neutrinos or allows for flavor changing interactions with quarks. The neutral \Z{} boson interacts in the same way as the photon. 
+The \Z{} boson is known as the neutral current. This boson mediates forces between particles and their respective antiparticles, see fig. \ref{ZbosonInteraction}. This interaction for the neutral weak force is $\gamma^\mu(c_V^f-c_A^f\gamma^5)$ which is quite similar to the charged weak interaction, but differs by the constants $c_V^f$ and $c_A^f$. The Weak interactions are shown in Fig. \ref{WeakRules}. We see the charged \W{} boson interactions with the charged leptons and their respective neutrinos or allows for flavor changing interactions with quarks. Event though the neutral \Z{} boson interacts with a $V-A$ interaction we can still replace the $\gamma$ in any QED Feynman diagram with a \Z{}.
 
 \subsection{The Electroweak Lagrangian}
 
@@ -297,7 +297,7 @@ with this specific transformation of the $SU(2)$ doublet and the simplification 
 
 \subsection{Electroweak} \label{EMWeak}
 
-We want to include the Higgs Mechanism into the weak isospin and weak hypercharge, $SU(2)_L\times U(1)_Y$, transformations of electroweak interactions. Isospin and hypercharge is defined as $I_3=\frac{1}{2}(n_u-n_d)$ and $Y\equiv B+S$, respectfully, where $n_u,n_d$ is the number of up or down quarks, $B$ is the baryon number, and $S$ is the strangeness. The weak isospin triplet for weak currents can be written down using Eqn. \ref{WeakLagrangian}, 
+We want to include the Higgs Mechanism into the weak isospin and weak hypercharge, $SU(2)_L\times U(1)_Y$, transformations of electroweak interactions. Weak isospin and hypercharge is defined as $I_3=\frac{1}{2}(n_u-n_d)$ and $Y\equiv B+S$, respectfully, where $n_u,n_d$ is the number of up or down quarks, $B$ is the baryon number, and $S$ is the strangeness. The weak isospin triplet for weak currents can be written down using Eqn. \ref{WeakLagrangian}, 
 \begin{equation}\label{WeakIsospinCurrent}
 J_\mu^i(x)=\overline{\chi}_L\gamma_\mu\frac{1}{2}\tau_i\chi_L, \text{ with } i=1,2,3.
 \end{equation}
@@ -458,12 +458,12 @@ The third family of squarks and sleptons should have quite different masses comp
 \begin{equation}
 \mathcal{L}_{\text{stop masses}}=-
 \begin{bmatrix}
-\st^*_L & \st^*_R \\
+\widetilde{t}_{1L}^* & \widetilde{t}_{1R}^* \\
 \end{bmatrix}
 \boldsymbol{m_{\st}^2}
 \begin{bmatrix}
-\st_L \\
-\st_R \\
+\widetilde{t}_{1L} \\
+\widetilde{t}_{1R} \\
 \end{bmatrix}
 \end{equation}
 where 
@@ -475,7 +475,7 @@ v(a_tsin\beta-\mu^*y_tcos\beta) & m^2_{\overline{u}_3} +m_t^2+(\frac{2}{3}sin^2\
 \end{bmatrix}.
 \end{equation}
 
-This is a hermitian matrix and can be diagonalized to give eigenstates $\st_1$ and $\st_2$ which are linear combinations of the left and right-handed \st, see fig. \ref{StopMass}. Now we get the eigenvalues for the mass states as $m_{\st_1}^2<m_{\st_2}^2$. From this models predict that the $\st_1$ is the lightest squark \cite{martin_supersymmetry_1997}. 
+This is a hermitian matrix and can be diagonalized to give eigenstates $\st$ and $\widetilde{t}_2$ which are linear combinations of the left and right-handed \st, see fig. \ref{StopMass}. Now we get the eigenvalues for the mass states as $m_{\st}^2<m_{\widetilde{t}_2}^2$. From this models predict that the $\st$ is the lightest squark \cite{martin_supersymmetry_1997}. 
 
 \subsection{Supersymmetry Searches}
 The SM of particle physics has been a powerful model for predicting interactions between quarks, leptons, and force carriers, with an accurate prediction for precision measurements, but has some faults such as, the Hierarchy problem, dark matter, and a Grand Unified Theory. We have seen that including SUSY can allow for possible solutions, such as: a dark matter candidate as the LSP, bosonic-fermionic loop corrections for the Higgs boson mass, and a unification of the fundamental forces at large energies. Then once investigating the theory of SUSY we were able to determine that the top squark could be the lightest squark, which allows us to develop multiple searches for this proposed theory. 
