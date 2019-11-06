@@ -1,0 +1,71 @@
+% matches pred table
+% copy and paste the output from the end of LLBPred() (it calls printMoriond17Table) between the below labels "start insert" and "stop insert".
+\begin{table}[!h]
+\begin{center}
+\resizebox*{\textwidth}{!}{
+\begin{tabular}{|c||c||c|c|c||c|c|c|}
+\hline
+& & \multicolumn{3}{c||}{\ttbar{} 1-lepton} & \multicolumn{3}{c||}{\ttbar{} Di-lepton}\\
+\hline
+\hline
+Type & Discriminator Cut & Efficiency & Fake Rate & Efficiency/Fake & Efficiency & Fake Rate & Efficiency/Fake \\
+\hline
+IsoTrack  & - & 27.9 \% & 6.1 \% & 4.541 & 24.8 \% & 6.1 \% & 4.084 \\
+TauMVA & 0.68  & 34.9 \% & 6.9 \% & 5.046 & 24.7 \% & 5.3 \% & 4.689 \\
+TauMVA & 0.70  & 34.6 \% & 6.5 \% & 5.355 & 24.4 \% & 4.9 \% & 4.997 \\
+TauMVA & 0.71  & 34.4 \% & 6.2 \% & 5.525 & 24.2 \% & 4.7 \% & 5.170 \\
+TauMVA & 0.73  & 33.9 \% & 5.7 \% & 5.914 & 23.8 \% & 4.3 \% & 5.540 \\
+TauMVA & 0.74  & 33.6 \% & 5.5 \% & 6.119 & 23.6 \% & 4.1 \% & 5.712 \\
+TauMVA & 0.75  & 33.4 \% & 5.2 \% & 6.356 & 23.4 \% & 3.9 \% & 5.961 \\
+\hline 
+\end{tabular}
+}
+\caption[TauMVA Background Optimization]{\label{tab:tau-mva-bkg}Comparing the efficiencies and Fake Rates of many difference discriminator cuts for the TauMVA and IsoTrack methods with SM simulation.}
+\end{center}
+\end{table}
+
+\begin{table}[!h]
+\begin{center}
+\resizebox*{\textwidth}{!}{
+\begin{tabular}{|c||c||c|c|c||c|c|c|}
+\hline
+& & \multicolumn{3}{c||}{T1tttt(2000,100)} & \multicolumn{3}{c||}{T2tt(850,100)}\\
+\hline
+\hline
+Type & Discriminator Cut & Efficiency & Fake Rate & Efficiency/Fake & Efficiency & Fake Rate & Efficiency/Fake \\
+\hline
+IsoTrack  & - & 7.4 \% & 2.9 \% & 2.503 & 5.5 \% & 2.0 \% & 2.704 \\
+TauMVA & 0.68  & 5.7 \% & 8.1 \% & 0.696 & 4.8 \% & 4.7 \% & 1.017 \\
+TauMVA & 0.70  & 5.5 \% & 7.5 \% & 0.735 & 4.7 \% & 4.4 \% & 1.075 \\
+TauMVA & 0.71  & 5.5 \% & 7.2 \% & 0.760 & 4.7 \% & 4.2 \% & 1.102 \\
+TauMVA & 0.73  & 5.4 \% & 6.6 \% & 0.806 & 4.6 \% & 3.9 \% & 1.175 \\
+TauMVA & 0.74  & 5.3 \% & 6.3 \% & 0.832 & 4.5 \% & 3.7 \% & 1.214 \\
+TauMVA & 0.75  & 5.2 \% & 6.0 \% & 0.869 & 4.5 \% & 3.5 \% & 1.262 \\
+\hline 
+\end{tabular}
+}
+\caption[TauMVA Signal Optimization]{\label{tab:tau-mva-sig}Comparing the efficiencies and Fake Rates of many difference discriminator cuts for the TauMVA and IsoTrack methods with two SUSY simulations.}
+\end{center}
+\end{table}
+
+\begin{table}[!h]
+\begin{center}
+\resizebox*{\textwidth}{!}{
+\begin{tabular}{|c||c|c||c|c||c|c|}
+\hline
+& \multicolumn{2}{c||}{\ttbar{} 1-lepton} & \multicolumn{2}{c||}{T1tttt(2000,100)} & \multicolumn{2}{c|}{T2tt(850,100)} \\
+\hline
+\hline
+Methods & Veto Percentage & Veto Efficiency & Veto Percentage & Veto Efficiency & Veto Percentage & Veto Efficiency \\
+\hline
+TauMVA         & 32.2\% & 57.7\% & 12.9 \% & 10.7 \% & 6.5\% & 10.9 \%  \\
+IsoTrack        & 21.3 \% & 37.9 \% & 4.4 \% & 2.5 \% & 2.6 \% & 6.6 \%  \\
+TauPOG         & 171 \% & 29.7 \% & 7.0 \% & 3.2 \%	& 5.2 \% & 2.5 \% \\
+IsoTrack + TauPOG & 29.0 \% & 49.1 \% & 10.4 \% & 5.6 \% & 7.2 \% & 22.6 \% \\
+\hline 
+
+\end{tabular}
+}
+\caption[Tau Identification Comparisons]{\label{tab:tau-comparisons}Comparing the veto percentage and efficiency for the TauMVA, IsoTrack, and the IsoTrack + TauPOG methods with SM and SUSY simulations.}
+\end{center}
+\end{table}

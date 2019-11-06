@@ -1,0 +1,36 @@
+\chapter{Tau Multivariate Analysis}\label{sec:TauMVA}
+
+The identification of taus that decay hadronically has been under extensive study to distinguish whether the custom tau multivariate analysis (tauMVA), the isolated track (isotrack) method, or the MVA from that is provided by the tau POG (tauPOG). The custom tauMVA was trained on PF charged hadron candidates with $\pt>10~\GeV$ and $|\eta|<2.4$ along with an additional PF photon candidate, if any, with highest $\pt>0.5!\GeV$ and within a cone of $\Delta R\leq0.2$ of the charged hadron candidate. The tau candidate is also required to have a transverse mass $m_T(\tau_h,\met)<100~\GeV$, where $m_T(\tau_h,\met)$ is defined as follows,
+\begin{equation}\label{tauMT}
+m_T(\tau_h,\met)=\sqrt{2\cdot\pt(\tau_h+\text{nearest}\gamma)\cdot\met\cdot(1-\cos\Delta\phi)}.
+\end{equation}
+
+The addition of photons in the final definition is due to the possibility of taus decaying to neutral pions. This improves the resolution for the hadronic tau candidate. The inputs for the MVA are as follows:
+\begin{itemize}
+	\item The \pt and $|\eta|$ of the $\tau$ candidate.
+	\item The sum \pt of charged particles associated to the primary vertex within $\Delta R$ cones of sizes 0.1, 0.2, 0.3, and 0.4 around the $\tau$ candidate.
+	\item The summed \pt of all particles within $\Delta R$ cones of sizes 0.1, 0.2, 0.3, and 0.4 around the candidate, now including the neutral contribution from pileup particles, which is reduced by applying the $\Delta \beta$ correction to the neutral component of the isolation quantity. 
+	\item The distance in $\Delta R$ to the nearest charged PF candidate with $\pt>1~\GeV$.
+	\item The distance in $\Delta R$ to the axis of the jet containing the $\tau$ candidate, and the b-tagging discriminant (DeepCSV) value for the jet, provided that the jet has $\pt>30~\GeV$ and $|\eta|<2.4$.
+\end{itemize}
+
+\begin{figure}
+ 	\centering
+	\includegraphics[width=0.60\textwidth]{tauMVA_ROCCurve.png}
+ 	\caption[Tau MVA ROC Curve]{A Reciever operator characteristic curve for the tauMVA discriminator.}
+ 	\label{tauMVAROCCurve} 
+\end{figure}
+
+\begin{figure}[!htb]
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{mva_eta03_sigscalesumbkg_thesis.pdf}
+		\includegraphics[width=0.5\textwidth]{mva_fakett_eta03_allpu_sigscalesumbkg_thesis.pdf} \\
+	\end{center}
+	\caption[Tau MVA Discriminator]{Tau MVA discriminator for different types of samples.
+	}
+	\label{fig:tau-discriminator}
+\end{figure}
+
+\input{tables/tauMVA_studies.tex}
+
+Now that we have the definition for the TauMVA and have trained it on our samples to identify hadronically decaying taus. We want to compare the veto efficiencies and fake rates of the each method: TauMVA, IsoTrack, TauPOG, or a combination of IsoTrack and TauPOG. In Table \ref{tab:tau-comparisons}
