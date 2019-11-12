@@ -78,4 +78,8 @@ Finally at the bottom of the datacard we have the rate parameters for the backgr
 
 \section{Higgs Combined Tool}\label{sec:HiggsCombined}
 
-The Higgs Combined Tool uses an asymptotic methods to compute the confidence level (CL) for each of the cross section limits. 
+The Higgs Combined Tool uses an asymptotic methods to compute the confidence level (CL) for each of the cross section limits. The tool is able to convert the datacards into a Likelihood function to calculate the limits. The Likelihood function is 
+\begin{equation}\label{eqn:likelihood}
+L(r,\overrightarrow{\theta})=\prod_i \frac{[r\cdot s_i(\overrightarrow{\theta})+b_i(\overrightarrow{\theta})]^{n_i}}{n_i !}e^{-[r\cdot s_i(\overrightarrow{\theta})+b_i(\overrightarrow{\theta})]}\prod_\kappa e^{-\frac{1}{2}\theta^2_\kappa},
+\end{equation}
+where $r$ is the POI which is unconstrained only by the observed data, $s_i(\overrightarrow{\theta})$ and $b_i(\overrightarrow{\theta})$ are nuisance parameters which have external constraints. Each of these three parameters are jointly fitted to get a value of $r$. 
