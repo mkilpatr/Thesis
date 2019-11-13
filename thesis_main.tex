@@ -27,6 +27,10 @@
 \usepackage{cite}
 \usepackage{notoccite}
 \usepackage[section]{placeins}
+\usepackage{enumitem}
+\newlist{abbrv}{itemize}{1}
+\setlist[abbrv,1]{label=,labelwidth=1in,align=parleft,itemsep=0.1\baselineskip,leftmargin=!}
+
 
 
 \graphicspath{ {./plots/}}
@@ -80,6 +84,7 @@
 \appendix
 \addcontentsline{toc} {chapter}{\numberline {}Appendix A}
 \include{append-a}
+\include{acronyms}
 %\include{append-b}
 \addcontentsline{toc} {chapter}{\numberline {}Bibliography}{}
 \include{biblio}
