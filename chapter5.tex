@@ -47,7 +47,7 @@ where $N_{MC}(1l)$ is the event count observed in the corresponding CR and $N_{M
 
 The main motivation behind this approach is to increase the statistical precision of the background estimation. The performance of the $t$ and \W{} taggers has been studied in data and MC samples and a reasonably good agreement is observed allowing us to proceed with this approach. Data-to-MC scale factors are extracted and applied to MC to account for residual differences of the tagging performance in data. Detailed studies comparing the performance of the $t$ and \W{} taggers in data and MC \cite{noauthor_search_nodate}.
 
-The control regions utilized to predict the LL background are displayed in Fig. \ref{fig:llb-1lcr-datavsmc-lm-nb0} to \ref{fig:llb-1lcr-datavsmc-hm-nb3-2}. The figures \ref{fig:llb-1lcr-datavsmc-lm-nb0} to \ref{fig:llb-1lcr-datavsmc-lm-nb1} display the control regions specific to the low \dm{} selection, where the regions are binned following the search region definition. Figures \ref{fig:llb-1lcr-datavsmc-hm-nt0-nrt0-nw0} to \ref{fig:llb-1lcr-datavsmc-hm-nb3-2} display the control regions dedicated for the high \dm{} selection. Due to the nature of the background estimation method applied in the high \dm{} search, control regions are utilized for the prediction of multiple search regions. 
+The control regions utilized to predict the LL background are displayed in Fig. \ref{fig:llb-1lcr-datavsmc-lm-nb0} to \ref{fig:llb-1lcr-datavsmc-hm-nb3-1}. The figures \ref{fig:llb-1lcr-datavsmc-lm-nb0} to \ref{fig:llb-1lcr-datavsmc-lm-nb1} display the control regions specific to the low \dm{} selection, where the regions are binned following the search region definition. Figures \ref{fig:llb-1lcr-datavsmc-hm-nt0-nrt0-nw0} to \ref{fig:llb-1lcr-datavsmc-hm-nb3-1} display the control regions dedicated for the high \dm{} selection. Due to the nature of the background estimation method applied in the high \dm{} search, control regions are utilized for the prediction of multiple search regions. 
 
 Tables \ref{tab:0l-llb-pred-lm} to \ref{tab:0l-llb-pred-hm-3} summarize the yields in data observed in the single-lepton sample, the derived transfer factor, and the resulting LL predictions for the low \dm{} and high \dm{} search regions respectively. The transfer factors in the high \dm{} region actually account for two levels of extrapolation. The CR for the high \dm{} is loose such that, there is no binning in tops or W tagging. We then extrapolate to the SR with the inclusion of the top and W tags, along with scale factors, to estimate the LL background in the region:
 \begin{equation}\label{TFExtrapolation}
@@ -83,7 +83,7 @@ Znunu: production of a Z boson that decays into two nuetrinos which are then mis
 \section{Quantum Chromodynamic Events}
 \label{subsec:QCD}
 
-Simulation predicts negligible levels of QCD contamination in the various search regions. However, the QCD multijet simulation has limited statistics and there are uncertainties related to the description of physics in the simulation, particularly for the rare scenarios that would lead to a multijet event passing all of the final search region selection criteria. For these reasons, it is necessary to perform a data-driven QCD background estimation. We follow an approach similar to those described for other SM backgrounds, first using a QCD-enhanced region to validate the simulation, then extrapolating the event count in the control region to a prediction in the search region. 
+Simulation predicts negligible levels of QCD contamination in the various search regions. However, the QCD multijet simulation has limited statistics and there are uncertainties related to the description of physics in the simulation, particularly for the rare scenarios that would lead to a multijet event passing all of the final search region selection criteria. For these reasons, it is necessary to perform a data-driven QCD background estimation. We follow an approach similar to those described for other SM backgrounds, first using a QCD-enhanced control region and use it to validate the simulation, then extrapolate the event count in the control region to a prediction in the search region. 
 
 \met{} is generated in QCD events through either jet \pt{} mis-measurement or semileptonic heavy flavor decay and for the purposes of this section both sources of \met{} will be generally referred to as "mis-measurement". This leads to the characteristic of \met{} being aligned to one of the leading jets, which motivates including a veto on such events in the baseline selection. On the other hand, inverting and tightening the \highdm{} selection from the high \dm{} region, or the \lowdm{} selection from the low \dm{} region, to \qcdcr{} for both the high and low \dm{} regions result in regions with fairly pure samples of QCD events. The QCD search regions yields are estimated with data yields in a series of control regions with this modified baseline selection after subtracting the contamination of non-QCD processes. The control region yields are related to search region yields with the following simulation transfer factors:
 \begin{equation}\label{QCDTF}
@@ -93,50 +93,53 @@ where $N_{MC}^{QCD}(SR)$ are the expected QCD yields from simulation for the sig
 \begin{equation}
 N_{pred}^{QCD}=TF_{QCD}\cdot(N_{data}-N_{MC}^{non-QCD}),
 \end{equation}
-where $N_{data}$ is the number of events in the \qcdcr{} control sample described above, and $N_{MC}^{non-QCD}$ is the number of non-QCD events in this sample as estimated by the background predictions.
-
-\input{QCD_LM_CR_plots.tex}
-\input{QCD_HM_CR_plots.tex}
-
-For the estimation of the QCd contribution in the high \dm{} search regions, the QCD control regions match the selection in the corresponding search regions except from the selection on $N_t,N_W,$ and $N_{res}$. Binning the control regions in these dimensions has the advantage of measureming the efficiency of each variable directly in data. The $t$ and \W{} tags improves significantly the statistical power of the estimate. The lepton vetoes are not applied when calculating $TF_{QCD}$, only on $N_{data}$ and $N_{MC}^{non-QCD}$. The fake rates are then estimated directly from data. 
-
-A similar approach is utilized for the estimation of the QCD contribution in the low \dm{} search regions. The QCD control regions are binned in the same variables and ranges as of the search regions, but the QCD purity is low for the low \dm{} control regions with one or more b-tags (the high \dm{} control regions are integrated with respect to top and \W-tags and therefore have sufficient statistics in spite of the number of b-tags). Except for a normalization factor, the MC is generally consistent with data as function of \met{} for each of the control regions. Therefore, these low \dm{} control region \met{} bins are combined in order to increase the precision of the prediction in these search region bins. A systematic uncertainty on this integration is obtained by comparing the MC \met{} shape to the data shape for the two $N_b=0$ control regions in which no integration is applied. For each control region, the data to MC ratio for each \met{} bin is compared to the fully integrated ratio. The maximum difference, $51\%$ is the systematic uncertainty.
-
-QCD events fail the \highdm{} or \lowdm{} selection cuts, for the high and low \dm{} regions respectively, and enter the search region due to a leading jet undergoing such severe mis-measurement that it is reconstructed as one of the sub-leading jets. Mis-measurement is parameterized by the jet response, defined as:
-\begin{equation}\label{jetres}
-r_{jet}=\frac{(\pt)_{reco}}{(\pt)_{gen}}.
+where $N_{data}$ is the number of events in the \qcdcr{} control sample described above, and $N_{MC}^{non-QCD}$ is the number of non-QCD events in this sample as estimated by the background predictions. This method is used to make the comparison with only the QCD events from data. The transfer factors in the high \dm{} region actually account for two levels of extrapolation, i.e., the extrapolation from the control regions to the search regions without the requirement of top and W tags, and the extrapolation in top and W tags in the search regions after correcting the top- and W-tagging efficiencies:
+\begin{equation}\label{QCDTFExtrapolation}
+\begin{split}
+TF_{QCD}&=TF_{QCD}^{CR-SR}\times TF_{QCD}^{SR-extrap} \\
+&=\frac{N_{MC}(SR)(\nj,\nb,\met)}{N_{MC}(\qcdcr)(\nj,\nb,\met)}\times\frac{N_{MC}(SR)(\nj,\nb,\met,\nt,\nrt,\nw)}{N_{MC}(SR)(\nj,\nb,\met)},
+\end{split}
 \end{equation}
+where we have split the transfer function into two different parts, a control region to search region comparison and a search region to search region extrapolation.
 
-A much larger proportion of events in the search region that the control region are in the tail of the $r_{jet}$ distribution, which means that this method relies on the correct modeling of $r_{jet}$ in simulation. Therefore, a $r_{jet}$ correction and uncertainty is extracted from data using the method described in Ref. []. The correciton is derived with the pseudo jet response $(r_{pseudo,jet})$ distribution, applying the QCD control region selection except for the number of jets and b-tagging requirements. We divide this region into two, in the case of the jet aligned to \met{} passing the medium b-tag requirement and in the case of it not passing the light b-tag requirement. The corrections range between $0.81\pm0.12$ and $0.83\pm0.08$ in the case of jets originating from b-quarks and between $1.04\pm0.04$ and $1.82\pm0.15$ for all other jets as can be seen in Table .
+The QCD control region estimation uses an extrapolation methods for the high \dm{} region. The selection for these regions are the same except for the \nt, \nrt, and \nw{} tags, see Eqn. \ref{QCDTFExtrapolation}. This method allows for the measurement of the efficiency directly in data. This also also for the statistical error on the estimation fo be greatly improved. The lepton vetoes are still applied to the $N_{MC}^{non-QCD}$ and $N_{data}$, but not the $TF_{QCD}$ estimation. For the low \dm{} control region, it is binned in the same manner as the search region with the same cuts applied. Unfortunately, the QCD purity is low for the regions with one or more b-tags. To improve the statistics in these regions we merge the \met{} bins to improve the precision of the prediction in these regions. 
 
-The statistical uncertainty on $TF_{QCD}$ is reduced by increasing the effective luminosity of the QCD multijet sample with a method referring to as "local smearing." The method relies on the parametrization of $r_{jet}$, which is only dependent on jet properties.
-
-\subsubsection{QCD Local Smearing}\label{Smearing}
+\subsection{QCD Local Smearing}\label{Smearing}
 \input{QCD_jetResponse.tex}
 The local smearing methods for QCD use a parameterization of the reconstructed(reco) jet. The reco jet is used when defining the jet response, see Eqn. \ref{jetres}. The analysis of the jet response spans many order of mangitude and is binned in \pt{} and jet flavor, see Fig. \ref{fig:qcd-light-jet-res} and \ref{fig:qcd-b-jet-res}. 
 
-\subsubsection{QCD Corrections}
+The QCD events that fail the \highdm{} or \lowdm{} selection cuts, for the high and low \dm{} regions respectively, enter the search region due to a leading jet undergoing such severe mis-measurement that it is reconstructed as one of the sub-leading jets. Mis-measurement is parameterized by the jet response, defined as:
+\begin{equation}\label{jetres}
+r_{jet}=\frac{(\pt)_{reco}}{(\pt)_{gen}},
+\end{equation}
+where $(\pt)_{reco}$ is the \pt{} of the reconstructed jet and $(\pt)_{gen}$ is the \pt{} of the gen-level jet that is matched to the reconstructed jet.
+
+\subsection{QCD Corrections}
 
 Figures ? and ? show the \met{} distribution in data and simculation in the QCD control regions for the high \dm{} and lowd \dm{} selections, respectively. The stacked plot labeled "Non-QCD bkg" is the distribution of the non-QCD events as predicted with the estimation methods detailed in this note. The other stacked plot, labeled "Smeared QCD MC" is the smeared QCD simulation yield after applying the $r_{jet}$ corrections. The other two lines show a combination of the predicted non-QCD SM yields and one of two scenarios. "Without $r_{jet}$ corr" is the smeared QCD simulation without the $r_{jet}$ correction and "With orig. QCD MC" is the standard QCD simulation without this correction. There are three important trends in this figure. The first is the purity of the control regions, which gives confidence in using them to predict QCD yields. The second is that the "Without $r_{jet}$ corr" estimation is nearly equivalent to "With orig. QCD MC" in the regions where there are enough statistics to have a meaningful comparison. This improves our confidence in the use of the smeared QCD simulation. Finally, the $r_{jet}$ correction improves the agreement between data simulation, which is a useful validation of this correction. Due to the nature of the background estimation method applied in the high \dm{} search, control regions are utilized for the prediciton of multiple search regions. 
 
 \begin{figure}
 	\begin{center}
-  \includegraphics[width=0.4\textwidth]{QCD/qcdjetrespbtagged.png}
-   \includegraphics[width=0.4\textwidth]{QCD/qcdjetrespbtaggedlight.png} //
+  \includegraphics[width=0.8\textwidth]{QCD/qcd_res_tail_2016.png}
+  \includegraphics[width=0.8\textwidth]{QCD/qcd_res_tail_2017.png}
+  \includegraphics[width=0.8\textwidth]{QCD/qcd_res_tail_2018.png}
 	\end{center}
 	\caption[QCD Jet Response for eah b-jet and light jet]{The correction for each event that has the corresponding b-jet or light jet that is then associated with the response of the jet. }
 	\label{fig:qcd-cr-response-corr}
 \end{figure}
 
-A much larger proportion of events in the search region than the control region are in the tail of the $r_{jet}$ distribution, which means that this method relies on the correct modeling of $r_{jet}$ in simulation. Therefore, a $r_{jet}$ correction and uncertainty is extracted from data. In the case of \met{} being caused by the severe mis-measurement of a single jet, \met{} and that jet are aligned and the generated level transverse momentum of the jet is approximately the pseudo-generator level \pt:
+A much larger proportion of events in the search region than the control region are in the tail of the $r_{jet}$ distribution, which means that this method relies on the correct modeling of $r_{jet}$ in simulation. Therefore, a $r_{jet}$ correction and uncertainty is extracted from data. In the case of \met{} being caused by the severe mis-measurement of a single jet, \met{} and that jet are aligned and the generated level transverse momentum of the jet is approximately the pseudo-generator level \pt.
 
-Tables ? and ? summarize the yields in data, the derived transfer factors, and the resulting QCD predictions for the high \dm{} and low \dm{} search regions respectively. The transfer factors in the high \dm{} region actually account for two levels of extrapolation, i.e., the extrapolation from the control regions to the search regions without the requirement of top and W tags, and the extrapolation in top and W tags in the search regions after correcting the top- and W-tagging efficiencies:
-\begin{equation}\label{QCDTFExtrapolation}
-\begin{split}
-TF_{QCD}&=TF_{QCD}^{CR-SR}\times TF_{QCD}^{SR-extrap} \\
-&=\frac{N_{MC}(SR)(\nj,\nb,\met)}{N_{MC}(\qcdcr)(\nj,\nb,\met)}\times\frac{N_{MC}(SR)(\nj,\nb,\met,\nt,\nrt,\nw)}{N_{MC}(SR)(\nj,\nb,\met)}
-\end{split}
-\end{equation}
+A much larger proportion of events in the search region that the control region are in the tail of the $r_{jet}$ distribution, which means that this method relies on the correct modeling of $r_{jet}$ in simulation. A $r_{jet}$ correction and uncertainty is extracted from data using the method described in Ref. []. The correction is derived with the pseudo jet response $(r_{pseudo,jet})$ distribution, applying the QCD control region selection except for the number of jets and b-tagging requirements. We divide this region into two, in the case of the jet aligned to \met{} passing the medium b-tag requirement and in the case of it not passing the light b-tag requirement. The corrections range between $1.52\pm1.44$ to $1.53\pm2.44$, $0.13\pm1.08$ to $0.32\pm0.71$, and $0.82\pm0.29$ to $0.84\pm0.56$ in the case of jets originating from b-quarks and between $0.26\pm0.44$ to $1.66\pm0.46$, $0.87\pm0.24$ to $1.51\pm0.41$, and $0.98\pm0.27$ to $1.16\pm0.32$ for 2016, 2017, and 2018 respectively, and for all other jets as can be seen in Tables \ref{tab:qcd_tailsf-2016}, \ref{tab:qcd_tailsf-2017}, \ref{tab:qcd_tailsf-2018}.
+
+\input{tables/qcd_tail_sf}
+
+The statistical uncertainty on $TF_{QCD}$ is reduced by increasing the effective luminosity of the QCD multijet sample with a method referring to as "local smearing." The method relies on the parametrization of $r_{jet}$, which is only dependent on jet properties.
+
+Tables ? and ? summarize the yields in data, the derived transfer factors, and the resulting QCD predictions for the high \dm{} and low \dm{} search regions respectively. 
+
+\input{QCD_LM_CR_plots.tex}
+\input{QCD_HM_CR_plots.tex}
 
 \section{Rare Interactions}
 \label{subsec:rare}
