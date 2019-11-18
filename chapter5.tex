@@ -77,8 +77,37 @@ The prediction of the \Znunu{} background is given by:
 \begin{equation}
 N_{pred}^{\Znunu}=N_{MC}^{\Znunu} \cdot R_Z \cdot S_\gamma
 \end{equation}
+where $N_{MC}^{\Znunu}$ is the expected number of \Znunu{} events obtained from simulation in a given search region, $R_Z$ is a factor used to account for any difference betweeen data and simulation in the cross-section of the \Znunu{} process, $S_\gamma$ accounts for any shape difference in the \Znunu{} process between data and simulation and is integrated in top and W tags. 
 
-Znunu: production of a Z boson that decays into two neutrinos which are then missed by the detector. Can have jets from other quarks/gluons in the interaction
+The factor $R_Z$ is calculated by comparing the observed and expected \Zll yields after applying a relaxed definition of the baseline selection. In particular, we remove the requirement on the azimuthal angle between the leading jets and $\met^{ll}$ after hecking that this does not bias the result. To increase the purity of the sample in \Zll{} events, we require the dilepton invariant mass to lie within the Z-mass windo $(80<M_{ll}<100$ GeV) and requie the \pt{} of the dilepton system to be above 200 GeV. However, the \ttbar{} contamination is non-negligible in events with $\nb\geq1$ and needs to be taken into account in the calculation of $R_Z$. We define a similar factor, $R_T$, for \ttbar{} events that is calculated by comparing the observed and expected yields for events with dilepton invariant mass outside the $Z$-mass window $(50<M_{ll}<80$ or $M_{ll}>100$ GeV). The relation between the factors, $R_Z$ and $R_T$, and the observed and expected yields inside and outside the Z-mass window, 
+\begin{equation}
+\begin{bmatrix}
+\text{Data}_{on-Z} \\
+\text{Data}_{off-Z}
+\end{bmatrix}
+=
+\begin{bmatrix}
+\text{MC}_{\text{on}-Z}(\Zll) & MC_{\text{on}-Z}(\ttbar) \\
+\text{MC}_{\text{off}-Z}(\Zll) & MC_{\text{off}-Z}(\ttbar)
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+R_Z \\
+R_T
+\end{bmatrix}.
+\end{equation}
+
+We include the small contributions from the tZ, ttZ, WZ, and ZZ processes in $R_Z$, and from tW, ttW, and WW processes in $R_T$. The factors $R_Z$ and $R_T$ are determined simultaneously by solving the equations above, and the statistical uncertainty of $R_Z$ and $R_T$ reflects the statistical uncertainty of the data and simulated sample.
+
+To account for potential effects related to heavy flavor production, $R_Z$ and $R_T$ are calculated separately for different \nb{} and \nsv{} requirements. The high and low \dm{} baseline selections are applied for the corresponding regions, except for the requirements on the azimuthal angles between the leading jets and \met. Figures ? to ? show the data and simulated events in the regions used to calculate $R_Z$ and $R_T$, and results are summarized in Table ?. The statistical uncertainties on $R_Z$ are included in the systematic uncertainty on the final background prediction. 
+
+As discussed earlier in the section, we utilize the $\gamma$+jets sample to extract corrections related to the modeling of the kinematics of \Znunu+jets events. The selected $\gamma$+jets sample consists of events that have at least one photon satisfying the selection described in Section 3.11. 
+
+The events are selected online using the HLT\_Photon165\_HE10 trigger. The photon trigger efficiency is observed to degrade by up to ~ 10\% at high photon \pt{} due to an inefficiency in the L1 trigger. We therefore utilize the combination of triggers listed in Table 1 to recover efficiency. to suppress potential signal contamination and ensure that the control sample is independent from the search sample, we only consider events with $\met<200$ GeV. The $\gamma$+jets data control sample consists of three main components: prompt photons produced directly or via fragmentation, and fake photons. We combine the $\gamma$+jets and QCD simulated samples to estimate the contributions of these components to our control sample. We consider prompt photons to be reconstructed photons that are matched to a generator-level photon in space and momentum as follows: $\Delta R(\gamma_{gen}, \gamma_{reco})<0.1$ and $0.5<\pt^{gen}/\pt^reco<2$. We use the $\gamma$+jets simulation to describe the direct photon component and the QCD simulaiton to describe the fragmentation and fake components. We consider direct photons to be those that satisfy the relationship $\Delta R(\gamma, \text{parton})>0.4$, where parton refers to a quark of gluon at the generator level. To avoid double-counting events from the $\gamma$+jets and QCD simulated samples, we reject events in the QCD sample with $\Delta R(\gamma,\text{parton})>0.4$. Finally, reconstructed photons that are not matched to a generator-level photon are considered to be fakes. Finally, the $\gamma$+jets sample can also have a sizable contribution from $tt\gamma$ events in regions requiring at least one top- or W- have shown that significant variations in the normalization of each of these components in the $\gamma$+jets sample do not significantly affect the shapes of the search region variable distributions, and therefore it is sufficient to estimate the relative contributions of each component using the simulated samples. 
+
+The quantity $S_\gamma$ is the shape correction factor that is calculated via a comparison of the $\met^\gamma$ distributions of $\gamma$+jets events in simulation and data. The simulation is normalized to the number of events seen in data after applying the baseline selections corresponding to the low and high \dm{} searches, respectively. A different $S_\gamma$ is estimated for each search region, to account for effects related to the search variables, and is used to correct the corresponding \Znunu+jets yields from simulation. To increase the statistical power of the correction, in the low \dm{} regions, we integrate over \nsv{} for $\nb=0$ and $\nb=1$ separately after verifying in simulaiton that there is no bias introduced in $\gamma$+jets $\met^\gamma$ distributions. Figure ? to ? compare the normalized $\met^\gamma$ distributions for $\gamma$+jets in data and simulation. The data over simulation ratios in the various $\met^\gamma$ bins are the weights used to correct the \Znunu+jets simulated sample. 
+
+Tables ? and ? summarize 
 
 \section{Quantum Chromodynamic Events}
 \label{subsec:QCD}

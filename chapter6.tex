@@ -76,10 +76,40 @@ The next major portion of the datacard is the various systematics of the signal 
 
 Finally at the bottom of the datacard we have the rate parameters for the backgrounds that require the extrapolation from units to SR bins. The units are a more basic definition of the SR bins that can be combined with the prediction of each background to give the total background in each SR bin. Since the LL, QCD, and \Znunu{} backgrounds use an extrapolation method for the high \dm{} bins, we have defined 112 CR units and 529 SR units. In the bottom of Fig. \ref{fig:example-datacard-sig}, are the expected rates for the LL, QCD, and \Znunu{} that show the combination of three units to give the prediction of each background in the respective bins. The rates from the LL and QCD background can be seen in Fig. \ref{fig:example-datacard-ll} and \ref{fig:example-datacard-qcd}. These are an example of a single unit datacard. The calculation for each background from the unit CR is the data observation divided by the SM background in each, $\frac{N_{data}^{CR}}{(N_{LL}^{CR} + N_{Sig}^{CR})}$ where the LL CR is used as an example. Now to be able to make the estimation of the limit for the various SUSY processes that we are looking at, we need to combine the datacards for each SR bin for all of the signals in the mass parameter space. This can be easily accomplished thanks to the unique bin and process names for each signal. We can then input each of these combined datacards into the Higgs Combined Tool.
 
+\section{Statistics}\label{sec:Statistics}
+
+For the combination of multiple analyses that are sensitive to different signal production mechanisms and different decay modes, we are required to set limits on a common signal strength modifier $\mu$ that is used to alter the cross sections of all the production mechanisms. 
+
 \section{Higgs Combined Tool}\label{sec:HiggsCombined}
 
-The Higgs Combined Tool uses an asymptotic methods to compute the confidence level (CL) for each of the cross section limits. The tool is able to convert the datacards into a Likelihood function to calculate the limits. The Likelihood function is 
+The Higgs Combined Tool \cite{noauthor_procedure_2011} uses a modified frequentist method to compute the confidence level (CL) \cite{read_presentation_2002, junk_confidence_1999, read_modified_2000} for each of the cross section limits. The tool is able to convert the datacards into a Likelihood function to calculate the limits. The Likelihood function is 
 \begin{equation}\label{eqn:likelihood}
-L(r,\overrightarrow{\theta})=\prod_i \frac{[r\cdot s_i(\overrightarrow{\theta})+b_i(\overrightarrow{\theta})]^{n_i}}{n_i !}e^{-[r\cdot s_i(\overrightarrow{\theta})+b_i(\overrightarrow{\theta})]}\prod_\kappa e^{-\frac{1}{2}\theta^2_\kappa},
+\mathcal{L}(\mu,\theta)=\prod_i \frac{[\mu\cdot s_i(\theta)+b_i(\theta)]^{n_i}}{n_i !}e^{-[\mu\cdot s_i(\theta)+b_i(\theta)]}\prod_\kappa e^{-\frac{1}{2}\theta^2_\kappa},
 \end{equation}
-where $r$ is the POI which is constrained only by the observed data, $s_i(\overrightarrow{\theta})$ and $b_i(\overrightarrow{\theta})$ are nuisance parameters which have external constraints. Each of these three parameters are jointly fitted to get a value of $r$. We will be using an asymptotic CL method to compute the limits for this analysis. 
+where $\mu$ is the POI which is constrained only by the observed data, $s_i(\theta)$ and $b_i(\theta)$ are nuisance parameters for signal and background. Both the signal and background are subject to multiple uncertainties that are dealt with by using nuisance parameters $\theta$. Each of these three parameters are jointly fitted to get a value of $\mu$. We will be using an asymptotic CL method to compute the limits for this analysis. 
+
+\subsection{Observed Limits}\label{sec:ObsLimits}
+
+To compute the observed limit the likelihood function, $\mathcal{L}(\mu,\theta)$ from Eqn. \ref{eqn:likelihood}. Comparing the compatability of the data with the background-only and signal+background hypotheses to get 
+\begin{equation}
+\widetilde{q}_\mu=-2 ln\frac{\mathcal{L}(\mu,\hat{\theta}_\mu)}{\mathcal{L}(\mu,\theta)},
+\end{equation}
+with a constraint $0\leq\hat{\mu}\leq\mu$ where $\hat{\theta}_\mu$ is the conditional maximum likelihood estimators of $\theta$ given the signal strength $\mu$ and data, and the estimators $\hat{\mu}$ and $\hat{\theta}$ are the global maximum of the likelihood. 
+
+From this, we get the observed value of $\widetilde{q}_\mu^{obs}$ for a given value of $\mu$. A toy Monte Carlo pseudo-data is used to construct the PDFs $f(\widetilde{q}_\mu|\mu,\hat{\theta}_\mu^{obs})$ and $f(\widetilde{q}_\mu|0,\hat{\theta}_0^{obs})$ where we have a signal with strength $\mu$ in the signal+background and a background-only hypothesis. Two $p$-values are defined and associated with the two hypotheses, $p_\mu$ and $p_b$,
+\begin{equation}\label{eqn:splusb}
+p_\mu=P(\widetilde{q}_\mu\geq\widetilde{q}_\mu^{obs}|\text{signal+background})=\int_{\widetilde{q}_\mu^{obs}}^{\infty}f(\widetilde{q}_\mu|\mu,\hat{\theta}_\mu^{obs})d\widetilde{q}_\mu,
+\end{equation} \label{eqn:b}
+whe then have
+\begin{equation}
+1-p_b=P(\widetilde{q}_\mu\geq\widetilde{q}_\mu^{obs}|\text{background-only})=\int_{\widetilde{q}_\mu^{obs}}^{\infty}f(\widetilde{q}_\mu|0,\hat{\theta}_0^{obs})d\widetilde{q}_\mu,
+\end{equation}
+using both of these we can calculate the $CL_s(\mu)$ as 
+\begin{equation}
+CL_s(\mu)=\frac{p_\mu}{1-p_b}.
+\end{equation}
+Finally, to quota a $95\%$ confidence level on the upper limit on $\mu$, $\mu$ is adjusted until the $CL_s=0.05$ such that the confidence level is $(1-\alpha)$ where $CL_s\leq\alpha$. 
+
+\subsection{Expected Limits}\label{sec:ExpLimits}
+
+Along with the observed limits we are also interested in calculating the expected median upper-limit, $\pm1\sigma$, and $\pm2\sigma$ bands for the background-only hypothesis. To do this we generate a large set of background-only pseudo-data, using the toy Monte Carlo method, and calculate the $CL_s$ as if it was real data. The calculation for the expected limit is done by finding the cumulative probability distribution function (CDF) of results and starting the integration. The point at which the CDF crosses the 50\% band is the median expected value. Then the $\pm1\sigma$ band is defined by the 16\% and 84\% band and the $\pm2\sigma$ band is the 2.5\% and 97.5\% crossings. 
