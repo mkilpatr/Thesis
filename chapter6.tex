@@ -84,11 +84,27 @@ Finally at the bottom of the datacard we have the rate parameters for the backgr
 
 \section{Statistics}\label{sec:Statistics}
 
-For the combination of multiple analyses that are sensitive to different signal production mechanisms and different decay modes, we are required to set limits on a common signal strength modifier $\mu$ that is used to alter the cross sections of all the production mechanisms. 
+For the combination of multiple analyses that are sensitive to different signal production mechanisms and different decay modes, we are required to set limits on a common signal strength modifier $\mu$ that is used to alter the cross sections of all the production mechanisms. It is conventional to require a 95\% confidence level (CL) to exlude a signal. The interpretation of the CL, however, is quite complicated. We use a modified classical frequentist method such that we can include systematic uncertainties in the results. The method for constructing a unified confidence interval is based on the likelihood-ratio test statistic \cite{feldman_unified_1998}, 
+\begin{equation}\label{eqn:likelihoodtest}
+q_\mu=-2\text{ln}\frac{\mathcal{L}(data|\mu s+b)}{\mathcal{L}(data|\hat{\mu} s+b)},
+\end{equation}
+where $\hat{\mu}$ is used to maximize the likelihood $\mathcal{L}(data|\mu s+b)$, and $s$ and $b$ are the signal and background, respectively. In order to add systematics on the signal and background rates, $s(\theta)$ and $b(\theta)$, we include a prior pdf for the nuisance $\theta$ as $\rho(\theta|\widetilde{\theta})$ where $\widetilde{\theta}$ is the nominal value of the nuisance parameter. We interpret the systematic uncertainty as posteriors of the measurements. 
+
+\subsection{Profile Likelihood Asymptotic Approximation}\label{subsec:Asymptotic}
+
+The profile likelihood ratio is shown in Eqn. \ref{eqn:likelihoodtest} with the addition of the constraint $0\leq\widehat{\mu}\leq\mu$ which ensures that the obtained limits are one-sided. Additionally, this can be approximated by an asymptotic formula which is based on the Wilks and Wald theorems \cite{cowan_asymptotic_2011}. Since we include the physical constraint $\widehat{\mu}>0$, the asymptotic features of $f(\widetilde{q}_\mu|\text{signal+background})$, where $f$ is the \textit{pdf} of $q_\mu$ assuming the hypothesis $\mu$, is provided by the well defined formula \cite{cowan_asymptotic_2011}, 
+\begin{equation}\label{eqn:profileLikelihood}
+f(\widetilde{q}_\mu|\mu)=\frac{1}{2}\delta(\widetilde{q}_\mu)+\left\{
+\begin{split}
+&\frac{1}{2}\frac{1}{\sqrt{2\pi}}\frac{1}{\sqrt{\widetilde{q}_\mu}}e^{-\widetilde{q}_\mu/2} & 0<\widetilde{q}_\mu\leq\mu^2/\sigma^2 \\
+&\frac{1}{\sqrt{2\pi}(2\mu/\sigma)}exp[-\frac{1}{2}\frac{(\widetilde{q}_\mu+\mu^2/\sigma^2)^2}{(2\mu/\sigma)^2}] & \widetilde{q}_\mu>\mu^2/\sigma^2
+\end{split}
+\end{equation}
+where $\sigma^2=\frac{\mu^2}{q_{\mu,A}}$ with $q_{\mu,A}$ is evaluated with the expected background and nominal nuisance parameters. 
 
 \section{Higgs Combined Tool}\label{sec:HiggsCombined}
 
-The Higgs Combined Tool \cite{noauthor_procedure_2011} uses a modified frequentist method to compute the confidence level (CL) \cite{read_presentation_2002, junk_confidence_1999, read_modified_2000} for each of the cross section limits. The tool is able to convert the datacards into a Likelihood function to calculate the limits. The Likelihood function is 
+The Higgs Combined Tool \cite{noauthor_procedure_2011} uses a modified frequentist method to compute the CL \cite{read_presentation_2002, junk_confidence_1999, read_modified_2000} for each of the cross section limits. The tool is able to convert the datacards into a Likelihood function to calculate the limits. The Likelihood function is 
 \begin{equation}\label{eqn:likelihood}
 \mathcal{L}(\mu,\theta)=\prod_i \frac{[\mu\cdot s_i(\theta)+b_i(\theta)]^{n_i}}{n_i !}e^{-[\mu\cdot s_i(\theta)+b_i(\theta)]}\prod_\kappa e^{-\frac{1}{2}\theta^2_\kappa},
 \end{equation}
@@ -106,7 +122,7 @@ From this, we get the observed value of $\widetilde{q}_\mu^{obs}$ for a given va
 \begin{equation}\label{eqn:splusb}
 p_\mu=P(\widetilde{q}_\mu\geq\widetilde{q}_\mu^{obs}|\text{signal+background})=\int_{\widetilde{q}_\mu^{obs}}^{\infty}f(\widetilde{q}_\mu|\mu,\hat{\theta}_\mu^{obs})d\widetilde{q}_\mu,
 \end{equation} \label{eqn:b}
-whe then have
+we then have
 \begin{equation}
 1-p_b=P(\widetilde{q}_\mu\geq\widetilde{q}_\mu^{obs}|\text{background-only})=\int_{\widetilde{q}_\mu^{obs}}^{\infty}f(\widetilde{q}_\mu|0,\hat{\theta}_0^{obs})d\widetilde{q}_\mu,
 \end{equation}
@@ -119,3 +135,16 @@ Finally, to quota a $95\%$ confidence level on the upper limit on $\mu$, $\mu$ i
 \subsection{Expected Limits}\label{sec:ExpLimits}
 
 Along with the observed limits we are also interested in calculating the expected median upper-limit, $\pm1\sigma$, and $\pm2\sigma$ bands for the background-only hypothesis. To do this we generate a large set of background-only pseudo-data, using the toy Monte Carlo method, and calculate the $CL_s$ as if it was real data. The calculation for the expected limit is done by finding the cumulative probability distribution function (CDF) of results and starting the integration. The point at which the CDF crosses the 50\% band is the median expected value. Then the $\pm1\sigma$ band is defined by the 16\% and 84\% band and the $\pm2\sigma$ band is the 2.5\% and 97.5\% crossings. 
+
+\section{Results}\label{sec:Results}
+
+\begin{figure}
+	\begin{center}
+  \includegraphics[width=0.8\textwidth]{limits/T2tt_testXSEC.pdf}
+	\end{center}
+	\caption[Run 2: T2tt Limits]{Limits for the mass parameter space for $\st\rightarrow t \neutralino$ (T2tt) decays for Run 2 data. With a current limit of 1.4 \TeV{} for a minimal neutralino mass.
+	 }
+	\label{fig:Run2-T2tt-limits}
+\end{figure}
+
+After creating all of the datacards for each mass point we can calculate the expected and observed limits for the entire Run 2 analysis for each signal region, T2tt, T2bW, T2tb, T2fbd, and T2bWC. 
