@@ -5,7 +5,7 @@
 There are many different types of physics objects that we are interested in when working with particle physics experiments. Since these particles have very short lifetimes, $\mathcal{O}(\text{decay})=10^{-23}$ s, we mainly interact with the decay products of the event, such as, jets $(N_j)$, heavy object tagging $(\nb, \nt, \nw, \nrt)$, missing transverse momentum (\met), scalar sum jet momentum $(H_T)$, soft-b tagging, denoted as $\nsv$, transverse mass between tagged $b$ quarks and \met{} $(m_T(b_{1,2}, \met))$, Initial State Radiation, and lepton identification. We will look into each of these objects further in this chapter.
 
 \subsection{Jets}\label{Jets}
-In an interaction whenever a quark is made it comes in pairs $(q\overline{q})$ such that the total color charge of the interaction is neutral. Typically due to conservation of momentum the quarks may originally be produced near the interaction point but will quickly start to move away from each other. Eventually the quarks will move far enough apart and will have enough potential energy in the gluon connections between them that it is then more efficient to create a new quark-antiquark $(q\overline{q})$ pair. This will continue to occur in a sequence of radiating gluons and the production of pairs of charged particles, see Fig. \ref{JetHadronization}. In the final state, the energy deposited in the HCAL is a cluster of charged particles of a radius, $\Delta R=\sqrt{\Delta\eta^2+\Delta\phi^2}$. There are many algorithms to reconstruct the jets. We are mainly interested in the anti-kT Jet algorithm \cite{cacciari_anti-ktjet_2008} method which uses the transverse momentum of the particles within a certain radius $\Delta R = 0.4 (0.8)$ for AK4(AK8) jets \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/cms/jetid_nodate, noauthor_https://twiki.cern.ch/twiki/bin/view/cms/introtojec_nodate}. A charged hadron subtraction is also used to correct for the pileup, the number of collisions seen during a single proton beam crossing \cite{noauthor_pileup_2014}. Once the jets have been identified, we can analyze their respective properties to determine the likelihood of the particle it originated from, such as a $b, t, \text{ or } W$. 
+In an interaction whenever a quark is made it comes in pairs $(q\overline{q})$ such that the total color charge of the interaction is neutral. Typically due to conservation of momentum the quarks may originally be produced near the interaction point but will quickly start to move away from each other. Eventually the quarks will move far enough apart and will have enough potential energy in the gluon connections between them that it is then more efficient to create a new quark-antiquark $(q\overline{q})$ pair. This will continue to occur in a sequence of radiating gluons and the production of pairs of charged particles, see Fig. \ref{JetHadronization}. In the final state, the energy deposited in the HCAL is a cluster of charged particles of a radius, $\Delta R=\sqrt{\Delta\eta^2+\Delta\phi^2}$. There are many algorithms to reconstruct the jets which must satisfy the requirements in Ref. \cite{noauthor_jet_2010}. We are mainly interested in the anti-kT Jet algorithm \cite{cacciari_anti-ktjet_2008} method which uses the transverse momentum of the particles within a certain radius $\Delta R = 0.4 (0.8)$ for AK4(AK8) jets \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/cms/jetid_nodate, noauthor_https://twiki.cern.ch/twiki/bin/view/cms/introtojec_nodate}. A charged hadron subtraction is also used to correct for the pileup, the number of collisions seen during a single proton beam crossing \cite{cacciari_pileup_2008, noauthor_pileup_2014}. For AK8 jets the pileup contribution is accounted for using the "pileup per particle identification" method \cite{bertolini_pileup_2014, noauthor_pileup_2014}, where each particle is weighted by its probability of originating from the primary vertex. Once the jets have been identified, we can analyze their respective properties to determine the likelihood of the particle it originated from, such as a $b, t,$ or \W. 
 
 \begin{figure}
  	\centering
@@ -28,10 +28,10 @@ Firstly, \B-tagged jets are jets that are likely to have originated from a \B{} 
 \end{figure}
 
 \subsubsection{Top/W Tagging}\label{TopTagging}
-The anti-kt algorithm using a distance parameter, $\Delta R=0.8$, is expected to contain the energy clusters of all of the decay product of boosted $t$ quarks, see Fig. \ref{TopDecays}, with $\pt>300$ \GeV{} or \W{} bosons with $\pt>200$ \GeV. The requirements are:
+Top quark tagging is an essential part of our analysis. The top quark tagging algorithm is designed to have a high reconstruction efficiency for entire \pt{} spectrum of the top quark in our signal models. The anti-kt algorithm using a distance parameter, $\Delta R=0.8$, is expected to contain the energy clusters of all of the decay product of boosted $t$ quarks \cite{noauthor_top_nodate, noauthor_identification_nodate-1}, see Fig. \ref{TopDecays}, with $\pt>300$ \GeV{} or \W{} bosons with $\pt>200$ \GeV. These decays are reminiscent of the expected decay, $t\rightarrow bq\bar{q}^\prime$, when it is a highly Lorentz boosted $t$ quark decay. The requirements are:
 \begin{itemize}
 	\item Medium working point $>0.937, 0.895, 0.895 (0.973, 0.991, 0.991)$ for boosted $t$ $(W)$ for the separate 2016, 2017, and 2018 eras, respectively.
-	\item Reconstructed soft drop\cite{larkoski_soft_2014} mass: $105<m_t<210$ \GeV{} and $65<m_W<105$ \GeV.
+	\item Reconstructed soft drop\cite{larkoski_soft_2014, dasgupta_towards_2013} mass: $105<m_t<210$ \GeV{} and $65<m_W<105$ \GeV.
 	\item Boosted tops: $\pt=300$ \GeV, $|\eta|<2.0$ and $W$: $\pt=200$ \GeV, $|\eta|<2.0$.
 \end{itemize}
 
@@ -43,7 +43,7 @@ There is another type of top that can be reconstructed, which is when each subje
 These object definitions, \nt, \nw, \nrt, are orthogonal to each other and are used to bin our search and control regions. 
 
 \subsection{Missing Transverse Momentum}\label{MET}
-The missing transverse momentum is the negative vector sum of the total transverse momentum measured in the detector,
+The missing transverse momentum \cite{lester_measuring_1999, barr_variable_2003} is the negative vector sum of the total transverse momentum measured in the detector,
 \begin{equation}
 \met=-\sum_{i\in\text{vis}}\overrightarrow{p}_{i, T},
 \end{equation}
@@ -95,7 +95,7 @@ where \pt(b) is the momentum of the leading \bjet{} and $\slashed{E}_\phi$ and $
 Initial-state radiation (ISR) may be clustered into one of the large-$R$ jets clustered with a distance parameter, $\Delta R=0.8$. We use the larger radius jets to be sensitive to ISR with gluon splitting, when a jet radiates a gluon that pair produces two quarks. The ISR jet is identified as being the hardest of the large-$R$ jets with $\pt>200$ GeV which fails the loose b-tagging working point and is not identified as a top or W. This is a good parameter for jets that are neither tagged as $t$ or \W{} in the low \dm{} region of our search.
  
  \subsection{Electron and Muon Identification}\label{EleMuonID}
- There are two sets of selection criteria used in the analysis for electrons and muons. The set of criteria used to efficiently reject events with an isolated electron is done with a "Veto" ID. An electron with a Veto ID must pass the following cuts:
+ There are two sets of selection criteria used in the analysis for electrons \cite{noauthor_performance_2015} and muons \cite{collaboration_performance_2013}. The set of criteria used to efficiently reject events with an isolated electron is done with a "Veto" ID. An electron with a Veto ID must pass the following cuts:
  \begin{itemize}
 	 \item $|\Delta\eta|<0.007(0.01),|\Delta\phi|<0.8(0.7)$ for the electrons (muons).
 	 \item $\sigma_{i\eta i\eta}<0.01(0.03)$ for the electrons (muons).
