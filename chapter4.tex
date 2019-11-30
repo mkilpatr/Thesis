@@ -2,10 +2,24 @@
 \label{ch:SearchStrategy}
 
 \section{Physics Objects}\label{PhysObj}
-There are many different types of physics objects that we are interested in when working with particle physics experiments. Since these particles have very short lifetimes, $\mathcal{O}(\text{decay})=10^{-23}$ s, we mainly interact with the decay products of the event, such as, jets $(N_j)$, heavy object tagging $(\nb, \nt, \nw, \nrt)$, missing transverse momentum (\met), scalar sum jet momentum $(H_T)$, soft-b tagging, denoted as $\nsv$, transverse mass between tagged $b$ quarks and \met{} $(m_T(b_{1,2}, \met))$, Initial State Radiation, and lepton identification. We will look into each of these objects further in this chapter.
+There are many different types of particles that we are interested in when working with particle physics measurements. These particles have very short lifetimes $\tau_t\approx10^{-25}$ s for the $t$ quark \cite{quadt_top_2007} and $\tau_b\approx10^{-12}$ s for the $b$ quark \cite{lenz_lifetimes_2019}. We are interested in certain physics objects such as jets (\nj), Heavy object tagging (\nb, \nt, \nrt, \nw), missing transverse momentum (\met), soft-b tagging (\nsv), Initial State Ratiation, and lepton identification. We will look into each of these objects further in this chapter.
+
+ %We mainly interact with the decay products of the event, such as, jets $(N_j)$, heavy object tagging $(\nb, \nt, \nw, \nrt)$, missing transverse momentum (\met), scalar sum jet momentum $(H_T)$, soft-b tagging, denoted as $\nsv$, transverse mass between tagged $b$ quarks and \met{} $(m_T(b_{1,2}, \met))$, Initial State Radiation, and lepton identification. We will look into each of these objects further in this chapter.
 
 \subsection{Jets}\label{Jets}
-In an interaction whenever a quark is made it comes in pairs $(q\overline{q})$ such that the total color charge of the interaction is neutral. Typically due to conservation of momentum the quarks may originally be produced near the interaction point but will quickly start to move away from each other. Eventually the quarks will move far enough apart and will have enough potential energy in the gluon connections between them that it is then more efficient to create a new quark-antiquark $(q\overline{q})$ pair. This will continue to occur in a sequence of radiating gluons and the production of pairs of charged particles, see Fig. \ref{JetHadronization}. In the final state, the energy deposited in the HCAL is a cluster of charged particles of a radius, $\Delta R=\sqrt{\Delta\eta^2+\Delta\phi^2}$. There are many algorithms to reconstruct the jets which must satisfy the requirements in Ref. \cite{noauthor_jet_2010}. We are mainly interested in the anti-kT Jet algorithm \cite{cacciari_anti-ktjet_2008} method which uses the transverse momentum of the particles within a certain radius $\Delta R = 0.4 (0.8)$ for AK4(AK8) jets \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/cms/jetid_nodate, noauthor_https://twiki.cern.ch/twiki/bin/view/cms/introtojec_nodate}. A charged hadron subtraction is also used to correct for the pileup, the number of collisions seen during a single proton beam crossing \cite{cacciari_pileup_2008, noauthor_pileup_2014}. For AK8 jets the pileup contribution is accounted for using the "pileup per particle identification" method \cite{bertolini_pileup_2014, noauthor_pileup_2014}, where each particle is weighted by its probability of originating from the primary vertex. Once the jets have been identified, we can analyze their respective properties to determine the likelihood of the particle it originated from, such as a $b, t,$ or \W. 
+In an interaction whenever a quark is produced it comes in pairs $(q\overline{q})$. When a quark pair is produced they form a color flux tube. As they quickly start to move away from each other, in the center-of-momentum frame, the energy density of the color flux tube will increase to the point that another $q\overline{q}$ pair can be produced. This will continue to occur in a sequence of radiating gluons or photons and the production of pairs of particles, see Fig. \ref{JetHadronization}. 
+In the detector, the energy deposited in the HCAL is a cluster of charged or neutral particles of a radius, $\Delta R=\sqrt{\Delta\eta^2+\Delta\phi^2}$. There are many algorithms to reconstruct the jets which must satisfy the requirements in Ref. \cite{noauthor_jet_2010}. We are mainly interested in the \antikt{} Jet algorithm \cite{cacciari_anti-ktjet_2008} method which uses the transverse momentum of the particles within a certain radius $\Delta R = 0.4 (0.8)$ for AK4(AK8) jets \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/cms/jetid_nodate, noauthor_https://twiki.cern.ch/twiki/bin/view/cms/introtojec_nodate}. 
+
+The measurement of interest is the distance $d_{ij}$ between the particles $(i)$ and pseudojets $(j)$ and $d_{iB}$ as the distance between the particle and the beam $(B)$. The clustering identifies the smallest distance and if it is $d_{ij}$ the particle is added to the pseudojet, while if it is the distance $d_{iB}$ it is classified as a jet and removed from consideration. The distances are recalculated and repeated for all particles, see Fig. \ref{antikTJetReco}. The generalized algorithm is defined by the following distance measurement,
+\begin{equation}\label{eqn:antikT}
+\begin{split}
+d_{ij}&=\text{min}(k_{ti}^{2p},k_{tj}^{2p})\frac{\Delta^2_{ij}}{R^2} \\
+d_{iB}&=k_{ti}^{2p} \\
+\end{split},
+\end{equation}
+where $\Delta^2_{ij}=(y_i-y_j)^2+(\phi_i-\phi_j)^2$, $k_{ti}$ is the transverse momentum, $y_i$ is the rapidity, $\phi_i$ is the azimuthal angle, and $R$ is the radius parameter of the pseudojet. The above becomes the \antikt{} algorithm when $p=-1$. The jet area of the reconstructed jets are circular since the \antikt{} jets are unaffected by soft radiation. It is also insensitive to pileup which is of particular importance in CMS. An additional feature is that it is infrared safe, such that soft emissions of particles will not effect the reconstructed jets. 
+
+A charged hadron subtraction is also used to correct for the pileup, the number of collisions seen during a single proton beam crossing \cite{cacciari_pileup_2008, noauthor_pileup_2014}. For AK8 jets the pileup contribution is accounted for using the "pileup per particle identification" method \cite{bertolini_pileup_2014, noauthor_pileup_2014}, where each particle is weighted by its probability of originating from the primary vertex. Once the jets have been identified, we can analyze their respective properties to determine the likelihood of the particle it originated from, such as a $b, t,$ or \W. 
 
 \begin{figure}
  	\centering
@@ -14,11 +28,18 @@ In an interaction whenever a quark is made it comes in pairs $(q\overline{q})$ s
  	\label{JetHadronization} 
 \end{figure}
 
+\begin{figure}
+ 	\centering
+	\includegraphics[width=0.75\textwidth]{antikT_jetReconstruction.png}
+ 	\caption[Anti-$k_T$ Jet Reconstruction]{A sample parton level event with random soft particles that is clustered with the anti-kT algorithm \cite{cacciari_anti-ktjet_2008}.}
+ 	\label{antikTJetReco} 
+\end{figure}
+
 \subsection{Heavy Object Tagging}\label{HeavyObject}
 Since this search is looking for a massive particle which then decays to slightly less massive particles we need to be able to identify and distinguish between them. We use various algorithms and neural networks to identify jets from $b$ quarks, $t$ quarks, or from \W {} bosons. 
 
 \subsubsection{B-Tagging}\label{Btagging}
-Firstly, \B-tagged jets are jets that are likely to have originated from a \B{} quark. For \B{} quarks with large transverse momentum, we use a Deep Combined Secondary Vertex (DeepCSV) algorithm that involves neural networks\cite{noauthor_performance_nodate}. The medium working point recommended by the B-tag POG, corresponding to a threshold of 0.6324 0.4941, and 0.4184 for the 2016, 2017, and 2018 eras, respectively \cite{noauthor_https://twiki.cern.ch/twiki/bin/viewauth/cms/btagrecommendation2016legacy_nodate, noauthor_https://twiki.cern.ch/twiki/bin/viewauth/cms/btagrecommendation94x_nodate, noauthor_https://twiki.cern.ch/twiki/bin/viewauth/cms/btagrecommendation102x_nodate, noauthor_https://twiki.cern.ch/twiki/bin/viewauth/cms/btagsfmethods_nodate}. The medium working point is defined such that the percentage of a light jet being misidentified as a \bjet{} is 1\%.
+\B-tagged jets are jets that are likely to have originated from a \B{} quark. For \B{} quarks with large transverse momentum, we use a Deep Combined Secondary Vertex (DeepCSV) algorithm that involves neural networks\cite{noauthor_performance_nodate}. The medium working point recommended by the B-tag Physics Object Group (POG), corresponding to a threshold of 0.6324 0.4941, and 0.4184 for the 2016, 2017, and 2018 eras, respectively \cite{noauthor_https://twiki.cern.ch/twiki/bin/viewauth/cms/btagrecommendation2016legacy_nodate, noauthor_https://twiki.cern.ch/twiki/bin/viewauth/cms/btagrecommendation94x_nodate, noauthor_https://twiki.cern.ch/twiki/bin/viewauth/cms/btagrecommendation102x_nodate, noauthor_https://twiki.cern.ch/twiki/bin/viewauth/cms/btagsfmethods_nodate}. The medium working point is defined such that the percentage of a light jet being misidentified as a $b$ jet is 1\%.
 
 \begin{figure}
  	\centering
@@ -28,7 +49,7 @@ Firstly, \B-tagged jets are jets that are likely to have originated from a \B{} 
 \end{figure}
 
 \subsubsection{Top/W Tagging}\label{TopTagging}
-Top quark tagging is an essential part of our analysis. The top quark tagging algorithm is designed to have a high reconstruction efficiency for entire \pt{} spectrum of the top quark in our signal models. The anti-kt algorithm using a distance parameter, $\Delta R=0.8$, is expected to contain the energy clusters of all of the decay product of boosted $t$ quarks \cite{noauthor_top_nodate, noauthor_identification_nodate-1}, see Fig. \ref{TopDecays}, with $\pt>300$ \GeV{} or \W{} bosons with $\pt>200$ \GeV. These decays are reminiscent of the expected decay, $t\rightarrow bq\bar{q}^\prime$, when it is a highly Lorentz boosted $t$ quark decay. The requirements are:
+Top quark tagging is an essential part of our analysis. The top quark tagging algorithm is designed to have a high reconstruction efficiency for entire \pt{} spectrum of the top quark in our signal models. The \antikt{} algorithm using a distance parameter, $\Delta R=0.8$, is expected to contain the energy clusters of all of the decay product of boosted $t$ quarks \cite{noauthor_top_nodate, noauthor_identification_nodate-1}, see Fig. \ref{TopDecays}, with $\pt>300$ \GeV{} or \W{} bosons with $\pt>200$ \GeV. These decays are reminiscent of the expected decay, $t\rightarrow bq\bar{q}^\prime$, when it is a highly Lorentz boosted $t$ quark decay. The requirements are:
 \begin{itemize}
 	\item Medium working point $>0.937, 0.895, 0.895 (0.973, 0.991, 0.991)$ for boosted $t$ $(W)$ for the separate 2016, 2017, and 2018 eras, respectively.
 	\item Reconstructed soft drop\cite{larkoski_soft_2014, dasgupta_towards_2013} mass: $105<m_t<210$ \GeV{} and $65<m_W<105$ \GeV.
