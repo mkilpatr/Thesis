@@ -39,6 +39,8 @@ A charged hadron subtraction is also used to correct for the pileup, the number 
 Since this search is looking for a massive particle which then decays to slightly less massive particles we need to be able to identify and distinguish between them. We use various algorithms and neural networks to identify jets from $b$ quarks, $t$ quarks, or from \W {} bosons. 
 
 \subsubsection{B-Tagging}\label{Btagging}
+The ability to identify secondary vertices is essential in searches for the top squark, see Sec. \ref{sec:Production}. Since the b quark is a long lived particle, about $10^{-12}$ seconds, it will travel many millimeters before decaying into other particles. A \B{} quark is identified during reconstruction, where the jet originating from a point separated from the primary vertex $(PV)$, known as the secondary vertex $(SV)$. The displaced vertex of the long lived $b$ quark with low \pt{} has many interesting kinematic properties that we can use to identify them, $b$-tagging. 
+
 \B-tagged jets are jets that are likely to have originated from a \B{} quark. For \B{} quarks with large transverse momentum, we use a Deep Combined Secondary Vertex (DeepCSV) algorithm that involves neural networks\cite{noauthor_performance_nodate}. The medium working point recommended by the B-tag Physics Object Group (POG), corresponding to a threshold of 0.6324 0.4941, and 0.4184 for the 2016, 2017, and 2018 eras, respectively \cite{noauthor_https://twiki.cern.ch/twiki/bin/viewauth/cms/btagrecommendation2016legacy_nodate, noauthor_https://twiki.cern.ch/twiki/bin/viewauth/cms/btagrecommendation94x_nodate, noauthor_https://twiki.cern.ch/twiki/bin/viewauth/cms/btagrecommendation102x_nodate, noauthor_https://twiki.cern.ch/twiki/bin/viewauth/cms/btagsfmethods_nodate}. The medium working point is defined such that the percentage of a light jet being misidentified as a $b$ jet is 1\%.
 
 \begin{figure}
@@ -51,38 +53,36 @@ Since this search is looking for a massive particle which then decays to slightl
 \subsubsection{Top/W Tagging}\label{TopTagging}
 Top quark tagging is an essential part of our analysis. The top quark tagging algorithm is designed to have a high reconstruction efficiency for entire \pt{} spectrum of the top quark in our signal models. The \antikt{} algorithm using a distance parameter, $\Delta R=0.8$, is expected to contain the energy clusters of all of the decay product of boosted $t$ quarks \cite{noauthor_top_nodate, noauthor_identification_nodate-1}, see Fig. \ref{TopDecays}, with $\pt>300$ \GeV{} or \W{} bosons with $\pt>200$ \GeV. These decays are reminiscent of the expected decay, $t\rightarrow bq\bar{q}^\prime$, when it is a highly Lorentz boosted $t$ quark decay. The requirements are:
 \begin{itemize}
-	\item Medium working point $>0.937, 0.895, 0.895 (0.973, 0.991, 0.991)$ for boosted $t$ $(W)$ for the separate 2016, 2017, and 2018 eras, respectively.
+	\item Medium working point $>0.937, 0.895, 0.895 (0.973, 0.991, 0.991)$ for boosted $t$ $(W)$ for the separate 2016, 2017, and 2018 eras, respectively \cite{ganin_unsupervised_2015}.
 	\item Reconstructed soft drop\cite{larkoski_soft_2014, dasgupta_towards_2013} mass: $105<m_t<210$ \GeV{} and $65<m_W<105$ \GeV.
 	\item Boosted tops: $\pt=300$ \GeV, $|\eta|<2.0$ and $W$: $\pt=200$ \GeV, $|\eta|<2.0$.
 \end{itemize}
 
-There is another type of top that can be reconstructed, which is when each subjet of the top decay can be resolved into each individual jet, denoted as a resolved top, see Fig. \ref{TopDecays}. The requirements are:
+There is another type of top that can be reconstructed, which is when each subjet of the top decay can be resolved into each individual jet, denoted as a resolved top \cite{ganin_unsupervised_2015}, see Fig. \ref{TopDecays}. The requirements are:
 \begin{itemize}
 	\item Medium working point: 0.92 for all eras.
 	\item $|\eta(j_{1,2,3})|<2.4$ and $b$-tag discriminator: $>0.6324, 0.4941, 0.4184$ for the separate 2016, 2017, and 2018 eras, respectively. The number of jets in the event that pass these cuts should be $\geq2$.
 \end{itemize}
-These object definitions, \nt, \nw, \nrt, are orthogonal to each other and are used to bin our search and control regions. 
+These object definitions, \nt, \nw, \nrt, are chosen such that there is no overlap in their definitions and are used to bin our search and control regions. 
 
 \subsection{Missing Transverse Momentum}\label{MET}
 The missing transverse momentum \cite{lester_measuring_1999, barr_variable_2003} is the negative vector sum of the total transverse momentum measured in the detector,
 \begin{equation}
 \met=-\sum_{i\in\text{vis}}\overrightarrow{p}_{i, T},
 \end{equation}
-where the momentum runs over every visible (vis) particle in the event. Ideally, if the detector was $100\%$ efficient this quantity would always be zero due to conservation of momentum, but many things, such as detector efficiency, particles that are weakly interacting, or particles beyond the SM will cause the missing energy. Because of these, \met{} is a good discriminator for searching for physics beyond the SM \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/cms/missingetrun2corrections_nodate}. 
+where the sum of the momentum runs over every visible (vis) particle in the event \cite{collaboration_missing_2011}. We use the transverse component of the momentum because the $z$ component of the particle momentum is not exactly known. We know the center-of-momentum for the system but cannot know how each proton is boosted. Since the $x$ and $y$ components are orthogonal to the direction of the boost they are unaffected by the boost of each individual interaction. Ideally, if the detector was $100\%$ efficient this quantity would always be zero due to conservation of momentum, but many things, such as detector efficiency, particle misidentification, or particles that are weakly interacting such as neutrinos or \neutralino. Because of these, \met{} is a good discriminator for searching for physics beyond the SM \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/cms/missingetrun2corrections_nodate}. 
 
 %\subsection{MET Filters}
 %Need to add MET Filters here.
 
 \subsection{$H_T$}\label{HT}
-Another interesting quantity is $H_T$, which is the scalar sum of the \pt{} of all of the jets in an event,
+Another interesting quantity is \Ht, which is the scalar sum of the \pt{} of all of the jets in an event \cite{cms_collaboration_search_2011},
 \begin{equation}
-H_T=\sum_{i\in\text{jets}}p_{i,T}.
+\Ht=\sum_{i\in\text{jets}}p_{i,T}.
 \end{equation}
-This quantity is quite useful when trying to identify massive particles and is quite good at suppressing QCD multijet background.
+This quantity is quite useful when trying to identify massive particles and is quite good at suppressing QCD multijet background. Since \Ht{} is a sum of all jets, it is specifically good at identifying particles that are massive and produce jets that can be measured in the CMS calorimeters. For QCD events that mainly contain quark(gluon) jets that are not $t$ tend to not have as much energy as such that the \Ht{} is small. 
 
-\subsection{Soft $b$-Tagging}\label{SV}
-
-The ability to identify secondary vertices is essential in searches for the top squark, see Sec. \ref{sec:Production}. Since the b quark is a long lived particle, about $10^{-12}$ seconds, it will travel many millimeters before decaying into other particles. A \B{} quark is identified during reconstruction, where the jet originating from a point separated from the primary vertex $(PV)$, known as the secondary vertex $(SV)$. The displaced vertex of the long lived $b$ quark with low \pt{} has many interesting kinematic properties that we can use to identify them, known as soft $b$-tagging. 
+\subsection{Soft $b$-Tagging}\label{SV} 
 
 \begin{figure}
  	\centering
@@ -91,31 +91,23 @@ The ability to identify secondary vertices is essential in searches for the top 
  	\label{SecondaryVertex} 
 \end{figure}
 
-This search also targets models that produce very soft bottom or charm quarks. A large fraction of events contain b quarks with \pt{} below the 20 GeV jet threshold which may fail to be reconstructed as jets or become b-tagged. Identification of these soft quarks improves our ability to separate potential signal events from the SM background. We therefore aim to identify $b$ or $c$ quarks based on the presence of a SV reconstructed using the Inclusive Vertex Finder (IVF) \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/main/inclusivesecondaryvertexfinder_nodate, fruehwirth_new_2003}. Additional requirements on the SV observable are applied to suppress the background originating from light quarks. These selected SV may be referred to as soft $b$-tags and are constructed to be orthogonal to the jets and b-tagged jets used in this analysis. 
+Soft $b$-tagging is used for $b$ quarks that have low \pt. This search also targets models that produce very soft (low \pt) bottom or charm quarks. A large fraction of events contain b quarks with \pt{} below the 20 GeV jet threshold which may fail to be reconstructed as jets or become b-tagged due to either the SUSY mass spectrum or kinematics causing a large boost along the beam line. Identification of these soft quarks improves our ability to separate potential signal events from the SM background. We therefore aim to identify $b$ or $c$ quarks based on the presence of a SV reconstructed using the Inclusive Vertex Finder (IVF) \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/main/inclusivesecondaryvertexfinder_nodate, fruehwirth_new_2003}. Additional requirements on the SV observable are applied to suppress the background originating from light quarks. These selected SV may be referred to as soft $b$-tags and are constructed to be an addition to the jets and b-tagged jets used in this analysis to improve efficiency. 
 
 The requirements on each SV to pass the soft b-tagging definition are:
 \begin{itemize}
 	 \item The distance in the transverse plane between the SV and the PV $\leq3$ cm.
-	 \item The significance of the distance, SIP3D, between the SV and the PV $\geq4$.
-	 \item The pointing angle, defined as $\cos(\overrightarrow{PV,SV},\overrightarrow{p_{SV}})\geq0.98$, where $\overrightarrow{p_{SV}}$ is the total four-momentum of the tracks associated with the SV. 
+	 \item The significance of the distance between the SV and the PV in 3D, $\sigma_{IP}^{3D}\geq4$.
+	 \item The pointing angle, defined as $\cos(\overrightarrow{PV,SV},\overrightarrow{p_{SV}})\geq0.98$, where $\overrightarrow{PV,SV}$ is the vector pointing from $PV$ to $SV$ and $\overrightarrow{p_{SV}}$ is the total four-momentum of the tracks associated with the SV. 
 	 \item The number of tracks associated with the SV is greater or equal to 3.
-	 \item The \pt{} of the SV is less than 20 GeV.
+	 \item The \pt{} of the particles associated SV is less than 20 GeV.
 \end{itemize}
-Identification of soft b-quarks is necessary for potential signal region where the stop does not directly decay into a top quark and is essential for some of our search region bins. 
-
-\subsection{Transverse Energy between $b$ quarks and \met}
-We will end up dividing the search regions we are interested in into two different groups. They will be distinguished by a parameter known as the transverse mass between the leading \bjet{} and \met{} defined as:
-\begin{equation}\label{TransverseMass}
-\mtb=\sqrt{2\cdot\met\cdot\pt(b)(1-\cos(\slashed{E}_\phi,p_{\phi}(b)))},
-\end{equation}
-where \pt(b) is the momentum of the leading \bjet{} and $\slashed{E}_\phi$ and $p_{\phi}(b)$ is the $\phi$ component of the missing energy and \bjet{}, respectively. This will be used to distinguish between our low and high mass search regions, see Section \ref{SearchRegions}.
-
+Identification of soft b-quarks is necessary for a potential signal region where the stop does not directly decay into a top quark and is essential for some of our search region bins. 
 
 \subsection{Initial-state Radiation}\label{ISRpt}
 
 Initial-state radiation (ISR) may be clustered into one of the large-$R$ jets clustered with a distance parameter, $\Delta R=0.8$. We use the larger radius jets to be sensitive to ISR with gluon splitting, when a jet radiates a gluon that pair produces two quarks. The ISR jet is identified as being the hardest of the large-$R$ jets with $\pt>200$ GeV which fails the loose b-tagging working point and is not identified as a top or W. This is a good parameter for jets that are neither tagged as $t$ or \W{} in the low \dm{} region of our search.
  
- \subsection{Electron and Muon Identification}\label{EleMuonID}
+\subsection{Electron and Muon Identification}\label{EleMuonID}
  There are two sets of selection criteria used in the analysis for electrons \cite{noauthor_performance_2015} and muons \cite{collaboration_performance_2013}. The set of criteria used to efficiently reject events with an isolated electron is done with a "Veto" ID. An electron with a Veto ID must pass the following cuts:
  \begin{itemize}
 	 \item $|\Delta\eta|<0.007(0.01),|\Delta\phi|<0.8(0.7)$ for the electrons (muons).
@@ -143,6 +135,15 @@ where $m_T(\text{IsoTrack},\met)$ is the transverse mass between the IsoTrack an
 	\item Medium working point.
 \end{itemize}
 With the inclusion of the separate electron/muon IDs and the combined IsoTrack + TauPOG IDs we have a method to efficiently veto leptons from our search region.
+
+\subsection{Transverse Energy between $b$ quarks and \met}
+We will end up dividing the search regions we are interested in into two different groups. They will be distinguished by a parameter known as the transverse mass between the leading \bjet{} and \met{} defined as:
+\begin{equation}\label{TransverseMass}
+M_T(b,\met)=\sqrt{2\cdot\met\cdot\pt(b)(1-\cos(\Delta\phi_{\slashed{E},p_b}))},
+\end{equation}
+where $\Delta\phi_{\slashed{E},p_b}$ is the angle, $\phi$, between \met and the leading $b$ jet $(p(b))$ and $1,2$. A feature of $M_T(b,\met)$ .This will be used to distinguish between our low and high mass search regions, see Section \ref{SearchRegions}.
+
+\section{Kinematic Variables}\label{sec:kinematicVar}
 
 \section{Samples}\label{Samples}
 \input{tables/samples.tex}
