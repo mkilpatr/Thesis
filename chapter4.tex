@@ -108,42 +108,49 @@ Identification of soft b-quarks is necessary for a potential signal region where
 Initial-state radiation (ISR) may be clustered into one of the large-$R$ jets clustered with a distance parameter, $\Delta R=0.8$. We use the larger radius jets to be sensitive to ISR with gluon splitting, when a jet radiates a gluon that pair produces two quarks. The ISR jet is identified as being the hardest of the large-$R$ jets with $\pt>200$ GeV which fails the loose b-tagging working point and is not identified as a top or W. This is a good parameter for jets that are neither tagged as $t$ or \W{} in the low \dm{} region of our search.
  
 \subsection{Electron and Muon Identification}\label{EleMuonID}
- There are two sets of selection criteria used in the analysis for electrons \cite{noauthor_performance_2015} and muons \cite{collaboration_performance_2013}. The set of criteria used to efficiently reject events with an isolated electron is done with a "Veto" ID. An electron with a Veto ID must pass the following cuts:
+ This is a search for all-hadronic decays so no leptons are expected in the search region, however, for some control regions we require exactly one lepton so an efficient tagging method is necessary. There are two sets of selection criteria used in the analysis for electrons \cite{noauthor_performance_2015} and muons \cite{collaboration_performance_2013}. The set of criteria used to efficiently reject events with an isolated electron is done with a "Veto" ID. An electron with a Veto ID must pass the following cuts for the barrel (endcap) regions of the detector:
  \begin{itemize}
-	 \item $|\Delta\eta|<0.007(0.01),|\Delta\phi|<0.8(0.7)$ for the electrons (muons).
-	 \item $\sigma_{i\eta i\eta}<0.01(0.03)$ for the electrons (muons).
-	 \item $H/E<0.15(N/A)$.
-	 \item $\text{PF isolation}/\pt(\text{cone } \Delta R=0.3)<0.15(0.15)$ for the electrons (muons).
-	 \item $|d_{0}|<0.04(0.04),|d_Z|<0.2(0.2)$ for the electrons (muons).
+	 \item $|\Delta\eta|<0.007(0.01),|\Delta\phi|<0.8(0.7)$ for the EM showers in the ECAL,
+	 \item $\sigma_{i\eta i\eta}=\frac{\sum(\eta_i-\overline{\eta})^2w_i}{\sum w_i}<0.01(0.03)$ where $\overline{\eta}=\frac{\sum\eta_iw_i}{\sum w_i}$ and $w_i=\text{max}(0,4.7+log(E_i/E_{5\times5}))$ where the sum is over a $5\times5$ crystal matrix centered arount the most energetic crystal in the ECAL \cite{collaboration_missing_2011},
+	 \item $H/E<0.15$ (not applicable) the ratio of hadronic energy over electromagnetic energy,
+	 \item $\text{PF isolation}/\pt(\Delta R=0.3)<0.15(0.15)$ where we are calculating the \pt{} of the various energy deposits (charged hadrons, photons, and neutral hadrons) as the \pt{} for the PF Isolation and dividing it by the sum of the \pt{} of the listed candidates in a cone with a size of $\Delta R=0.3$,
+	 \item $|d_{0}|<0.04(0.04),|d_z|<0.2(0.2)$ where $d_0$ is the distance in the $xy$ plane and $d_z$ is the distance along the $z$-axis for the reconstructed candidate.
  \end{itemize}
- for the barrel and endcap regions of the detector, where $H/E$ is the ratio of hadronic energy over electromagnetic energy. This veto ID is chosen such that the search region is most likely to be devoid of electrons, since it has a 95\% efficiency \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/cms/cutbasedelectronidentificationrun2_nodate}.
+This veto ID is chosen such that the search region is most likely to be devoid of electrons, since it has a 95\% efficiency \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/cms/cutbasedelectronidentificationrun2_nodate}.
  
  We use the Loose muon definition recommended by the Muon POG for the purposes of the muon veto \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/cmspublic/swguidemuonidloose_muon_nodate}. A Loose muon is identified as a Particle Flow (PF)\cite{noauthor_cms_nodate} muon and can be either a global muon or an arbitrated tracker muon. Only candidates with transverse (longitudinal) impact parameter $|d_0|<0.2$ cm $(|d_z|<0.5 \text{cm},)$ with respect to the primary vertex, are considered. The electron and muon IDs are used in the definition of the Lost Lepton background which will be expanded upon further in Section \ref{sec:LL}. 
  
 \subsection{Tau Identification}\label{TauID}
-The Tau ID has been studied extensively in tests which looked into the custom MVA \cite{roe_boosted_2004, hoecker_tmva_2007, bravo_search_2015} similar to the one used in Ref. \cite{cms_collaboration_search_2016}, a cut-based IsoTrack method, and Tau POG MVA method of identifying hadronically decaying taus. The methods which provide the best improvement to the efficiency of identifying taus with a small fake rate is the combination of IsoTrack and Tau POG MVA. With the inclusion of the combined method for identifying hadronically decaying taus, the veto percentage is $\approx29.0\%(7.2\%)$ with an efficiency of the veto of $\approx49.1\%(22.6\%)$ for SM background (signal), see Appendix. \ref{sec:TauMVA}. 
+Identification of taus, which is a long lived particle $\tau_\tau=2.9\times10^{-13}$, is necessary in an all-hadronic analysis, but a tau has the possibility of decaying hadronically, $\tau^+\rightarrow e^+ \nu_e\overline{\nu}_\tau$. The tau can decay both leptonically and hadronically with $\approx17\%$ of decays to electrons or muons each, $\approx51\%$ of decays to $1$ hadron with $\geq1$ neutral hadrons, and $\approx15\%$ for 3 hadrons with $\geq1$ neutral hadrons. The tau decays that are leptonic should be identified by the muon or electron IDs, but the hadronic decays are a bit more difficult. We are using a combined isolated track (IsoTrack) and MVA method for identifying a hadronically decaying tau. 
+
+The IsoTrack requirements are:
+\begin{itemize}
+	\item pdgId = 11 or 13 (211) where pdgId is the particle data group Id from the reconstructed particle and 11 = electron, 13 = muon, and 211 = pion,
+	\item $\pt\geq5(10)$ and $iso>0.2(0.1)$ for electrons and muons (pions) where the isolation is the separation from other particle for a cone of $\Delta R=0.2$,
+	\item $m_T(l,\met)\leq100$ is the transverse mass between the candidate lepton and \met, see Sec. \ref{sec:transverseMass}
+\end{itemize}
+
+The Tau ID has been studied extensively in tests which looked into the custom multivariate analysis (MVA) \cite{roe_boosted_2004, hoecker_tmva_2007, bravo_search_2015} similar to the one used in Ref. \cite{cms_collaboration_search_2016}, a cut-based IsoTrack method, and Tau POG MVA method of identifying hadronically decaying taus. The methods which provide the best improvement to the efficiency of identifying taus with a small fake rate is the combination of IsoTrack and Tau POG MVA. With the inclusion of the combined method for identifying hadronically decaying taus, the veto percentage is $\frac{N_\tau>0}{N_{gen}>0}\approx29.0\%(7.2\%)$ with an efficiency of the veto of $\frac{N_\tau>0\text{ \& }N_\tau^{gen}>0}{N_\tau^{gen}=0}\approx49.1\%(22.6\%)$ for \ttbar{} background (signal), see Appendix. \ref{sec:TauMVA}. 
 
 For the IsoTrack method we require the following:
 \begin{itemize}
-	\item $\pt\geq5(10) \GeV, \text{iso}\leq0.2(0.1)$ for electrons and muons(pions);
-	\item $m_T(\text{IsoTrack},\met)<100 \GeV$;
+	\item $\pt\geq5(10) \text{GeV}, \text{iso}\leq0.2(0.1)$ for electrons and muons(pions);
+	\item $m_T(\text{IsoTrack},\met)<100$ GeV;
 \end{itemize}
 where $m_T(\text{IsoTrack},\met)$ is the transverse mass between the IsoTrack and \met. For the Tau POG method we require:
 \begin{itemize}
-	\item $\pt\geq20 \GeV, |\eta|<2.4$;
-	\item idDecayMode, a booleon to identify hadronically decaying taus; and
+	\item $\pt\geq20 \text{GeV}, |\eta|<2.4$;
+	\item Decay mode $=5(N_c-1)+N_p\geq0$ where $N_c$ is the number of charged hadrons and $N_p$ is the number of pions in the decay it is a descriminator developed to identify taus decaying to multiple prong events; and
 	\item Medium working point.
 \end{itemize}
 With the inclusion of the separate electron/muon IDs and the combined IsoTrack + TauPOG IDs we have a method to efficiently veto leptons from our search region.
 
-\subsection{Transverse Energy between $b$ quarks and \met}
+\subsection{Transverse Energy between $b$ quarks and \met} \label{sec:transverseMass}
 We will end up dividing the search regions we are interested in into two different groups. They will be distinguished by a parameter known as the transverse mass between the leading \bjet{} and \met{} defined as:
 \begin{equation}\label{TransverseMass}
 M_T(b,\met)=\sqrt{2\cdot\met\cdot\pt(b)(1-\cos(\Delta\phi_{\slashed{E},p_b}))},
 \end{equation}
-where $\Delta\phi_{\slashed{E},p_b}$ is the angle, $\phi$, between \met and the leading $b$ jet $(p(b))$ and $1,2$. A feature of $M_T(b,\met)$ .This will be used to distinguish between our low and high mass search regions, see Section \ref{SearchRegions}.
-
-\section{Kinematic Variables}\label{sec:kinematicVar}
+where $\Delta\phi_{\slashed{E},p_b}$ is the angle, $\phi$, between \met and the leading $b$ jet $(p(b))$ and $1,2$. A feature of $M_T(b,\met)$ when used for a parent particle that decays to a visible and invisible particles, such as $\W^+\rightarrow l^+\nu_l$ will have a peak at the \W{} mass in the rest frame \cite{tovey_transformation_2019}.This will be used to distinguish between our low and high mass search regions, see Section \ref{SearchRegions}.
 
 \section{Samples}\label{Samples}
 \input{tables/samples.tex}
@@ -152,47 +159,48 @@ where $\Delta\phi_{\slashed{E},p_b}$ is the angle, $\phi$, between \met and the 
 \subsection{Filters}
 The following filters, recommended by the JetMET POG, are applied to 2016, 2017, and 2018 eras:
 \begin{itemize}
-	\item goodVertices;
-	\item HBHENoiseFilter;
-	\item HBHENoiseIsoFilter;
-	\item EcalDeadCellTriggerPrimitiveFilter;
-	\item BadPFMuonFilter;
-	\item GlobalSuperTightHalo2016Filter; and
-	\item eeBadScFilter.
+	\item goodVertices where the event is required to have $|z|\leq24$;
+	\item HBHENoiseFilter, to reduce bad pulse-shape, timing, and hit multiplicity;
+	\item HBHENoiseIsoFilter, to include a requirement on the number of isolated noise channels;
+	\item EcalDeadCellTriggerPrimitiveFilter, to remove events where the energy measured in the ECAL is biases due to energy deposits in dead cell regions;
+	\item BadPFMuonFilter, to remove badly reconstructed muons from the PF algorithm;
+	\item GlobalSuperTightHalo2016Filter, to minimize effects of the beam halo which is a process when partons interact upstream of the detector; and
+	\item eeBadScFilter, to remove crystals that are determined to be erroneous.
 \end{itemize}
-There is an addition ecalBadCalibFilter for 2017 and 2018 eras only.
+There is an addition ecalBadCalibFilter for 2017 and 2018 eras only for additional bad calorimeters for those years of data.
 
 \section{Baseline Selection} \label{sec:Baseline}
 
 Following the same methods as above, we have a loose pre-selection which is referred to as the baseline selection. This will place a selection on jets and \met, which is used to eliminate a large fraction of background events. We define the baseline selection as:
 \begin{itemize}
-	\item $N_{e,(\mu)} = 0, (\pt\geq5$ \GeV, $|\eta|<2.5(2.4), \text{miniISO}<0.1(0.2))$;
-	\item $N_{\text{IsoTrack}} = 0, (\pt\geq5 (10)$ \GeV, ISO $< 0.2(0.1) \text{ for electron/muons(pions)})$;
-	\item $N_{tauPOG} = 0, (\pt\geq20$ \GeV, $|\eta|<2.4)$, medium working point;
+	\item $N_{e,\mu} = 0, (\pt\geq5$ \GeV, $|\eta|<2.5(2.4), \text{miniISO}<0.1(0.2))$ where the ISO is the sum of the \pt{} for the isolated tracks and calorimeter measurements divided by the lepton \pt;
+	\item $N_{e/\mu/\pi}^{\text{trk}} = 0, (\pt\geq5 (10)$ \GeV, ISO $< 0.2(0.1) \text{ for electron/muons(pions)})$;
+	\item $N_\tau = 0, (\pt\geq20$ \GeV, $|\eta|<2.4)$, medium working point;
 	\item $N_{j} \geq 2, (\pt\geq30$ \GeV, $|\eta|<2.4)$;
 	\item $\met\geq250$ \GeV, to reach the plateau of the trigger efficiency;
 	\item $\Ht\geq300$ \GeV; and
 	\item HEM Veto for part of 2018 data: $-3\leq\eta\leq-1.4, -1.57\leq\phi\leq-0.87$.
 \end{itemize}
-In addition to this, we allow for two separate sets of additional selections to apply to the low and high \dm{} search regions to further reduce background. The high \dm{} baseline selection includes the baseline selection and additionally:
+The HEM Veto is required due to a failure of two sectors of the HCAL endcaps on June 30th, 2018 which ended with the modules becoming unresponsive. These modules correspond to a region of $-3\leq\eta\leq-1.4, -1.57\leq\phi\leq-0.87$ which effect the lepton, jet, and \met{} reconstructions. This is applied to data from 2018 after Run 319077 and to the corresponding simulated events.
+In addition to this, we allow for two separate sets of additional selections to apply to the low and high \dm{} search regions to further reduce background where the $\Delta m=m_{\st}-m_{\neutralino}$, see Fig. \ref{StopParameterSpace}. The high \dm{} baseline selection includes the baseline selection and additionally:
 \begin{itemize}
 	\item $N_j\geq 5, (\pt \geq30$ \GeV, $|\eta|<2.4)$;
 	\item $N_b\geq 1, (\pt\geq20$ \GeV, $|\eta|<2.4)$, medium DeepCSV working point;
-	\item $\text{Min}[|\Delta\phi(\met,j_1)|,|\Delta\phi(\met,j_2)|,|\Delta\phi(\met,j_3)|,|\Delta\phi(\met,j_4)|]\equiv\highdm$, where $j_1, j_2, j_3, j_4$ are the four leading jets in $p_T$. This requirement is to reduce the QCD multijet background. 
+	\item $\text{Min}[|\Delta\phi(\met,j_1)|,|\Delta\phi(\met,j_2)|,|\Delta\phi(\met,j_3)|,|\Delta\phi(\met,j_4)|]\equiv\highdm$, where $j_1, j_2, j_3, j_4$ are the four leading jets in $p_T$. This requirement is to reduce the QCD multijet background since QCD events with \met{} are typically due to mis-measurement of the quark-gluon jets. 
 \end{itemize}
 Next, the low \dm{} baseline selection has the following addition selections:
 \begin{itemize}
 	\item $N_t=0, N_W=0,N_{res}=0,$ where $N_t$ and $N_W$ are the number of merged tops and \W's, respectively, and $N_{res}$ is the number of resolved tops;
 	\item An ISR jet as defined in Sec. \ref{ISRpt} with $\pt(ISR)\geq200$ \GeV, $|\eta|<2.4, |\Delta\phi(j_{ISR},\met)|\geq2.$;
-	\item $\met/\sqrt{H_{T}}\equiv S_{\met}\geq10$, where $H_T$ is calculated as the scalar sum of the \pt of jets with $\pt\geq30$ \GeV{} and $|\eta|<2.4.$; and
+	\item $\met/\sqrt{H_{T}}\equiv S_{\met}\geq10$, where $H_T$ is calculated as the scalar sum of the \pt{} of jets with $\pt\geq30$ \GeV{} and $|\eta|<2.4.$; and
 	\item \lowdm, where $j_1,j_2,j_3$ are the three leading jets in \pt. 
 \end{itemize}
 
 \subsection{Search Regions}\label{SearchRegions}
 
-After applying the baseline selection criteria, we categorize events in the search sample into exclusive search regions that exploit the kinematic properties of different signal topologies, see \cite{cms_collaboration_search_2016, alwall_simplified_2009, alwall_model-independent_2009}. 
+After applying the baseline selection criteria, we categorize events in the search sample into exclusive search regions that exploit the kinematic properties of different signal topologies, see \cite{cms_collaboration_search_2016, alwall_simplified_2009, alwall_model-independent_2009}. The search regions will be binned using the physics objects and kinematics variables explained above, such as, \nj, \nb, \nt, \nrt, \nw, \met, \Ht, \nsv, \mtb, and $N_{lep}=0$
 
-For the search regions that mainly target high \dm{} signal models, we define two event categories in \mtb, see Section \ref{TransverseMass}, a variable defined as:
+For the search regions that mainly target high \dm{} signal models, we define two event categories in \mtb, see Section \ref{TransverseMass}, and a variable defined as:
 \begin{equation}
 \mtb\equiv
 \begin{cases}
@@ -202,9 +210,10 @@ For the search regions that mainly target high \dm{} signal models, we define tw
 \end{split}
 \end{cases},
 \end{equation}
-where $b_1, b_2$ are the two selected b-tagged jets with the highest values of the DeepCSV discriminator. In \ttbar{} events where one of the \W{} bosons undergoes a leptonic decay and the lepton is missed causes \met{}, the transverse mass of \met{} and the b-quark from the same top decay as the missed lepton has a kinematic endpoint at the mass of the top-quark. We therefore define two event categories: $\mtb>175~\GeV$ and $< 175~\GeV$, see Fig. \ref{StopParameterSpace}. In the low-\mtb{} category, to target signal models with moderate values of \dm, we define search regions by requiring $\nj\geq7$ and $\nrt\geq1$ to benefit from potential ISR in signal events while suppressing the SM background. Events are then subdivided according to the number of b-tagged jets $(\nb=1,=2,\geq3)$ and different \met{} thresholds. The same subdivision is performed for events in the high-\mtb{} category with $\nj\geq7$, but containing no top- or W-tagged candidates. We then target signal models with sufficiently boosted top quarks or W bosons by defining categories in the high-\mtb{} region that require the presence of at least one top- or W-tagged candidate. These categories do not have any further \nj{} requirement beyond that of the high \dm{} baseline selection, and are further subdivided according to $\nb, \met, \Ht$ and the number of each kind of top- and W-tagged candidate. Table \ref{tab:searchregions-hm} summarizes the definitions of all 130 disjoint search regions targeting high \dm{} signal models.
+where $b_1, b_2$ are the two selected b-tagged jets with the highest values of the DeepCSV discriminator. In \ttbar{} events where the \W{} bosons decays leptonically and is missed by the lepton tagging, which is known as Lost Lepton background, the \mtb of such an event has a kinematic endpoint at the mass of the top quark, $m_t$.
+We therefore define two event categories: $\mtb>175$ GeV and $< 175$ GeV, see Fig. \ref{StopParameterSpace}. In the low-\mtb{} category, to target signal models with moderate values of \dm, we define search regions by requiring $\nj\geq7$ and $\nrt\geq1$ to benefit from potential ISR in signal events while suppressing the SM background. Events are then subdivided according to the number of b-tagged jets $(\nb=1,=2,\geq3)$ and different \met{} thresholds. The same subdivision is performed for events in the high-\mtb{} category with $\nj\geq7$, but containing no top- or W-tagged candidates. We then target signal models with sufficiently boosted top quarks or W bosons by defining categories in the high-\mtb{} region that require the presence of at least one top- or W-tagged candidate. These categories do not have any further \nj{} requirement beyond that of the high \dm{} baseline selection, and are further subdivided according to $\nb, \met, \Ht$ and the number of each kind of top- and W-tagged candidate. Table \ref{tab:searchregions-hm} summarizes the definitions of all 130 disjoint search regions targeting high \dm{} signal models.
 
-Events originating from low \dm{} signal models are likely to have lower values of \mtb. We therefore only use the low-\mtb{} category to define search regions targeting these signal models. These search regions are further defined by the number of b-tagged jets, the number of identified secondary vertices (\nsv), the ISR jet \pt (\ptb), and \met. Events in the $\nb=0$ category, which targets very compressed signal models, are further subdivided according to \nj. Only events with very high ISR $\pt(>500~\GeV)$ are selected in this category, which is also categorized by the presence or absence of soft b-tagged secondary vertices. Events in the $\nb=1$ category are further characterized according to the \pt{} of the b-tagged jet into two sub-categories, while those in the $\nb\geq2$ are subdivided based on \ptbonetwo{} into three sub-categories, in order to take advantage of the softer b jet \pt{} spectrum expected in signal events compared to the SM background. Orthogonality to the high \dm{} event categories is achieved mostly by the \mtb{} categorization. Table \ref{tab:searchregions-lm}  summarizes the definitions of the 53 disjoint search regions targeting low \dm{} signal models. The numbers are based on simulation and correspond to an integrated luminosity of \datalumi. 
+Events originating from low \dm{} signal models are likely to have lower values of \mtb. We therefore only use the low-\mtb{} category to define search regions targeting these signal models. These search regions are further defined by the number of b-tagged jets, the number of identified secondary vertices (\nsv), the ISR jet \pt{} (\ptb), and \met. Events in the $\nb=0$ category, which targets very compressed signal models, are further subdivided according to \nj. Only events with very high ISR $\pt(>500~\GeV)$ are selected in this category, which is also categorized by the presence or absence of soft b-tagged secondary vertices. Events in the $\nb=1$ category are further characterized according to the \pt{} of the b-tagged jet into two sub-categories, while those in the $\nb\geq2$ are subdivided based on \ptbonetwo{} into three sub-categories, in order to take advantage of the softer b jet \pt{} spectrum expected in signal events compared to the SM background. Orthogonality to the high \dm{} event categories is achieved mostly by the \mtb{} categorization. Table \ref{tab:searchregions-lm}  summarizes the definitions of the 53 disjoint search regions targeting low \dm{} signal models.
 
 \begin{figure}
  	\centering
