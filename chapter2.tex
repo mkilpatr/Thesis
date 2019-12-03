@@ -12,12 +12,12 @@ After decades of theoretical and experimental research the SM has been developed
 
  All matter can be explained by three kinds of elementary particles: leptons, quarks, and gauge bosons. Each of these can be distinguished by various quantum properties. The leptons and quarks are fermions, which are particles that have half-integer spin. Leptons are particles that only interact with the EM and Weak force, while quarks interact with all three forces of the SM. The gauge bosons are the force carriers for each respective force and have integer spin. 
  
- There are three generations of leptons and quarks which are differentiated by a charge $\pm e$, the charge of an electron, and the mass of the respective lepton. Leptons have three different charged particles: electron $(e)$, muon $(\mu)$, and tau $(\tau)$, with each charged particle having a corresponding neutrino $(\nu)$ of the same flavor, see Fig. \ref{SMParticles}. Quarks are also separated into three generations of doublets, the down-type $(-\frac{1}{3}e)$: down $(d)$, strange $(s)$, and bottom $(b)$ and up-type $(\frac{2}{3}e)$: up $(u)$, charm $(c)$, and top $(t)$, see fig \ref{SMParticles}. Each of the quarks has a color associated with it which is analogous to an electric charge, except there are three color charges: red, blue, and green.  
+ There are three generations of leptons and quarks which are differentiated by a charge $\pm e$, the charge of an electron, and the mass of the respective lepton. Leptons have three different charged particles: electron $(e)$, muon $(\mu)$, and tau $(\tau)$, with each charged particle having a corresponding neutrino $(\nu)$ of the same flavor, see Fig. \ref{SMParticles} \cite{griffiths_introduction_2008}. Quarks are also separated into three generations of doublets, the down-type $(-\frac{1}{3}e)$: down $(d)$, strange $(s)$, and bottom $(b)$ and up-type $(\frac{2}{3}e)$: up $(u)$, charm $(c)$, and top $(t)$, see fig \ref{SMParticles}. Each of the quarks has a color associated with it which is analogous to an electric charge, except there are three color charges: red, blue, and green \cite{griffiths_introduction_2008}.  
 
 \begin{figure}
  	\centering
 	\includegraphics[width=0.75\textwidth]{StandardModel.pdf}
- 	\caption[Standard Model particles]{The fundamental particles of the Standard Model. There are three generations of quarks and leptons. Along with the five bosons, where four of them relate to the interactions of the three forces included in the SM: Electromagnetism, the Weak force, and the Strong force and the final being the Higgs boson.}
+ 	\caption[Standard Model particles]{The fundamental particles of the Standard Model. There are three generations of quarks and leptons. Along with the five bosons, where four of them relate to the interactions of the three forces included in the SM: Electromagnetism, the Weak force, and the Strong force and the final being the Higgs boson \cite{noauthor_https://www.quantumdiaries.org/2014/03/14/-standard-model--beautiful-but-flawed-theory/_nodate}.}
  	\label{SMParticles} 
 \end{figure}
  
@@ -42,7 +42,7 @@ After decades of theoretical and experimental research the SM has been developed
  \partial_\mu j^\mu(x)&=0, \text{ where}\\
  j^\mu(x)&=\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\Delta\phi-\mathcal{J}^\mu
  \end{split}.
- \end{equation} We see from the above equation that the current $j^\mu(x)$ of the Lagrangian is conserved. Now let's apply this to the particle fields of the SM.
+ \end{equation} We see from the above equation that the current $j^\mu(x)$ of the Lagrangian is conserved. Now let's apply this to the particle fields of the SM \cite{halzen_quarks_1984, peskin_introduction_1995}.
  
  \subsection{Quantum Electrodynamics (QED)}
  
@@ -55,7 +55,7 @@ After decades of theoretical and experimental research the SM has been developed
  \begin{equation}\label{DiracLag}
 \mathcal{L}_{QED}^{vac}=i\overline{\psi}\gamma^\mu\partial_\mu\psi-m\overline{\psi}\psi
 \end{equation}
- where the $\gamma^\mu$ are the Dirac matrices, $\partial_\mu$ is the partial derivative, $\overline{\psi}$ is the hermitian conjugate of the wave function $\psi$, and $m$ is the mass of the particle. As a small aside, the bilinear quantities $\overline{\psi}(4\times4)\psi$ have certain properties under Lorentz transformations when the $4\times4$ matrix is a $\gamma$-matrices. These are of the form,
+ where the $\gamma^\mu$ are the Dirac matrices, $\partial_\mu$ is the partial derivative, $\overline{\psi}$ is the hermitian conjugate of the wave function $\psi$, and $m$ is the mass of the particle \cite{halzen_quarks_1984, peskin_introduction_1995}. As a small aside, the bilinear quantities $\overline{\psi}(4\times4)\psi$ have certain properties under Lorentz transformations when the $4\times4$ matrix is a $\gamma$-matrices. These are of the form,
 \begin{equation} \label{gammaMatrix}
 \gamma^0=
 \begin{bmatrix}
@@ -73,7 +73,7 @@ After decades of theoretical and experimental research the SM has been developed
 \boldsymbol{I} & 0
 \end{bmatrix},
 \end{equation}
-where the $\boldsymbol{I}$ is the identity matrix and $\boldsymbol{\sigma}$ are the Dirac matrices. We can combine the first two parts of Eqn. \ref{gammaMatrix} and write it compactly as $\gamma^\mu$ where $\mu=0,1,2, \text{and }3$. The possible interesting quantities of the above transformations are shown in Table \ref{Transformations}.
+where the $\boldsymbol{I}$ is the identity matrix and $\boldsymbol{\sigma}$ are the Dirac matrices \cite{halzen_quarks_1984, peskin_introduction_1995}. We can combine the first two parts of Eqn. \ref{gammaMatrix} and write it compactly as $\gamma^\mu$ where $\mu=0,1,2, \text{and }3$. The possible interesting quantities of the above transformations are shown in Table \ref{Transformations}.
 
 \begin{table}
 \centering
@@ -89,7 +89,7 @@ Type & Form & Components & Space Inversion \\
  Pseudoscalar & $\overline{\psi}\gamma^5\psi$ & 1 & $-$ under $P$ \\
  \hline
 \end{tabular}
-\caption[Fermion Currents]{A table showing all forms of the fermion currents. These can be symmetric under parity transformation in all or some components.}
+\caption[Fermion Currents]{A table showing all forms of the fermion currents. These can be symmetric under parity transformation in all or some components \cite{halzen_quarks_1984}.}
 \label{Transformations}
 \end{table}
 
@@ -97,7 +97,7 @@ To allow for the field to be invariant, we must include a derivative, $D_\mu$, t
  \begin{equation}\label{QEDCovariantD}
  D_\mu\equiv\partial_\mu-ieA_\mu.
  \end{equation}
- The covariant derivative includes the vector field $A_\mu$ which must also transform as,
+ The covariant derivative includes the vector field $A_\mu$ which must also transform as \cite{halzen_quarks_1984, peskin_introduction_1995},
   \begin{equation}\label{PhotonField}
  A_\mu\rightarrow A_\mu+\frac{1}{e}\partial_\mu\alpha.
  \end{equation}
@@ -105,12 +105,12 @@ To allow for the field to be invariant, we must include a derivative, $D_\mu$, t
 \begin{equation}\label{LagrangianQED}
 \mathcal{L}_{QED}=\overline{\psi}(i\gamma^\mu\partial_\mu-m)\psi+e\overline{\psi}\gamma^{\mu}A_{\mu}\psi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu},
 \end{equation}
-where $A_{\mu}$ is the EM field operator and $F^{\mu\nu}$ is the EM field tensor. This Lagrangian describes the interactions between spin-$1/2$ charged particles and the $U(1)$ EM force. Each of the parts of this equation is Lorentz invariant which allows this to be true in all reference frames. 
+where $A_{\mu}$ is the EM field operator and $F^{\mu\nu}$ is the EM field tensor. This Lagrangian describes the interactions between spin-$1/2$ charged particles and the $U(1)$ EM force. Each of the parts of this equation is Lorentz invariant which allows this to be true in all reference frames \cite{halzen_quarks_1984, peskin_introduction_1995}. 
 
 \begin{figure}
  	\centering
 	\includegraphics[width=0.75\textwidth]{QEDRules.png}
- 	\caption[QED Feynman Diagrams]{The possible Feynman diagrams in QED. The $e$ can be replaced with any spin-$1/2$ charged particle. We see that the electron and photon can propagate freely in space or a vertex with one photon and a particle-antiparticle pair is allowed.}
+ 	\caption[QED Feynman Diagrams]{The possible Feynman diagrams in QED. The $e$ can be replaced with any spin-$1/2$ charged particle. We see that the electron and photon can propagate freely in space or a vertex with one photon and a particle-antiparticle pair is allowed \cite{noauthor_https://www.quantumdiaries.org/2010/03/07/more-feynman-diagrams-momentum-conservation/_nodate}.}
  	\label{QEDRules} 
 \end{figure}
 
@@ -122,7 +122,7 @@ Let's now transition from the description of the $U(1)$ EM field to the $SU(3)$ 
 \begin{equation}\label{LagrangianQCDVacuum}
 \mathcal{L}_{QCD}^{vac}=\overline{q}_j(i\gamma^\mu\partial\mu-m)q_j,
 \end{equation}
-where $q_1, q_2,$ and $q_3$ are quark fields with three possible color charges. From this we want to require that the field is again invariant under another local phase transformation such as,
+where $q_1, q_2,$ and $q_3$ are quark fields with three possible color charges \cite{halzen_quarks_1984, peskin_introduction_1995}. From this we want to require that the field is again invariant under another local phase transformation such as,
 \begin{equation}
 q(x)\rightarrow Uq(x)\equiv e^{i\alpha_a(x)T_a}q(x),
 \end{equation}
@@ -130,7 +130,7 @@ where $U$ is a $3\times3$ unitary matrix, $T_a$ with $a=1,\ldots,8$ are a set of
 \begin{equation}
 [T_a, T_b]=if_{abc}T_c,
 \end{equation}
-where $f_{abc}$ are constants. 
+where $f_{abc}$ are constants \cite{halzen_quarks_1984, peskin_introduction_1995}. 
 
 We need to impose $SU(3)$ local gauge invariance on Eqn. \ref{LagrangianQCDVacuum}, to allow for the following phase transformations,
 \begin{equation}
@@ -147,7 +147,7 @@ where the field $G_\mu^a$, which are the gluons, transforms as,
 \begin{equation}
 G_\mu^a\rightarrow G_\mu^a-\frac{1}{g_Q}\partial_\mu\alpha_a,
 \end{equation}
-where $g_Q$ is the coupling strength of QCD interactions. This will give us a similar Lagrangian to the QED one described above, but this is not sufficient for a non-Abelian gauge transformation and it does not produce a gauge-invariant Lagrangian. One final transformation is required for the $G_\mu^a$ fields, 
+where $g_Q$ is the coupling strength of QCD interactions. This will give us a similar Lagrangian to the QED one described above, but this is not sufficient for a non-Abelian gauge transformation and it does not produce a gauge-invariant Lagrangian. One final transformation is required for the $G_\mu^a$ fields \cite{peskin_introduction_1995}, 
 \begin{equation}\label{QCDGaugeTransform}
 G_\mu^a\rightarrow G_\mu^a-\frac{1}{g_Q}\partial_\mu\alpha_a-f_{abc}\alpha_b G_\mu^c.
 \end{equation}
@@ -159,7 +159,7 @@ G_\mu^a\rightarrow G_\mu^a-\frac{1}{g_Q}\partial_\mu\alpha_a-f_{abc}\alpha_b G_\
 	\minipage{0.5\textwidth}
 	  \includegraphics[width=\linewidth]{QCDGluonRules.png}
 	\endminipage\hfill
-	\caption[QCD Feynman Diagrams]{The possible Feynman diagrams in QCD where each vertex needs to conserve color charge. Here is just an example of a red-blue vertex. QCD also includes a 3- and 4-vertex with gluons.}
+	\caption[QCD Feynman Diagrams]{The possible Feynman diagrams in QCD where each vertex needs to conserve color charge. Here is just an example of a red-blue vertex and QCD also includes a 3- and 4-vertex with gluons \cite{griffiths_introduction_2008}.}
  	\label{QCDRules} 
 \end{figure}
 
@@ -167,23 +167,23 @@ This finally gives us a gauge invariant kinetic energy term for all the $G_\mu^a
 \begin{equation}\label{LagrangianQCD}
 \mathcal{L}_{QCD}=\overline{q}(i\gamma^\mu\partial_\mu-m)q-g_Q(\overline{q}\gamma^\mu T_a q)G^a_\mu-\frac{1}{4}G^a_{\mu\nu}G_a^{\mu\nu}.
 \end{equation}
-From the QCD Lagrangian Eqn. \ref{LagrangianQCD}, we can see that it includes all of the same interactions we showed for QED, but also includes a $SU(3)$ interaction due to the quark-gluon interactions with a certain color charge, see Fig. \ref{QCDRules}. However, QCD also included a 3- and 4-vertex interaction between the gluons, which arises due to the non-Abelian nature of the force. From this, it is easy to tell that QCD is a much more complicated theory. We seem to be missing a vital part of the SM, specifically a theory for the Weakly interacting processes which is mediated by the massive bosons, \W{} and \Z{} from Fig. \ref{SMParticles}. 
+From the QCD Lagrangian Eqn. \ref{LagrangianQCD}, we can see that it includes all of the same interactions we showed for QED, but also includes a $SU(3)$ interaction due to the quark-gluon interactions with a certain color charge, see Fig. \ref{QCDRules}. However, QCD also included a 3- and 4-vertex interaction between the gluons, which arises due to the non-Abelian nature of the force \cite{halzen_quarks_1984, peskin_introduction_1995}. From this, it is easy to tell that QCD is a much more complicated theory. We seem to be missing a vital part of the SM, specifically a theory for the Weakly interacting processes which is mediated by the massive bosons, \W{} and \Z{} from Fig. \ref{SMParticles}. 
 
 \subsection{Weak Force}
 \label{WeakForce}
 
 The Weak force is responsible for nuclear decay. The Weak force has an interaction of the type $\frac{1}{2}\gamma^\mu(1-\gamma^5)$, so it is a $V-A$ interaction with $SU(2)$ symmetry. From this, we can conclude that it violates Parity (P). Parity is a transformation from $(x, y, z)\rightarrow(-x,-y,-z)$ or space inversion. Since it violates Parity, the next step is to consider a conservation of $CP$, where $C$ is charge conjugation (particle-to-antiparticle). 
 
-Now the Weak force is mediated by two vector bosons, \W{} and \Z, see Fig. \ref{SMParticles}. These are unlike the other forces because these vector bosons have a large mass of $m_\W=80.379\pm0.012$ GeV and $m_Z=91.1876\pm0.0021$ GeV. The \W{} boson is a charged particle and interacts with many nuclear decays. 
+Now the Weak force is mediated by two vector bosons, \W{} and \Z, see Fig. \ref{SMParticles}. These are unlike the other forces because these vector bosons have a large mass of $m_\W=80.379\pm0.012$ GeV and $m_Z=91.1876\pm0.0021$ GeV \cite{particle_data_group_review_2018}. The \W{} boson is a charged particle and interacts with many nuclear decays. 
 
-\begin{figure}
- 	\centering
-	\includegraphics[width=0.5\textwidth]{Quark_weak_interactions.png}
- 	\caption[CKM Matrix Couplings]{A grammatical representation to show the couplings for Weak interactions, known as the Cabibbo-Kobayashi-Maskawa Matrix. }
- 	\label{CKMInteractions} 
-\end{figure}
+%\begin{figure}
+% 	\centering
+%	\includegraphics[width=0.5\textwidth]{Quark_weak_interactions.png}
+% 	\caption[CKM Matrix Couplings]{A grammatical representation to show the couplings for Weak interactions, known as the Cabibbo-Kobayashi-Maskawa Matrix. }
+% 	\label{CKMInteractions} 
+%\end{figure}
 
-The \W{} boson interacts very interestingly for quarks in the SM. There is a mixing of flavors of quarks for particles. They will mix partners between up-type and down-type particles, see Fig. \ref{CKMInteractions} \cite{kobayashi_cp-violation_1973}. The interactions for the generalized three generations of quarks is known as the Cabibbo-Kobayashi-Maskawa (CKM) matrix,
+The \W{} boson interacts very interestingly for quarks in the SM. There is a mixing of flavors of quarks for particles. They will mix partners between up-type and down-type particles \cite{kobayashi_cp-violation_1973}. The interactions for the generalized three generations of quarks is known as the Cabibbo-Kobayashi-Maskawa (CKM) matrix \cite{halzen_quarks_1984, griffiths_introduction_2008},
 \begin{equation}\label{CKM}
 \begin{bmatrix}
 d' \\
@@ -210,11 +210,11 @@ where for example, $V_{ud}$ is the coupling of $u$ to $d$ which is exactly $(d\r
 	\minipage{0.4\textwidth}
 	  \includegraphics[width=\linewidth]{Zboson_interaction.png}
 	\endminipage\hfill
-	\caption[Weak Feynman Diagrams]{Feynman diagram for Neutral Weak interaction and the charged Weak current.}
+	\caption[Weak Feynman Diagrams]{Feynman diagram for Neutral Weak interaction and the charged Weak current \cite{griffiths_introduction_2008}.}
  	\label{WeakRules} 
 \end{figure}
 
-The \Z{} boson is known as the neutral current. This boson mediates forces between particles and their respective antiparticles, see Fig. \ref{ZbosonInteraction}. This interaction for the neutral weak force is $\gamma^\mu(c_V^f-c_A^f\gamma^5)$ which is quite similar to the charged weak interaction, but differs by the constants $c_V^f$ and $c_A^f$. The Weak interactions are shown in Fig. \ref{WeakRules}. We see the charged \W{} boson interacts with the charged leptons and their respective neutrinos or allows for flavor changing interactions with quarks. Even though the neutral \Z{} boson interacts with a $V-A$ interaction we can still replace the $\gamma$ in any QED Feynman diagram with a \Z{}.
+The \Z{} boson is known as the neutral current. This boson mediates forces between particles and their respective antiparticles, see Fig. \ref{WeakRules}. This interaction for the neutral weak force is $\gamma^\mu(c_V^f-c_A^f\gamma^5)$ which is quite similar to the charged weak interaction, but differs by the constants $c_V^f$ and $c_A^f$. The Weak interactions are shown in Fig. \ref{WeakRules}. We see the charged \W{} boson interacts with the charged leptons and their respective neutrinos or allows for flavor changing interactions with quarks. Even though the neutral \Z{} boson interacts with a $V-A$ interaction we can still replace the $\gamma$ in any QED Feynman diagram with a \Z{} \cite{halzen_quarks_1984, griffiths_introduction_2008}.
 
 \subsection{The Electroweak Lagrangian}
 
@@ -222,14 +222,14 @@ The simplest group for the Electroweak interaction is $SU(2)_L\times U(1)_Y$, wh
 \begin{equation}\label{WeakL}
 \mathcal{L}=\overline{\psi}_j\gamma^\mu\psi_j,
 \end{equation}
-where $j$ is the fermion wave function. We are not including the mass parameter because it would cause the left and right-handed parts to mix.  This is assumed to transform under the global invariant,
+where $j$ is the fermion wave function \cite{halzen_quarks_1984, griffiths_introduction_2008}. We are not including the mass parameter because it would cause the left and right-handed parts to mix.  This is assumed to transform under the global invariant,
 \begin{equation}\label{WeakGlobal}
 \begin{split}
 \chi_L\rightarrow\chi'_L&=e^{i\frac{\tau_a}{2}\alpha^a(x)+i\beta(x)Y}\chi_L, \\
 \psi_R\rightarrow\psi'_R&=e^{i\beta(x)Y}\psi_R
 \end{split}
 \end{equation}
-where the transformation $e^{i\frac{\tau_a}{2}\alpha^a(x)}$ with $a = 1, 2, 3$ is the $SU(2)_L$ transformation and only acts on the left-handed doublet. The next step is to require that the Lagrangian is invariant under local $SU(2)_L\times U(1)_Y$. We allow for the following covariant derivatives,
+where the transformation $e^{i\frac{\tau_a}{2}\alpha^a(x)}$ with $a = 1, 2, 3$ is the $SU(2)_L$ transformation and only acts on the left-handed doublet. The next step is to require that the Lagrangian is invariant under local $SU(2)_L\times U(1)_Y$. We allow for the following covariant derivatives \cite{halzen_quarks_1984},
 \begin{equation}
 \begin{split}
 D_\mu\psi_1&=[\partial_\mu-ig_W\frac{\tau_a}{2}W_\mu^a-ig_W^\prime y_1 B_\mu]\psi_1 \\
@@ -237,7 +237,7 @@ D_\mu\psi_2&=[\partial_\mu-ig_W^\prime y_2 B_\mu]\psi_2 \\
 D_\mu\psi_3&=[\partial_\mu-ig_W^\prime y_3 B_\mu]\psi_3 \\
 \end{split},
 \end{equation}
-where $g_W$ and $g_W^{\prime}$ are the Weak force coupling constants while $W_\mu^a$ and $B_\mu$ are four gauge bosons and can be the possible candidates for $\W^\pm$, $Z$ and $\gamma$. 
+where $g_W$ and $g_W^{\prime}$ are the Weak force coupling constants while $W_\mu^a$ and $B_\mu$ are four gauge bosons and can be the possible candidates for $\W^\pm$, $Z$ and $\gamma$ \cite{halzen_quarks_1984, griffiths_introduction_2008}. 
 
  Just like the above descriptions, the fields need to transform along with the wave functions and derivatives. These transformations are,
 \begin{equation}
@@ -246,7 +246,7 @@ B_\mu\rightarrow&B^\prime_\mu=B_\mu+\frac{1}{g_W^\prime}\partial_\mu\beta(x) \\
 W\mu\rightarrow&W^\prime_\mu=U_L W_\mu U^\dagger_L-\frac{1}{g_W}\partial_\mu U_L U_L^\dagger \\
 \end{split},
 \end{equation}
-where $U_L=e^{i\frac{\tau_a}{2}\alpha^a(x)}$. These transformations are similar to the QED and QCD transformation. If we include all of these invariant transformations in the free Weak Lagrangian Eqn. \ref{WeakL}, we get a free invariant Lagrangian, but this does not allow us to include a mass term for the fermions. Therefore, it is not a viable procedure to include the Electroweak interactions into the model. In order to do this we must include the Higgs Mechanism.
+where $U_L=e^{i\frac{\tau_a}{2}\alpha^a(x)}$ \cite{halzen_quarks_1984, griffiths_introduction_2008}. These transformations are similar to the QED and QCD transformation. If we include all of these invariant transformations in the free Weak Lagrangian Eqn. \ref{WeakL}, we get a free invariant Lagrangian, but this does not allow us to include a mass term for the fermions. Therefore, it is not a viable procedure to include the Electroweak interactions into the model. In order to do this we must include the Higgs Mechanism.
 
 \subsection{The Higgs Mechanism}\label{HiggsMechanism}
 
@@ -262,7 +262,7 @@ with $\phi$ being a $SU(2)$ doublet of complex scalar fields,
 \phi_3+i\phi_4
 \end{bmatrix},
 \end{equation} 
-and is invariant under global $SU(2)$ phase transformations $\phi\rightarrow e^{i\alpha_a\tau_a/2}\phi$. To allow for local invariance, we first allow for a covariant derivative,
+and is invariant under global $SU(2)$ phase transformations $\phi\rightarrow e^{i\alpha_a\tau_a/2}\phi$ \cite{halzen_quarks_1984}. To allow for local invariance, we first allow for a covariant derivative,
 \begin{equation}
 D_\mu=\partial_\mu+ig_W \frac{\tau_a}{2}W_\mu^a,
 \end{equation}
@@ -271,11 +271,11 @@ where we now have three gauge fields, $W_\mu^a$. If we assume an infinitesimal g
 W^a_\mu\rightarrow W^a_\mu-\frac{1}{g_W}\partial_\mu\alpha_a-f_{abc}\alpha_bW^c_\mu.
 \end{equation}
 
-You can see that Eqn. \ref{HiggVectorTransform} is similar to Eqn. \ref{QCDGaugeTransform} where we have replaced the QCD gauge field with the three gauge fields $W_\mu^a$. If we include these locally invariant transformations into the above $SU(2)$ Lagrangian we get,
+You can see that Eqn. \ref{HiggVectorTransform} is similar to Eqn. \ref{QCDGaugeTransform} where we have replaced the QCD gauge field with the three gauge fields $W_\mu^a$ \cite{halzen_quarks_1984, griffiths_introduction_2008}. If we include these locally invariant transformations into the above $SU(2)$ Lagrangian we get,
 \begin{equation}\label{WeakLagrangian}
 \mathcal{L}=(\partial_\mu\phi+ig_W\frac{1}{2}\tau_{a}W^{a}_\mu\phi)^\dagger(\partial^\mu\phi+ig_W\frac{1}{2}\tau_{a}W^{a\mu}\phi)-\mu^2\phi^\dagger\phi+\lambda(\phi^\dagger\phi)^2-\frac{1}{4}W^{a}_{\mu\nu}W^{a\mu\nu},
 \end{equation}
-where the gauge field kinetic term has been included at the end. The most interesting regions of this Lagrangian is when $\mu^2<0$ and $\lambda>0$, and the potential has a minimum at $\phi^\dagger\phi=-\frac{\mu^2}{2\lambda}$. With this, we will expand the potential around the minimum and require that,
+where the gauge field kinetic term has been included at the end\cite{halzen_quarks_1984, griffiths_introduction_2008}. The most interesting regions of this Lagrangian is when $\mu^2<0$ and $\lambda>0$, and the potential has a minimum at $\phi^\dagger\phi=-\frac{\mu^2}{2\lambda}$. With this, we will expand the potential around the minimum and require that,
 \begin{equation}
 \phi_1=\phi_2=\phi_4=0, \phi_3^2=-\frac{\mu^2}{2\lambda}\equiv v^2.
 \end{equation}
@@ -291,21 +291,21 @@ with this specific transformation of the $SU(2)$ doublet and the simplification 
 
 \subsection{Electroweak} \label{EMWeak}
 
-We want to include the Higgs Mechanism into the weak isospin and weak hypercharge, $SU(2)_L\times U(1)_Y$, transformations of electroweak interactions. Weak isospin and hypercharge is defined as $I_3=\frac{1}{2}(n_u-n_d)$ and $Y\equiv B+S$, respectfully, where $n_u,n_d$ is the number of up or down quarks, $B$ is the baryon number, and $S$ is the strangeness. The weak isospin triplet for weak currents can be written down using Eqn. \ref{WeakLagrangian}, 
+We want to include the Higgs Mechanism into the weak isospin and weak hypercharge, $SU(2)_L\times U(1)_Y$, transformations of electroweak interactions \cite{halzen_quarks_1984, griffiths_introduction_2008}. Weak isospin and hypercharge is defined as $I_3=\frac{1}{2}(n_u-n_d)$ and $Y\equiv B+S$, respectfully, where $n_u,n_d$ is the number of up or down quarks, $B$ is the baryon number, and $S$ is the strangeness. The weak isospin triplet for weak currents can be written down using Eqn. \ref{WeakLagrangian}, 
 \begin{equation}\label{WeakIsospinCurrent}
 J_\mu^i(x)=\overline{\chi}_L\gamma_\mu\frac{1}{2}\tau_i\chi_L, \text{ with } i=1,2,3.
 \end{equation}
-Since this is a current we can calculate the charge by integrating all of space, $T^i=\int J_0^i(x)d^3x$, which will give us the generators of the $SU(2)_L$ symmetry $[T^i,T^j]=i\epsilon_{ijk}T^k$. Weak hypercharge, $Y$, is then defined by $Q=T^3+\frac{Y}{2}$ where $Q$ is the charge and $T^3$ is the third component of the weak isospin. The weak hypercharge is the conserved quantity of the $U(1)_Y$ symmetry. 
+Since this is a current we can calculate the charge by integrating all of space, $T^i=\int J_0^i(x)d^3x$, which will give us the generators of the $SU(2)_L$ symmetry $[T^i,T^j]=i\epsilon_{ijk}T^k$ \cite{halzen_quarks_1984, griffiths_introduction_2008}. Weak hypercharge, $Y$, is then defined by $Q=T^3+\frac{Y}{2}$ where $Q$ is the charge and $T^3$ is the third component of the weak isospin. The weak hypercharge is the conserved quantity of the $U(1)_Y$ symmetry. 
 
 First, we need to include the coupling of the Weak current $J^a_\mu$ and the gauge field $W^{a\mu}$ such that,
 \begin{equation}
 -ig_WJ^a_\mu W^{a\mu}=-ig_W\overline{\chi}_L\gamma_\mu T^aW^{a\mu}\chi_L,
 \end{equation}
-which is the basic interaction for the $SU(2)_L$ symmetry. In this basic interaction, we can see that the electric charge that we know from EM is a combination of the Weak isospin and hypercharge and the gauge bosons mix to produce the massless photon that couples to the electric charge. There are three additional massive bosons, one neutral and two charged, that couple to the other combinations of Weak isospin and hypercharge. Then, we also need to include the weak hypercharge current with the fourth vector boson $B^\mu$,
+which is the basic interaction for the $SU(2)_L$ symmetry \cite{halzen_quarks_1984, griffiths_introduction_2008}. In this basic interaction, we can see that the electric charge that we know from EM is a combination of the Weak isospin and hypercharge and the gauge bosons mix to produce the massless photon that couples to the electric charge. There are three additional massive bosons, one neutral and two charged, that couple to the other combinations of Weak isospin and hypercharge \cite{halzen_quarks_1984, griffiths_introduction_2008}. Then, we also need to include the weak hypercharge current with the fourth vector boson $B^\mu$,
 \begin{equation}
 -i\frac{g_W^{\prime}}{2}j_\mu^YB^\mu=-ig_W^{\prime}\overline{\psi}\gamma_\mu\frac{Y}{2}\psi B^\mu, 
 \end{equation}
-where the operators $T^a$ and $Y$ are generators for the $SU(2)_L$ and $U(1)_Y$ gauge transformations, respectively. Now we combine the two symmetries with the transformations of the left and right hand components of $\psi$ and from this we can write down the contributions of the two gauge fields $W_\mu^3$ and $B_\mu$ and the missing angle $\theta_W$ to find the interactions of the two neutral currents. The physical fields are thus,
+where the operators $T^a$ and $Y$ are generators for the $SU(2)_L$ and $U(1)_Y$ gauge transformations, respectively. Now we combine the two symmetries with the transformations of the left and right hand components of $\psi$ and from this we can write down the contributions of the two gauge fields $W_\mu^3$ and $B_\mu$ and the missing angle $\theta_W$ to find the interactions of the two neutral currents \cite{halzen_quarks_1984, griffiths_introduction_2008}. The physical fields are thus,
 \begin{equation}
 -ig_WJ_\mu^3W^{3\mu}-i\frac{g_W^{\prime}}{2}j_\mu^YB^\mu=-iej_\mu^{em}A^\mu-\frac{ie}{sin\theta_Wcos\theta_W}[J_\mu^3-sin^2\theta_Wj_\mu^{em}]Z^\mu.
 \end{equation}
@@ -331,7 +331,7 @@ With the inclusion of the Higgs mechanism and the formulation of a local gauge i
 &-(G_1\overline{L}\phi R+G_2\overline{L}\phi_cR+\text{hermitian conjugate}),
 \end{split}
 \end{equation}
-where the first terms are the kinetic energies and self-interactions of the $\W^\pm,\Z, g, \text{and } \gamma$ bosons. The second and third terms are the kinetic energies and interactions of the leptons and quarks with the $\W^\pm,\Z, g, \text{and } \gamma$ bosons where $L$ is a left-handed fermion doublet and $R$ is a right-handed fermion singlet. The fourth term is the $\W^\pm,\Z,\gamma$ and Higgs masses and couplings. The final term is the lepton and quark masses and couplings to the Higgs field.  
+where the first terms are the kinetic energies and self-interactions of the $\W^\pm,\Z, g, \text{and } \gamma$ bosons \cite{gaillard_standard_1999, halzen_quarks_1984, griffiths_introduction_2008}. The second and third terms are the kinetic energies and interactions of the leptons and quarks with the $\W^\pm,\Z, g, \text{and } \gamma$ bosons where $L$ is a left-handed fermion doublet and $R$ is a right-handed fermion singlet. The fourth term is the $\W^\pm,\Z,\gamma$ and Higgs masses and couplings. The final term is the lepton and quark masses and couplings to the Higgs field.  
 
 \section{Fundamental Problems in the Standard Model}
 \label{sec:SMIssues}
@@ -341,12 +341,12 @@ The SM is able to accurately and precisely describe many facets of the universe,
 \subsection{Dark Matter}
 The main motivation for Dark Matter is the difference between the visible matter and the measurable matter in the universe. This has most notably been seen in the radial velocities of stars in galaxies. In a galaxy which is solely made up of visible matter, or matter that interacts with light, the radial velocity of stars should decrease as $1/\sqrt{r}$ the further away it is from the galactic nuclei, although measurements show the velocity becoming constant as a function of radius.
 
-A study of this was on the galaxy NGC 1560, where the measured galactic velocity curve provided a result that was 400 times large than the visible matter in the cluster \cite{broeils_mass_1992}.  To reproduce these features in models, the mass of the galaxy must be significantly more than what is seen. This implies some unseen dark matter, that still interacts with the gravitational field, but not with the EM field. The neutrino could be a potential dark matter candidate due to the fact that it interacts weakly with matter and is abundant in the universe. However, the mass, which is nonzero, can only explain a small fraction of the dark matter in the universe where we have limits derived by high-redshift galaxies \cite{bertone_dark_2005}.
+A study of this was on the galaxy NGC 1560, where the measured galactic velocity curve provided a result that was 400 times large than the visible matter in the cluster \cite{broeils_mass_1992}.  To reproduce these features in models, the mass of the galaxy must be significantly more than what is seen. This implies some unseen dark matter \cite{broeils_mass_1992, feng_dark_2010}, that still interacts with the gravitational field, but not with the EM field. The neutrino could be a potential dark matter candidate due to the fact that it interacts weakly with matter and is abundant in the universe. However, the mass, which is nonzero, can only explain a small fraction of the dark matter in the universe where we have limits derived by high-redshift galaxies \cite{bertone_dark_2005}.
 
 \begin{figure}
  	\centering
 	\includegraphics[width=0.5\textwidth]{Hierarchy.pdf}
- 	\caption[Hierarchy Problem Loop Correction]{The loop corrections to the Higgs boson interacting with a top quark and its superpartner, the top squark. This is a next-to-leading order (NLO) correction to the Higgs boson mass.}
+ 	\caption[Hierarchy Problem Loop Correction]{The loop corrections to the Higgs boson interacting with a top quark and its superpartner, the top squark. This is a next-to-leading order (NLO) correction to the Higgs boson mass \cite{martin_supersymmetry_1997}.}
  	\label{HiggsMass} 
 \end{figure}
 
@@ -366,14 +366,14 @@ With the introduction of a scalar partner to the $t$, there is a logarithmic div
 
 \subsection{Grand Unified Theory}
 
-The SM is able to accurately describe three of the fundamental sources at typical energy scales, 1 to $10^{4}$ GeV, but ideally the forces would be able to merge into a single force at higher energies. This has not been directly observed, but many theories, such as SUSY, can give a GUT that can allow for a common gauge coupling and a simpler theory overall \cite{martin_supersymmetry_1997}.
+The SM is able to accurately describe three of the fundamental forces at typical energy scales, 1 to $10^{4}$ GeV, but ideally the forces would be able to merge into a single force at higher energies. This has not been directly observed, but many theories, such as SUSY, can give a GUT \cite{georgi_unity_1974, georgi_hierarchy_1974, buras_aspects_1978} that can allow for a common gauge coupling and a simpler theory overall \cite{martin_supersymmetry_1997}.
 
 At standard energies for particle physics experiments the difference in the strength of each force is quite noticeable. But it has been shown that in the SM the strengths of each force are dependent on the energy scale. SUSY could also explain the running coupling constant for QCD interaction. It would be ideal if they converge to a single force at large energies, such as $10^{16}$ GeV. In Fig. \ref{GUT}, we see the extrapolated energy scales of the forces in the SM shown as the dotted line. These unfortunately, do not meet at a single point to become one force, but if we include SUSY into the model we get a nice convergence between the forces \cite{martin_supersymmetry_1997}.
 
 \begin{figure}
  	\centering
 	\includegraphics[width=0.5\textwidth]{GUTRenormalization.png}
- 	\caption[GUT Force Energy Dependence]{The energy dependence of the inverse gauge coupling of each force in the SM (dashed line) and the MSSM (solid lines). The MSSM gives two thresholds for the sparticle mass 750 GeV and 2.5 TeV.}
+ 	\caption[GUT Force Energy Dependence]{The energy dependence of the inverse gauge coupling of each force in the SM (dashed line) and the MSSM (solid lines). The MSSM gives two thresholds for the sparticle mass 750 GeV and 2.5 TeV \cite{martin_supersymmetry_1997}.}
  	\label{GUT} 
 \end{figure}
 
@@ -384,7 +384,7 @@ We have seen from the above three problems that there is still more to learn abo
 \begin{figure}
  	\centering
 	\includegraphics[width=0.75\textwidth]{SM-SUSY-diagram.jpg}
- 	\caption[Supersymmetry and Standard Model Particles]{The corresponding SUSY particles which are partners to the SM particles.}
+ 	\caption[Supersymmetry and Standard Model Particles]{The corresponding SUSY particles which are partners to the SM particles \cite{francis_sort_2014}.}
  	\label{SUSYParticles} 
 \end{figure}
 
@@ -425,7 +425,7 @@ The five higgsinos and electroweak gauginos mix with each other because of elect
 \subsection{R Parity}
 \label{subsec:rparity}
 
-$R$-parity or matter parity is the multiplicatively conserved quantum number \cite{wess_supergauge_1974}, \cite{farrar_phenomenology_1978} defined as, 
+$R$-parity or matter parity is the multiplicatively conserved quantum number \cite{wess_supergauge_1974, farrar_phenomenology_1978} defined as, 
 \begin{equation} \label{RParity}
 P_R=(-1)^{3(B-L)+2s}, 
 \end{equation}
@@ -444,7 +444,7 @@ $R$-parity is thought to be exactly conserved in SUSY, where there is no mixing 
 \begin{figure}
 \centering
 	\includegraphics[width=0.5\textwidth]{TopSquarkMass.png}
- 	\caption[Top squark mass hierarchy]{On the right we have the arbitrary masses of the top and charm quarks. The left and right handed states mix into two mass eigenstates. It is possible that the top squark will have the smallest mass of the squarks.}
+ 	\caption[Top squark mass hierarchy]{On the right we have the arbitrary masses of the top and charm quarks. The left and right handed states mix into two mass eigenstates. It is possible that the top squark will have the smallest mass of the squarks \cite{martin_supersymmetry_1997}.}
  	\label{StopMass} 
 \end{figure}
 
@@ -485,35 +485,35 @@ With the comprehensive analysis that was performed in 2016, we have various limi
 \begin{figure}
 \centering
 	\includegraphics[width=0.50\textwidth]{T2tt_AN16.png}
- 	\caption[T2tt Limits]{Limits for the mass parameter space for $\st\rightarrow t \neutralino$ (T2tt) decays. With a current limit of 1.05 \TeV{} for a minimal neutralino mass \cite{cms_collaboration_search_2016}.}
+ 	\caption[T2tt Limits]{Limits for the mass parameter space for $\st\rightarrow t \neutralino$ (T2tt) decays. With a current limit of 1.05 \TeV{} for a minimal neutralino mass \cite{sirunyan_search_2017}.}
  	\label{T2ttANLimits} 
 \end{figure}
 
 \begin{figure}
 \centering
 	\includegraphics[width=0.50\textwidth]{T2bW_AN16.png}
- 	\caption[T2bW Limits]{Limits for the mass parameter space for $\st\rightarrow b \chargino$ (T2bW) decays. With a current limit of 750 \GeV{} for a minimal neutralino mass \cite{cms_collaboration_search_2016}.}
+ 	\caption[T2bW Limits]{Limits for the mass parameter space for $\st\rightarrow b \chargino$ (T2bW) decays. With a current limit of 750 \GeV{} for a minimal neutralino mass \cite{sirunyan_search_2017}.}
  	\label{T2bWANLimits} 
 \end{figure}
 
 \begin{figure}
 \centering
 	\includegraphics[width=0.50\textwidth]{T2tb_AN16.png}
- 	\caption[T2tb Limits]{Limits for the mass parameter space for $\st\rightarrow b \chargino\rightarrow bW^\pm\neutralino$ or $\st\rightarrow t\neutralino$ (T2tb) decays. With a current limit of 850 \GeV{} for a minimal neutralino mass \cite{cms_collaboration_search_2016}.}
+ 	\caption[T2tb Limits]{Limits for the mass parameter space for $\st\rightarrow b \chargino\rightarrow bW^\pm\neutralino$ or $\st\rightarrow t\neutralino$ (T2tb) decays. With a current limit of 850 \GeV{} for a minimal neutralino mass \cite{sirunyan_search_2017}.}
  	\label{T2tbANLimits} 
 \end{figure}
 
 \begin{figure}
 \centering
 	\includegraphics[width=0.50\textwidth]{T2fbd_AN16.png}
- 	\caption[T2fbd Limits]{Limits for the mass parameter space for $\st\rightarrow b W^+ \neutralino$ (T2fbd) decays. Which has a range of 550 \GeV{} for a \neutralino{} mass of approx. 500 \GeV{} \cite{cms_collaboration_search_2016}.}
+ 	\caption[T2fbd Limits]{Limits for the mass parameter space for $\st\rightarrow b W^+ \neutralino$ (T2fbd) decays. Which has a range of 550 \GeV{} for a \neutralino{} mass of approx. 500 \GeV{} \cite{sirunyan_search_2017}.}
  	\label{T2fbdANLimits} 
 \end{figure}
 
 \begin{figure}
 \centering
 	\includegraphics[width=0.50\textwidth]{T2bWC_AN16.png}
- 	\caption[T2bWC Limits]{Limits for the mass parameter space for $\st\rightarrow b\chargino, \chargino\rightarrow W ^\pm\neutralino$ (T2bWC) decays. Which has a range of 550 to 675 \GeV{} for a \neutralino{} mass of 600 \GeV{} \cite{cms_collaboration_search_2016}.}
+ 	\caption[T2bWC Limits]{Limits for the mass parameter space for $\st\rightarrow b\chargino, \chargino\rightarrow W ^\pm\neutralino$ (T2bWC) decays. Which has a range of 550 to 675 \GeV{} for a \neutralino{} mass of 600 \GeV{} \cite{sirunyan_search_2017}.}
  	\label{T2bWCANLimits} 
 \end{figure}
 
