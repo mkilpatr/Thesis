@@ -44,49 +44,6 @@ In order to test and validate the background estimation strategy in data, we car
 	\label{fig:validation-region-hm}
 \end{figure}
 
-\section{Combination of Search region}\label{sec:Combination}
-
-As we have seen, this analysis has quite a large parameter space of interesting mass points. This combined with the number of SR bins and different backgrounds in each bin it is necessary to discuss how we plan on combining all of this to get a final estimation. To do this we use a datacard method to perform the combination and uncertainty calculation for our counting experiment. In Figure \ref{fig:example-datacard-sig}, we have an example of a single bin from our SR, specifically bin 61 (high $\dm, \nb=1, \mtb\geq175, \nt=0, \nrt=0, \nw=0, \Ht\geq1000, 250\leq\met<350$), for a single signal sample, T2tt(175, 1). 
-
-Lets go through Figure \ref{fig:example-datacard-sig}, so that we can understand what is going on. The parameter \textit{imax} is the number of final states analyzed in the datacard, \textit{jmax} is the number of independent physical processes whose yields are provided minus 1, and \textit{kmax} is the number of independent systematic uncertainties. Here we put "*" and allow the computation to figure that out. Next, we have the number of observed events from data in this particular bin, shown as \textit{observation}, where the bin above it is a unique name. Then, in the five lines following, we have the yields for the different processes included in this bin. The first process denoted as \textit{signal} is the yield from T2tt(175, 1), then the other four processes are the SM backgrounds in this bin. 
-
-\begin{figure}
-	\begin{center}
-  \includegraphics[width=1\textwidth]{T2tt_175_1_example_bin_hm_nb1_highmtb_nt0_nrt0_nw0_htgt1000_MET_pt250to350.png}
-	\end{center}
-	\caption[Example Datacard of T2tt(175,1)]{An example of the datacard for a single bin of T2tt(175, 1) with background and uncertainties.
-	 }
-	\label{fig:example-datacard-sig}
-\end{figure}
-\begin{figure}
-	\begin{center}
-  \includegraphics[width=1\textwidth]{bin_lepcr_hm_nb1_highmtb_ht1000to1300_MET_pt250to350.png}
-	\end{center}
-	\caption[Example Datacard of LL CR]{An example of the datacard for the LL CR with signal contamination.
-	 }
-	\label{fig:example-datacard-ll}
-\end{figure}
-\begin{figure}
-	\begin{center}
-  \includegraphics[width=1\textwidth]{bin_phocr_hm_nb1_highmtb_ht1000to1300_MET_pt250to350.png}
-	\end{center}
-	\caption[Example Datacard of \Znunu{} CR]{An example of the datacard for the \Znunu{} CR with signal contamination.
-	 }
-	\label{fig:example-datacard-znunu}
-\end{figure}
-\begin{figure}
-	\begin{center}
-  \includegraphics[width=1\textwidth]{bin_qcdcr_hm_nb1_highmtb_ht1000to1300_MET_pt250to350.png}
-	\end{center}
-	\caption[Example Datacard of QCD CR]{An example of the datacard for the QCD CR.
-	 }
-	\label{fig:example-datacard-qcd}
-\end{figure}
-
-The next major portion of the datacard is the various systematics of the signal and background processes. The most common type of uncertainty is the log-normal which is denoted by \textit{lnN}. For these, the distribution is described by the parameter $\kappa$, which is a multiplicative error. A $+1\sigma$ deviation corresponds to a yield scaled by $\kappa$ while a $-1\sigma$ scales the yields by $\frac{1}{\kappa}$. If the uncertainties are small the log-normal error can be approximated by a gaussian and we can approximate $\kappa=1+\frac{\delta x}{x}$, where $\frac{\delta x}{x}$ is the relative uncertainty of the event yield. Each process has a value for the statistical uncertainty which is a poisson error of $\sqrt{N}$. Then each process can have a systematic error that may be correlated to other backgrounds. In each process, we can have a value for the uncertainty or a dash which means that the uncertainty does not contribute to the process. 
-
-Finally, at the bottom of the datacard we have the rate parameters for the backgrounds that require the extrapolation from units to SR bins. The units are a more basic definition of the SR bins that can be combined with the prediction of each background to give the total background in each SR bin. Since the LL, QCD, and \Znunu{} backgrounds use an extrapolation method for the high \dm{} bins, we have defined 112 CR units and 529 SR units. In the bottom of Fig. \ref{fig:example-datacard-sig}, are the expected rates for the LL, QCD, and \Znunu{} that show the combination of three units to give the prediction of each background in the respective bins. The rates from the LL and QCD background can be seen in Fig. \ref{fig:example-datacard-ll}, \ref{fig:example-datacard-znunu}, and  \ref{fig:example-datacard-qcd}. These are an example of a single unit datacard. The calculation for each background from the unit CR is the data observation divided by the SM background in each, $\frac{N_{data}^{CR}}{(N_{LL}^{CR} + N_{Sig}^{CR})}$, where the LL CR is used as an example. Now to be able to make the estimation of the limit for the various SUSY processes that we are looking at, we need to combine the datacards for each SR bin for all of the signals in the mass parameter space. This can be easily accomplished thanks to the unique bin and process names for each signal. We can then input each of these combined datacards into the Higgs Combined Tool.
-
 \section{Statistics}\label{sec:Statistics}
 
 For the combination of multiple analyses that are sensitive to different signal production mechanisms and different decay modes, we are required to set limits on a common signal strength modifier $\mu$ that is used to alter the cross-sections of all the production mechanisms. It is conventional to require a 95\% confidence level (CL) to exlude a signal. The interpretation of the CL, however, is quite complicated. We use a modified classical frequentist method such that we can include systematic uncertainties in the results. The method for constructing a unified confidence interval is based on the likelihood-ratio test statistic \cite{feldman_unified_1998}, 
@@ -141,15 +98,67 @@ Finally, to quota a $95\%$ confidence level on the upper limit on $\mu$, $\mu$ i
 
 Along with the observed limits we are also interested in calculating the expected median upper-limit, $\pm1\sigma$, and $\pm2\sigma$ bands for the background-only hypothesis. To do this we generate a large set of background-only pseudo-data, using the toy Monte Carlo method, and calculate the $CL_s$ as if it was real data. The calculation for the expected limit is done by finding the cumulative probability distribution function (CDF) of results and starting the integration. The point at which the CDF crosses the 50\% band is the median expected value. Then the $\pm1\sigma$ band is defined by the 16\% and 84\% band and the $\pm2\sigma$ band is the 2.5\% and 97.5\% crossings. 
 
+\section{Combination of Search region}\label{sec:Combination}
+
+As we have seen, this analysis has quite a large parameter space of interesting mass points. This combined with the number of SR bins and different backgrounds in each bin it is necessary to discuss how we plan on combining all of this to get a final estimation. To do this we use a datacard to input the combination and uncertainty calculation for our counting experiment. In Figure \ref{fig:example-datacard-sig}, we have an example of a single bin from our SR, specifically bin 61 (high $\dm, \nb=1, \mtb\geq175, \nt=0, \nrt=0, \nw=0, \Ht\geq1000, 250\leq\met<350$), for a single signal sample, T2tt(175, 1). 
+
+Lets go through Figure \ref{fig:example-datacard-sig}, so that we can understand what is going on. The parameter \textit{imax} is the number of final states analyzed in the datacard, \textit{jmax} is the number of independent physical processes whose yields are provided minus 1, and \textit{kmax} is the number of independent systematic uncertainties. Here we put "*" and allow the computation to figure that out. Next, we have the number of observed events from data in this particular bin, shown as \textit{observation}, where the bin above it is a unique name. Then, in the five lines following, we have the yields for the different processes included in this bin. The first process denoted as \textit{signal} is the yield from T2tt(175, 1), then the other four processes are the SM backgrounds in this bin. 
+
+\begin{figure}
+	\begin{center}
+  \includegraphics[width=1\textwidth]{T2tt_175_1_example_bin_hm_nb1_highmtb_nt0_nrt0_nw0_htgt1000_MET_pt250to350.png}
+	\end{center}
+	\caption[Example Datacard of T2tt(175,1)]{An example of the datacard for a single bin of T2tt(175, 1) with background and uncertainties.
+	 }
+	\label{fig:example-datacard-sig}
+\end{figure}
+\begin{figure}
+	\begin{center}
+  \includegraphics[width=1\textwidth]{bin_lepcr_hm_nb1_highmtb_ht1000to1300_MET_pt250to350.png}
+	\end{center}
+	\caption[Example Datacard of LL CR]{An example of the datacard for the LL CR with signal contamination.
+	 }
+	\label{fig:example-datacard-ll}
+\end{figure}
+\begin{figure}
+	\begin{center}
+  \includegraphics[width=1\textwidth]{bin_phocr_hm_nb1_highmtb_ht1000to1300_MET_pt250to350.png}
+	\end{center}
+	\caption[Example Datacard of \Znunu{} CR]{An example of the datacard for the \Znunu{} CR with signal contamination.
+	 }
+	\label{fig:example-datacard-znunu}
+\end{figure}
+\begin{figure}
+	\begin{center}
+  \includegraphics[width=1\textwidth]{bin_qcdcr_hm_nb1_highmtb_ht1000to1300_MET_pt250to350.png}
+	\end{center}
+	\caption[Example Datacard of QCD CR]{An example of the datacard for the QCD CR.
+	 }
+	\label{fig:example-datacard-qcd}
+\end{figure}
+
+The next major portion of the datacard is the various systematics of the signal and background processes. The most common type of uncertainty is the log-normal which is denoted by \textit{lnN}. For these, the distribution is described by the parameter $\kappa$, which is a multiplicative error. A $+1\sigma$ deviation corresponds to a yield scaled by $\kappa$ while a $-1\sigma$ scales the yields by $\frac{1}{\kappa}$. If the uncertainties are small the log-normal error can be approximated by a gaussian and we can approximate $\kappa=1+\frac{\delta x}{x}$, where $\frac{\delta x}{x}$ is the relative uncertainty of the event yield. Each process has a value for the statistical uncertainty which is a poisson error of $\sqrt{N}$. Then each process can have a systematic error that may be correlated to other backgrounds. In each process, we can have a value for the uncertainty or a dash which means that the uncertainty does not contribute to the process. 
+
+Finally, at the bottom of the datacard we have the rate parameters for the backgrounds that require the extrapolation from units to SR bins. The units are a more basic definition of the SR bins that can be combined with the prediction of each background to give the total background in each SR bin. Since the LL, QCD, and \Znunu{} backgrounds use an extrapolation method for the high \dm{} bins, we have defined 112 CR units and 529 SR units. In the bottom of Fig. \ref{fig:example-datacard-sig}, are the expected rates for the LL, QCD, and \Znunu{} that show the combination of three units to give the prediction of each background in the respective bins. The rates from the LL and QCD background can be seen in Fig. \ref{fig:example-datacard-ll}, \ref{fig:example-datacard-znunu}, and  \ref{fig:example-datacard-qcd}. These are an example of a single unit datacard. The calculation for each background from the unit CR is the data observation divided by the SM background in each, $\frac{N_{data}^{CR}}{(N_{LL}^{CR} + N_{Sig}^{CR})}$, where the LL CR is used as an example. Now to be able to make the estimation of the limit for the various SUSY processes that we are looking at, we need to combine the datacards for each SR bin for all of the signals in the mass parameter space. This can be easily accomplished thanks to the unique bin and process names for each signal. We can then input each of these combined datacards into the Higgs Combined Tool.
+
 \section{Results}\label{sec:Results}
 
 \begin{figure}
 	\begin{center}
-  \includegraphics[width=0.8\textwidth]{limits/T2tt_testXSEC.pdf}
+  \includegraphics[width=0.8\textwidth]{limits/T2tt_dry_V2_XSEC.pdf}
 	\end{center}
-	\caption[Run 2: T2tt Limits]{Limits for the mass parameter space for $\st\rightarrow t \neutralino$ (T2tt) decays for Run 2 data. With a current limit of 1.4 \TeV{} for a minimal neutralino mass.
+	\caption[Run 2: T2tt Limits]{Limits for the mass parameter space for $\st\rightarrow t \neutralino$ (T2tt) decays for Run 2 data. With a current limit approximately 1240 GeV for a minimal neutralino mass. The limit near the top mass corridor has been significantly approved with improved signal 
 	 }
 	\label{fig:Run2-T2tt-limits}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+  \includegraphics[width=0.8\textwidth]{limits/T1tttt_testXSEC.pdf}
+	\end{center}
+	\caption[Run 2: T2tt Limits]{Limits for the mass parameter space for $\widetilde{g}\rightarrow t\hat{t}\neutralino$ (T2tt) decays for Run 2 data. With a current limit of 1.4 \TeV{} for a minimal neutralino mass.
+	 }
+	\label{fig:Run2-T1tttt-limits}
 \end{figure}
 
 After creating all of the datacards for each mass point we can calculate the expected and observed limits for the entire Run 2 analysis for each signal region, T2tt, T2bW, T2tb, T2fbd, and T2bWC. 
