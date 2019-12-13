@@ -1,0 +1,16 @@
+\chapter{Samples}\label{sec:SamplesApp}
+\input{tables/samples.tex}
+
+\subsection{Filters}
+The following filters, recommended by the JetMET POG, are applied to 2016, 2017, and 2018 eras:
+\begin{itemize}
+	\item goodVertices where the event is required to have $|z|\leq24$;
+	\item HBHENoiseFilter, to reduce bad pulse-shape, timing, and hit multiplicity;
+	\item HBHENoiseIsoFilter, to include a requirement on the number of isolated noise channels;
+	\item EcalDeadCellTriggerPrimitiveFilter, to remove events where the energy measured in the ECAL is biases due to energy deposits in dead cell regions;
+	\item BadPFMuonFilter, to remove badly reconstructed muons from the PF algorithm;
+	\item GlobalSuperTightHalo2016Filter, to minimize effects of the beam halo which is a process when partons interact upstream of the detector; and
+	\item eeBadScFilter, to remove crystals that are determined to be erroneous.
+\end{itemize}
+There is an addition ecalBadCalibFilter for 2017 and 2018 eras only for additional bad calorimeters for those years of data.
+

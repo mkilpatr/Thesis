@@ -150,24 +150,10 @@ We will end up dividing the search regions we are interested in into two differe
 \begin{equation}\label{TransverseMass}
 M_T(b,\met)=\sqrt{2\cdot\met\cdot\pt(b)(1-\cos(\Delta\phi_{\slashed{E},p_b}))},
 \end{equation}
-where $\Delta\phi_{\slashed{E},p_b}$ is the angle, $\phi$, between \met and the leading $b$ jet $(p(b))$ and $1,2$. A feature of $M_T(b,\met)$ when used for a parent particle that decays to a visible and invisible particles, such as $\W^+\rightarrow l^+\nu_l$ will have a peak at the \W{} mass in the rest frame \cite{tovey_transformation_2019}.This will be used to distinguish between our low and high mass search regions, see Section \ref{SearchRegions}.
+where $\Delta\phi_{\slashed{E},p_b}$ is the angle, $\phi$, between \met and the leading $b$ jet, $(p(b))$. A feature of $M_T(b,\met)$ when used for a parent particle that decays to a visible and invisible particles, such as $\W^+\rightarrow l^+\nu_l$ will have a peak at the \W{} mass in the rest frame \cite{tovey_transformation_2019}.This will be used to distinguish between our low and high mass search regions, see Section \ref{SearchRegions}.
 
-\section{Samples}\label{Samples}
-\input{tables/samples.tex}
-
-
-\subsection{Filters}
-The following filters, recommended by the JetMET POG, are applied to 2016, 2017, and 2018 eras:
-\begin{itemize}
-	\item goodVertices where the event is required to have $|z|\leq24$;
-	\item HBHENoiseFilter, to reduce bad pulse-shape, timing, and hit multiplicity;
-	\item HBHENoiseIsoFilter, to include a requirement on the number of isolated noise channels;
-	\item EcalDeadCellTriggerPrimitiveFilter, to remove events where the energy measured in the ECAL is biases due to energy deposits in dead cell regions;
-	\item BadPFMuonFilter, to remove badly reconstructed muons from the PF algorithm;
-	\item GlobalSuperTightHalo2016Filter, to minimize effects of the beam halo which is a process when partons interact upstream of the detector; and
-	\item eeBadScFilter, to remove crystals that are determined to be erroneous.
-\end{itemize}
-There is an addition ecalBadCalibFilter for 2017 and 2018 eras only for additional bad calorimeters for those years of data.
+\section{Samples and Filters}\label{Samples}
+A detailed list of the samples and filters used in this analysis are described in Appendix \ref{sec:SamplesApp}.
 
 \section{Baseline Selection} \label{sec:Baseline}
 
