@@ -24,7 +24,7 @@ After decades of theoretical and experimental research the SM has been developed
  \subsection{Quantum Field Theory}
  \label{QFT}
  
- The interactions of all these particle fields are described by quantized fields whose operators describe the creation and annihilation of particles. Each of the particle fields of the SM have a corresponding gauge boson which is described by a quantized gauge field, see Fig. \ref{SMParticles}. The most well-known particle field is the EM field and its interactions. In order to write a concise theory of the particles in the SM, the symmetry and conservation laws of the SM can be derived by starting with Noether's Theorem.
+ The interactions of all these particle fields are described by quantized fields whose operators describe the creation and annihilation of particles. Each of the forces of the SM have a corresponding gauge boson which is described by a quantized gauge field, see Fig. \ref{SMParticles}. The most well-known particle field is the EM field and its interactions. In order to write a concise theory of the particles in the SM, the symmetry and conservation laws of the SM can be derived by starting with Noether's Theorem.
  
  \subsection{Noether's Theorem}
  
@@ -50,7 +50,7 @@ After decades of theoretical and experimental research the SM has been developed
  \begin{equation}\label{U1gauge}
  \psi(x)\rightarrow e^{i\alpha(x)}\psi(x),
  \end{equation}
- where $\alpha(x)$ has an arbitrary dependence on space and time. 
+ where $\alpha(x)$ has an arbitrary dependence on space and time because we want the theory to be invariant in space and time. 
  If one were to include this into the Lagrangian for a spin-$1/2$ particle in a vacuum,
  \begin{equation}\label{DiracLag}
 \mathcal{L}_{QED}^{vac}=i\overline{\psi}\gamma^\mu\partial_\mu\psi-m\overline{\psi}\psi
@@ -105,7 +105,7 @@ To allow for the field to be invariant, we must include a derivative, $D_\mu$, t
 \begin{equation}\label{LagrangianQED}
 \mathcal{L}_{QED}=\overline{\psi}(i\gamma^\mu\partial_\mu-m)\psi+e\overline{\psi}\gamma^{\mu}A_{\mu}\psi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu},
 \end{equation}
-where $A_{\mu}$ is the EM field operator and $F^{\mu\nu}$ is the EM field tensor. This Lagrangian describes the interactions between spin-$1/2$ charged particles and the $U(1)$ EM force. Each of the parts of this equation is Lorentz invariant which allows this to be true in all reference frames \cite{halzen_quarks_1984, peskin_introduction_1995}. 
+where $A_{\mu}$ is the EM field operator and $F^{\mu\nu}$ is the EM field tensor. This Lagrangian describes the interactions between spin-$1/2$ charged particles and the $U(1)$ EM force. Each of the parts of this equation is Lorentz invariant which allows this to be true in all reference frames. We also find that the conserved current of QED is the electric charge, $Q=\int d^3xj^0$ \cite{halzen_quarks_1984, peskin_introduction_1995}. 
 
 \begin{figure}
  	\centering
@@ -321,6 +321,8 @@ However, these masses cannot be predicted since they depend on the values from t
 
 \subsection{The Standard Model Lagrangian}
 
+Noether's theorem has been used to confirm that QED, QCD, and the Weak force are invariant under local and global gauge transformations. This also allowed us to find that the conserved current of QED is the electric charge, QCD is the color charge, and for the Weak force it's the Weak isospin and hypercharge. 
+
 With the inclusion of the Higgs mechanism and the formulation of a local gauge invariant Lagrangian for the Electroweak and QCD fields, we have the complete SM Lagrangian as,
 \begin{equation}\label{SMLagrangian}
 \begin{split}
@@ -332,6 +334,7 @@ With the inclusion of the Higgs mechanism and the formulation of a local gauge i
 \end{split}
 \end{equation}
 where the first terms are the kinetic energies and self-interactions of the $\W^\pm,\Z, g, \text{and } \gamma$ bosons \cite{gaillard_standard_1999, halzen_quarks_1984, griffiths_introduction_2008}. The second and third terms are the kinetic energies and interactions of the leptons and quarks with the $\W^\pm,\Z, g, \text{and } \gamma$ bosons where $L$ is a left-handed fermion doublet and $R$ is a right-handed fermion singlet. The fourth term is the $\W^\pm,\Z,\gamma$ and Higgs masses and couplings. The final term is the lepton and quark masses and couplings to the Higgs field.  
+
 
 \section{Fundamental Problems in the Standard Model}
 \label{sec:SMIssues}
@@ -349,6 +352,8 @@ A study of this was on the galaxy NGC 1560, where the measured galactic velocity
  	\caption[Hierarchy Problem Loop Correction]{The loop corrections to the Higgs boson interacting with a top quark and its superpartner, the top squark. This is a next-to-leading order (NLO) correction to the Higgs boson mass \cite{martin_supersymmetry_1997}.}
  	\label{HiggsMass} 
 \end{figure}
+
+We have also measured an effect called gravitational lensing, which is caused by a large amount of mass bending spacetime and the resulting light passing through it. The galaxy cluster Abell 2218 has been viewed to have a gravitational lensing of the galaxy behind it \cite{saraniti_gravitational_1996}. Using an equivalent of the lens equation in general relativity we can calculate the mass distribution required to cause the lensing. Then with measurement of the visible light in the galaxy we can determine that there is another kind of matter, "dark matter", that is causing the extra mass but interacts weakly with light. 
 
 \subsection{Hierarchy Problem} 
 The Higgs boson is a beautiful solution to electroweak symmetry breaking, gives a method for particles to acquire mass, see Sec. \ref{HiggsMechanism},  and was discovered to have a measured mass of $m_{H}=125.18\pm0.16$ GeV \cite{chatrchyan_observation_2012, aad_observation_2012, chatrchyan_observation_2013, atlas_collaboration_combined_2015}. This value, however, is not predictable with the SM, but can be constrained and leads to some inconsistencies when you include loop corrections. Since the Higgs boson is strongly coupled to particles with large masses, the dominant loop correction is due to interactions with the $t$ quark. These higher order loop corrections to the Higgs mass, $m_H^2$, caused by the fermionic $t$ loop, see Fig \ref{HiggsMass}, are,
@@ -388,14 +393,14 @@ We have seen from the above three problems that there is still more to learn abo
  	\label{SUSYParticles} 
 \end{figure}
 
-The partners to the fermions are denoted with a 's' in front of the name to notify that it is the scalar form of the particle and the partners to the bosons have an 'ino' attached at the end, such as photino, gluino, wino, and Higgsino. So, for the partners to the fermionic particles in the standard model we have: sup $(\widetilde{u})$, sdown $(\widetilde{d})$, scharm $(\widetilde{c})$, sstrange $(\widetilde{s})$, stop $(\st)$, and sbottom $(\widetilde{b})$ for the squarks and selectron $(\widetilde{e})$, smuon $(\widetilde{\mu})$, and stau $(\widetilde{\tau})$ for the charged sleptons. The partners to the neutrinos, which are always left-handed if you neglect the minimal masses, are sneutrinos $(\widetilde{\nu}_e, \widetilde{\nu}_\mu, \widetilde{\nu}_\tau)$, where we have one for each flavor of lepton, see Fig. \ref{SUSYParticles}. 
+The partners to the fermions are denoted with a `s' in front of the name to notify that it is the scalar form of the particle and the partners to the bosons have an `ino' attached at the end, such as photino, gluino, wino, and Higgsino. So, for the partners to the fermionic particles in the standard model we have: sup $(\widetilde{u})$, sdown $(\widetilde{d})$, scharm $(\widetilde{c})$, sstrange $(\widetilde{s})$, stop $(\st)$, and sbottom $(\widetilde{b})$ for the squarks and selectron $(\widetilde{e})$, smuon $(\widetilde{\mu})$, and stau $(\widetilde{\tau})$ for the charged sleptons. The partners to the neutrinos, which are always left-handed if you neglect the minimal masses, are sneutrinos $(\widetilde{\nu}_e, \widetilde{\nu}_\mu, \widetilde{\nu}_\tau)$, where we have one for each flavor of lepton, see Fig. \ref{SUSYParticles}. 
 
 If the SUSY was unbroken, the superpartners would have exactly the same properties as the SM pairs except their spin. This would cause a massless photino or a $m_{\widetilde{e}}=0.511$ keV selectron. These particles would certainly have been detected at this point, which leads us to think that SUSY is a broken symmetry where all the superpartners have a mass that is significantly higher than their SM partners. 
 
 \subsection{Supermultiplets and Chirality}
 \label{subsec:chiral}
 
-A supermultiplet is any symmetry where the number of bosonic degrees of freedom and fermionic degrees of freedom are equal, $n_B=n_F$. The simplest  way to achieve this is to have a combination of a single Weyl fermion, which is a chiral representation of the fermion and has two spin helicity states, $n_F=2$, and two real scalars with each having $n_B=1$. It becomes convenient for the mathematics to combine the two real scalars into one complex scalar field. Now the combination of a complex scalar field and a Weyl fermion is known as a chiral supermultiplet. 
+A supermultiplet is any symmetry where the number of bosonic degrees of freedom and fermionic degrees of freedom are equal, $n_B=n_F$. The simplest  way to achieve this is to have a combination of a single Weyl fermion, which is a chiral representation of the fermion, $n_F=2$, and two real scalars with each having $n_B=1$. It becomes convenient for the mathematics to combine the two real scalars into one complex scalar field. Now the combination of a complex scalar field and a Weyl fermion is known as a chiral supermultiplet. 
 
 \subsection{Minimal Supersymmetric Standard Model}
 \label{sec:MSSM}
@@ -439,7 +444,7 @@ $R$-parity is thought to be exactly conserved in SUSY, where there is no mixing 
 \end{itemize}
  We are going to be investigating a MSSM that conserves $R$-parity. This is quite well motivated by the possibility of a dark matter candidate \cite{feng_dark_2010}. 
 
-\subsection{Mass Spectrums}\label{subsec:StopMassSpec}
+\subsection{Mass Spectra}\label{subsec:StopMassSpec}
 
 \begin{figure}
 \centering
@@ -476,7 +481,7 @@ The SM of particle physics has been a powerful model for predicting interactions
 
 \section{Current SUSY Results}\label{CurrentResults}
 
-Here we see the most current results from searches for the top squark. These have been completed with data from 2016 with $35.9 \text{ fb}^{-1}$. This analysis was completed with the most up-to-date identification methods for particles in the SM. From this Analysis \cite{cms_collaboration_search_2016}, all 104 search region bins, as well as the corresponding single-lepton control region bins, the $\gamma+$jets control region bins and the QCD control regions, are fit simultaneously in order to evaluate the cross section excluded at 95\% confidence level for each signal benchmark point. There are similar searches using data from 2016 in Ref. \cite{atlas_collaboration_search_2017, cms_collaboration_search_2017, sirunyan_search_2017-1, sirunyan_search_2017, cms_collaboration_search_2017-1}
+Here we see the most current results from searches for the top squark from CMS. These have been completed with data from 2016 with $35.9 \text{ fb}^{-1}$. This analysis was completed with the most up-to-date identification methods for particles in the SM. From this Analysis \cite{cms_collaboration_search_2016}, all 104 search region bins, as well as the corresponding single-lepton control region bins, the $\gamma+$jets control region bins and the QCD control regions, are fit simultaneously in order to evaluate the cross section excluded at 95\% confidence level for each signal benchmark point. There are similar searches using data from 2016 in Ref. \cite{atlas_collaboration_search_2017, cms_collaboration_search_2017, sirunyan_search_2017-1, sirunyan_search_2017, cms_collaboration_search_2017-1}
 
 The easiest way to think about the plots shown in Figs. \ref{T2ttANLimits}, \ref{T2bWANLimits}, \ref{T2tbANLimits}, \ref{T2fbdANLimits}, \ref{T2bWCANLimits} \cite{alwall_simplified_2009, alwall_model-independent_2009, feng_dark_2010}, is that there is a calculated limit for each mass point. The $x$-axis is the possible mass range for the \st, $m_{\st}$ and the y-axis is the possible range for the \neutralino, $m_{\neutralino}$. Each point in this 2D space has a color representation for the value of the upper limit on the cross section at a confidence level of 95\%. 
 

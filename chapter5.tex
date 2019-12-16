@@ -166,21 +166,45 @@ Smearing is done by taking the response, Eqn. \ref{jetres}, and adjusting it usi
 
 \subsection{QCD Corrections}
 
-%Figures ? and ? show the \met{} distribution in data and simulation in the QCD control regions for the high \dm{} and low \dm{} selections, respectively. The stacked plot labeled "Non-QCD bkg" is the distribution of the non-QCD events as predicted with the estimation methods detailed in this note. The other stacked plot, labeled "Smeared QCD MC" is the smeared QCD simulation yield after applying the $r_{jet}$ corrections. The other two lines show a combination of the predicted non-QCD SM yields and one of two scenarios. "Without $r_{jet}$ corr" is the smeared QCD simulation without the $r_{jet}$ correction and "With orig. QCD MC" is the standard QCD simulation without this correction. There are three important trends in this figure. The first is the purity of the control regions, which gives confidence in using them to predict QCD yields. The second is that the "Without $r_{jet}$ corr" estimation is nearly equivalent to "With orig. QCD MC" in the regions where there are enough statistics to have a meaningful comparison. This improves our confidence in the use of the smeared QCD simulation. Finally, the $r_{jet}$ correction improves the agreement between data simulation, which is a useful validation of this correction. Due to the nature of the background estimation method applied in the high \dm{} search, control regions are utilized for the prediction of multiple search regions. 
+%\begin{figure}
+%	\begin{center}
+%  \includegraphics[width=0.8\textwidth]{QCD/qcd_res_tail_2016.png}
+%  \includegraphics[width=0.8\textwidth]{QCD/qcd_res_tail_2017.png}
+%  \includegraphics[width=0.8\textwidth]{QCD/qcd_res_tail_2018.png}
+%	\end{center}
+%	\caption[QCD Jet Response for each b-jet and light jet]{The correction for each event that has the corresponding b-jet or light jet that is then associated with the response of the jet. }
+%	\label{fig:qcd-cr-response-corr}
+%\end{figure}
+
+%A much larger proportion of events in the search region than the control region are in the tail of the $r_{jet}$ distribution, which means that this method relies on the correct modeling of $r_{jet}$ in simulation. A $r_{jet}$ correction and uncertainty is extracted from data using the method described in Ref. \cite{cms_collaboration_search_2016}. In the case of \met{} being caused by the severe mis-measurement of a single jet, \met{} and that jet are aligned and the generated level transverse momentum of the jet is approximately the pseudo-generator level \pt. The correction is derived with the pseudo jet response $(r_{pseudo,jet})$ distribution, applying the QCD control region selection except for the number of jets and b-tagging requirements. We divide this region into two, in the case of the jet aligned to \met{} passing the medium b-tag requirement and in the case of it not passing the light b-tag requirement. The corrections range between $1.52\pm1.44$ to $1.53\pm2.44$, $0.13\pm1.08$ to $0.32\pm0.71$, and $0.82\pm0.29$ to $0.84\pm0.56$ in the case of jets originating from b-quarks and between $0.26\pm0.44$ to $1.66\pm0.46$, $0.87\pm0.24$ to $1.51\pm0.41$, and $0.98\pm0.27$ to $1.16\pm0.32$ for 2016, 2017, and 2018 respectively, and for all other jets as can be seen in Tables \ref{tab:qcd_tailsf-2016}, \ref{tab:qcd_tailsf-2017}, \ref{tab:qcd_tailsf-2018}.
+
+%\input{tables/qcd_tail_sf.tex}
 
 \begin{figure}
 	\begin{center}
-  \includegraphics[width=0.8\textwidth]{QCD/qcd_res_tail_2016.png}
-  \includegraphics[width=0.8\textwidth]{QCD/qcd_res_tail_2017.png}
-  \includegraphics[width=0.8\textwidth]{QCD/qcd_res_tail_2018.png}
+  \includegraphics[width=0.4\textwidth]{QCD/JetCorrection_2016.png}
+  \includegraphics[width=0.4\textwidth]{QCD/JetCorrection_2017.png} \\
+  \includegraphics[width=0.4\textwidth]{QCD/JetCorrection_2018PreHEM.png}
+  \includegraphics[width=0.4\textwidth]{QCD/JetCorrection_2018PostHEM.png} \\
 	\end{center}
-	\caption[QCD Jet Response for each b-jet and light jet]{The correction for each event that has the corresponding b-jet or light jet that is then associated with the response of the jet. }
+	\caption[QCD Jet Response Scale Factor]{The scale factor for the smeared QCD when comparing the data to simulation for 2016, 2017, 2018 pre-HEM, and 2018 post-HEM.}
+	\label{fig:qcd-cr-response-sf}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+  \includegraphics[width=0.4\textwidth]{QCD/QCD_corr_2016.png}
+  \includegraphics[width=0.4\textwidth]{QCD/QCD_corr_2017.png} \\
+  \includegraphics[width=0.4\textwidth]{QCD/QCD_corr_2018preHEM.png}
+  \includegraphics[width=0.4\textwidth]{QCD/QCD_corr_2018postHEM.png} \\
+	\end{center}
+	\caption[QCD Jet Response Correction]{The correction for each event that has the corresponding b-jet or light jet that is then associated with the response of the jet. }
 	\label{fig:qcd-cr-response-corr}
 \end{figure}
 
-A much larger proportion of events in the search region than the control region are in the tail of the $r_{jet}$ distribution, which means that this method relies on the correct modeling of $r_{jet}$ in simulation. A $r_{jet}$ correction and uncertainty is extracted from data using the method described in Ref. \cite{cms_collaboration_search_2016}. In the case of \met{} being caused by the severe mis-measurement of a single jet, \met{} and that jet are aligned and the generated level transverse momentum of the jet is approximately the pseudo-generator level \pt. The correction is derived with the pseudo jet response $(r_{pseudo,jet})$ distribution, applying the QCD control region selection except for the number of jets and b-tagging requirements. We divide this region into two, in the case of the jet aligned to \met{} passing the medium b-tag requirement and in the case of it not passing the light b-tag requirement. The corrections range between $1.52\pm1.44$ to $1.53\pm2.44$, $0.13\pm1.08$ to $0.32\pm0.71$, and $0.82\pm0.29$ to $0.84\pm0.56$ in the case of jets originating from b-quarks and between $0.26\pm0.44$ to $1.66\pm0.46$, $0.87\pm0.24$ to $1.51\pm0.41$, and $0.98\pm0.27$ to $1.16\pm0.32$ for 2016, 2017, and 2018 respectively, and for all other jets as can be seen in Tables \ref{tab:qcd_tailsf-2016}, \ref{tab:qcd_tailsf-2017}, \ref{tab:qcd_tailsf-2018}.
+The QCD jet response, $r_{jet}$, is known to have a mismatch between data and simulation. To account for this, we devide the $r_{jet}$ distribution into five bins which are then normalized to the data, see Fig. \ref{fig:qcd-cr-response-sf}. The scale factor for 2018 post-HEM is large but the $r_{jet}$ is in good agreement after the correction. The $r_{jet}$ distribution after corrections is show in Fig. \ref{fig:qcd-cr-response-corr}. We can see each era has a good agreement between data and simulation.
 
-\input{tables/qcd_tail_sf.tex}
+\subsection{QCD Prediction}\label{sec:QCDPred}
 
 The statistical uncertainty on $TF_{QCD}$ is reduced by increasing the effective luminosity of the QCD multijet sample with a method referred to as "local smearing." The method relies on the parameterization of $r_{jet}$, which is only dependent on jet properties. Tables \ref{tab:0l-qcd-pred-lm}, \ref{tab:0l-qcd-pred-hm-1}, \ref{tab:0l-qcd-pred-hm-2}, and \ref{tab:0l-qcd-pred-hm-3} summarize the yields in data, the derived transfer factors, and the resulting QCD predictions in all \datalumi{} of Run 2 data for the high \dm{} and low \dm{} search regions, respectively. 
 
