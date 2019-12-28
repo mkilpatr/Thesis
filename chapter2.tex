@@ -1,7 +1,7 @@
 \chapter{Supersymmetry and the Standard Model}
 \label{ch:SUSY}
 
-The fundamental theory of particle physics, known as the SM, can predict interactions between the fundamental particles in our universe. With these predictions we can look for and confirm these processes, but there are some aspects of the universe that have not yet been explained. In this Chapter, we will analyze the SM, look at some specific shortcomings, and introduce supersymmetry as a possible solution.
+The fundamental theory of particle physics, known as the Standard Model (SM), can predict interactions between the fundamental particles in our universe. With these predictions we can look for and confirm these processes, but there are some aspects of the universe that have not yet been explained. In this Chapter, we will analyze the SM, look at some specific shortcomings, and introduce supersymmetry as a possible solution.
 
 \section{The Standard Model}
 \label{sec:SM}
@@ -10,7 +10,7 @@ After decades of theoretical and experimental research the SM has been developed
 
 \subsection{The Fundamental Particles}
 
- All matter can be explained by three kinds of elementary particles: leptons, quarks, and gauge bosons. Each of these can be distinguished by various quantum properties. The leptons and quarks are fermions, which are particles that have half-integer spin. Leptons are particles that only interact with the EM and Weak force, while quarks interact with all three forces of the SM. The gauge bosons are the force carriers for each respective force and have integer spin. 
+ All matter can be explained by three kinds of elementary particles: leptons, quarks, and gauge bosons. Each of these can be distinguished by various quantum properties. The leptons and quarks are fermions, which are particles that have half-integer spin. Charged leptons are particles that only interact with the EM and Weak force, while neutral leptons, neutrinos, only interact weakly. Quarks interact with all three forces of the SM. The gauge bosons are the force carriers for each respective force and have integer spin. 
  
  There are three generations of leptons and quarks which are differentiated by a charge $\pm e$, the charge of an electron, and the mass of the respective lepton. Leptons have three different charged particles: electron $(e)$, muon $(\mu)$, and tau $(\tau)$, with each charged particle having a corresponding neutrino $(\nu)$ of the same flavor, see Fig. \ref{SMParticles} \cite{griffiths_introduction_2008}. Quarks are also separated into three generations of doublets, the down-type $(-\frac{1}{3}e)$: down $(d)$, strange $(s)$, and bottom $(b)$ and up-type $(\frac{2}{3}e)$: up $(u)$, charm $(c)$, and top $(t)$, see fig \ref{SMParticles}. Each of the quarks has a color associated with it which is analogous to an electric charge, except there are three color charges: red, blue, and green \cite{griffiths_introduction_2008}.  
 
@@ -24,25 +24,27 @@ After decades of theoretical and experimental research the SM has been developed
  \subsection{Quantum Field Theory}
  \label{QFT}
  
- The interactions of all these particle fields are described by quantized fields whose operators describe the creation and annihilation of particles. Each of the forces of the SM have a corresponding gauge boson which is described by a quantized gauge field, see Fig. \ref{SMParticles}. The most well-known particle field is the EM field and its interactions. In order to write a concise theory of the particles in the SM, the symmetry and conservation laws of the SM can be derived by starting with Noether's Theorem.
+ The interactions of all these particle fields are described by quantized fields whose operators describe the creation and annihilation of particles. Each of the forces of the SM have a corresponding gauge boson which is described by a quantized gauge field, see Fig. \ref{SMParticles}. The most well-known bosonic field is the EM field and its interactions. In order to write a concise theory of the particles in the SM, the symmetry and conservation laws of the SM can be derived by starting with Noether's Theorem.
  
  \subsection{Noether's Theorem}
  
- Noether's theorem states,"to each symmetry of a local Lagrangian, there corresponds a conserved current" \cite{peskin_introduction_1995}. This can be done by allowing for an infinitesimal symmetry variation. Requiring the Lagrangian to be invariant under $\phi(x)\rightarrow\phi^\prime(x)=\phi(x)+\alpha\Delta\phi(x)$, where $\alpha$ is infinitesimal real parameter and $\Delta\phi$ is a deformation to the field, up to a 4-divergence, the Lagrangian transforms as,
+ Noether's theorem states,"to each symmetry of a local Lagrangian, there corresponds a conserved current" \cite{peskin_introduction_1995}. This can be done by allowing for an infinitesimal symmetry variation. Requiring the Lagrangian to be invariant under $\phi(x)\rightarrow\phi^\prime(x)=\phi(x)+\alpha\Delta\phi(x)$, where $x$ is a shorthand for $(t,x,y,z)$, $\alpha$ is infinitesimal real parameter and $\Delta\phi$ is a deformation to the field, up to a 4-divergence, the Lagrangian transforms as,
  \begin{equation}\label{LagrangeFluctuation}
  \mathcal{L}(x)\rightarrow\mathcal{L}(x)+\alpha\partial_\mu\mathcal{J}^\mu(x),
  \end{equation}
- where $\mathcal{J}^\mu$ is a current. If we apply the Euler-Lagrange equation,
+ where $\mathcal{J}^\mu$ is a current. We then apply the Euler-Lagrange equation to Eqn. \ref{LagrangeFluctuation},
  \begin{equation}
  \partial_\mu(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)})-\frac{\partial\mathcal{L}}{\partial\phi}=0,
  \end{equation}
- to Eqn. \ref{LagrangeFluctuation} with the addition of the fluctuation of the particle field. After some simplification we get a conserved current \cite{halzen_quarks_1984, peskin_introduction_1995},
+ where $\partial_\mu = (\partial_t, \partial_x, \partial_y, \partial_z)$ is the 4-divergence ($\mu=0,1,2,3$) with the addition of the fluctuation of the particle field. After some simplification we get a conserved current \cite{halzen_quarks_1984, peskin_introduction_1995},
  \begin{equation}
  \begin{split}
  \partial_\mu j^\mu(x)&=0, \text{ where}\\
  j^\mu(x)&=\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\Delta\phi-\mathcal{J}^\mu
- \end{split}.
- \end{equation} We see from the above equation that the current $j^\mu(x)$ of the Lagrangian is conserved. Now let's apply this to the particle fields of the SM \cite{halzen_quarks_1984, peskin_introduction_1995}.
+ \end{split},
+ \end{equation} 
+ where $\partial_\mu j^\mu(x) = \partial_0 j^0(x) - (\partial_1 j^1(x)+\partial_2 j^2(x)+\partial_3 j^3(x))$.
+ We see from the above equation that the current $j^\mu(x)$ of the Lagrangian is conserved. Now let's apply this to the particle fields of the SM \cite{halzen_quarks_1984, peskin_introduction_1995}.
  
  \subsection{Quantum Electrodynamics (QED)}
  
@@ -55,7 +57,7 @@ After decades of theoretical and experimental research the SM has been developed
  \begin{equation}\label{DiracLag}
 \mathcal{L}_{QED}^{vac}=i\overline{\psi}\gamma^\mu\partial_\mu\psi-m\overline{\psi}\psi
 \end{equation}
- where the $\gamma^\mu$ are the Dirac matrices, $\partial_\mu$ is the partial derivative, $\overline{\psi}$ is the hermitian conjugate of the wave function $\psi$, and $m$ is the mass of the particle \cite{halzen_quarks_1984, peskin_introduction_1995}. As a small aside, the bilinear quantities $\overline{\psi}(4\times4)\psi$ have certain properties under Lorentz transformations when the $4\times4$ matrix is a $\gamma$-matrices. These are of the form,
+ where the $\gamma^\mu$ are the Dirac matrices, $\overline{\psi}$ is the hermitian conjugate of the wave function $\psi$, and $m$ is the mass of the particle \cite{halzen_quarks_1984, peskin_introduction_1995}. As a small aside, the bilinear quantities $\overline{\psi}(4\times4)\psi$ have certain properties under Lorentz transformations when the $4\times4$ matrix is a $\gamma$-matrices. These are of the form,
 \begin{equation} \label{gammaMatrix}
 \gamma^0=
 \begin{bmatrix}
@@ -73,7 +75,7 @@ After decades of theoretical and experimental research the SM has been developed
 \boldsymbol{I} & 0
 \end{bmatrix},
 \end{equation}
-where the $\boldsymbol{I}$ is the identity matrix and $\boldsymbol{\sigma}$ are the Dirac matrices \cite{halzen_quarks_1984, peskin_introduction_1995}. We can combine the first two parts of Eqn. \ref{gammaMatrix} and write it compactly as $\gamma^\mu$ where $\mu=0,1,2, \text{and }3$. The possible interesting quantities of the above transformations are shown in Table \ref{Transformations}.
+where the $\boldsymbol{I}$ is the identity matrix and $\boldsymbol{\sigma}$ are the Dirac matrices \cite{halzen_quarks_1984, peskin_introduction_1995}. We can combine the first two parts of Eqn. \ref{gammaMatrix} and write it compactly as $\gamma^\mu$. The possible interesting quantities of the above transformations are shown in Table \ref{Transformations}.
 
 \begin{table}
 \centering
@@ -93,7 +95,7 @@ Type & Form & Components & Space Inversion \\
 \label{Transformations}
 \end{table}
 
-To allow for the field to be invariant, we must include a derivative, $D_\mu$, that is covariant under phase transformations,
+To allow for the field to be invariant, we must include a derivative, $D_\mu$, that is covariant under phase transformations, such that the derivative preserves the physical properties under the transformation,
  \begin{equation}\label{QEDCovariantD}
  D_\mu\equiv\partial_\mu-ieA_\mu.
  \end{equation}
@@ -101,11 +103,11 @@ To allow for the field to be invariant, we must include a derivative, $D_\mu$, t
   \begin{equation}\label{PhotonField}
  A_\mu\rightarrow A_\mu+\frac{1}{e}\partial_\mu\alpha.
  \end{equation}
- So after requiring that there be a local gauge transformation, we were forced to introduce a vector field $A_\mu$, called the gauge field, which couples to Dirac particles in the same way as the photon field. We will think of this new field as the real photon field, which means we need to add a kinematic energy portion to the Lagrangian. This kinematic term will be invariant under Eqn. \ref{PhotonField}, which leads us to the final representation of the QED Lagrangian which can be written down concisely as, 
+ So after requiring that there be a local gauge transformation, we were forced to introduce a vector field $A_\mu$, called the gauge field, which couples to Dirac particles in the same way as the photon field. We will think of this new field as the real photon field, which means we need to add a kinetic energy portion to the Lagrangian since this is describing a real particle. This kinetic term will be invariant under Eqn. \ref{PhotonField}, which leads us to the final representation of the QED Lagrangian which can be written down concisely as, 
 \begin{equation}\label{LagrangianQED}
 \mathcal{L}_{QED}=\overline{\psi}(i\gamma^\mu\partial_\mu-m)\psi+e\overline{\psi}\gamma^{\mu}A_{\mu}\psi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu},
 \end{equation}
-where $A_{\mu}$ is the EM field operator and $F^{\mu\nu}$ is the EM field tensor. This Lagrangian describes the interactions between spin-$1/2$ charged particles and the $U(1)$ EM force. Each of the parts of this equation is Lorentz invariant which allows this to be true in all reference frames. We also find that the conserved current of QED is the electric charge, $Q=\int d^3xj^0$ \cite{halzen_quarks_1984, peskin_introduction_1995}. 
+where $A_{\mu}$ is the EM field operator and $F^{\mu\nu}$ is the EM field tensor. This Lagrangian describes the interactions between spin-$1/2$ charged particles and the $U(1)$ EM force. Each of the parts of this equation is Lorentz invariant which allows this to be true in all reference frames. We also find that the conserved current of QED is the electric charge, $Q=\int d^3xj^0$, which is the time varying current, $j^0$, integrated over all of space \cite{halzen_quarks_1984, peskin_introduction_1995}. 
 
 \begin{figure}
  	\centering
@@ -126,7 +128,7 @@ where $q_1, q_2,$ and $q_3$ are quark fields with three possible color charges \
 \begin{equation}
 q(x)\rightarrow Uq(x)\equiv e^{i\alpha_a(x)T_a}q(x),
 \end{equation}
-where $U$ is a $3\times3$ unitary matrix, $T_a$ with $a=1,\ldots,8$ are a set of linearly independent traceless $3\times3$ matrices, and $\alpha_a$ are the group parameters. Since the generators $T_a$ do not necessarily commute with each other, we can see that it is a non-Abelian transformation and the commutator can be represented as,
+where $U$ is a $3\times3$ unitary matrix, $T_a$ with $a=1,\ldots,8$ are a set of linearly independent traceless $3\times3$ matrices, and $\alpha_a$ are the group parameters. Since $T_a$ does not necessarily commute with one another, we can see that it is a non-Abelian transformation and the commutator can be represented as,
 \begin{equation}
 [T_a, T_b]=if_{abc}T_c,
 \end{equation}
@@ -183,7 +185,7 @@ Now the Weak force is mediated by two vector bosons, \W{} and \Z, see Fig. \ref{
 % 	\label{CKMInteractions} 
 %\end{figure}
 
-The \W{} boson interacts very interestingly for quarks in the SM. There is a mixing of flavors of quarks for particles. They will mix partners between up-type and down-type particles \cite{kobayashi_cp-violation_1973}. The interactions for the generalized three generations of quarks is known as the Cabibbo-Kobayashi-Maskawa (CKM) matrix \cite{halzen_quarks_1984, griffiths_introduction_2008},
+The \W{} boson interacts very interestingly for quarks in the SM. Due to the $V-A$ nature of the weak interaction there is a mixing of quark flavors. They will mix the down-type particles between all three flavors \cite{kobayashi_cp-violation_1973}. The interactions for the generalized three generations of quarks is known as the Cabibbo-Kobayashi-Maskawa (CKM) matrix \cite{halzen_quarks_1984, griffiths_introduction_2008},
 \begin{equation}\label{CKM}
 \begin{bmatrix}
 d' \\
@@ -229,7 +231,7 @@ where $j$ is the fermion wave function \cite{halzen_quarks_1984, griffiths_intro
 \psi_R\rightarrow\psi'_R&=e^{i\beta(x)Y}\psi_R
 \end{split}
 \end{equation}
-where the transformation $e^{i\frac{\tau_a}{2}\alpha^a(x)}$ with $a = 1, 2, 3$ is the $SU(2)_L$ transformation and only acts on the left-handed doublet. The next step is to require that the Lagrangian is invariant under local $SU(2)_L\times U(1)_Y$. We allow for the following covariant derivatives \cite{halzen_quarks_1984},
+where the transformation $e^{i\frac{\tau_a}{2}\alpha^a(x)}$ with $a = 1, 2, 3$ is the $SU(2)_L$ transformation and only acts on the left-handed doublet. The $SU(2)_L$ symmetry has 3 generators for the group which are the three $\tau_a$. The next step is to require that the Lagrangian is invariant under local $SU(2)_L\times U(1)_Y$. We allow for the following covariant derivatives \cite{halzen_quarks_1984},
 \begin{equation}
 \begin{split}
 D_\mu\psi_1&=[\partial_\mu-ig_W\frac{\tau_a}{2}W_\mu^a-ig_W^\prime y_1 B_\mu]\psi_1 \\
@@ -349,7 +351,7 @@ A study of this was on the galaxy NGC 1560, where the measured galactic velocity
 \begin{figure}
  	\centering
 	\includegraphics[width=0.5\textwidth]{Hierarchy.png}
- 	\caption[Hierarchy Problem Loop Correction]{The loop corrections to the Higgs boson interacting with a top quark and its superpartner, the top squark. This is a next-to-leading order (NLO) correction to the Higgs boson mass \cite{martin_supersymmetry_1997}.}
+ 	\caption[Hierarchy Problem Loop Correction]{The loop corrections to the Higgs boson interacting with fermion and its superpartner. This is a next-to-leading order (NLO) correction to the Higgs boson mass.}
  	\label{HiggsMass} 
 \end{figure}
 
@@ -423,7 +425,7 @@ It turns out that this is also necessary for the Higgsino field to give mass to 
  	\label{GaugeSMultiplets} 
 \end{table}
 
-The SM vector boson will also have a corresponding chiral supermultiplet. They have fermionic superpartners that are referred to as gauginos. The $SU(3)_C$ color gauge interactions of QCD, which are a spin-$1/2$ color-octet, has a partner called a gluino $(\widetilde{g})$. The electroweak gauge theory $SU(2)_L\times U(1)_Y$ has the superpartners $\widetilde{\W}^+,\widetilde{\W}^0, \widetilde{\W}^-, \text{and } \widetilde{B}^0$ each with spin-$1/2$, called winos and bino, see Table \ref{GaugeSMultiplets}. The gaugino mixtures of $\widetilde{\W}^0$ and $\widetilde{B}^0$ give the corresponding zino $(\widetilde{Z}^0)$ and photino $(\widetilde{\gamma})$. The chiral supermultiplets shown in Table \ref{ChiralSMultiplets} and \ref{GaugeSMultiplets} give the particles of the MSSM. These are part of a simplified model for SUSY \cite{alwall_simplified_2009, alwall_model-independent_2009, alves_simplified_2012, alves_where_2011, noauthor_phys._nodate}.
+The SM vector boson will also have a corresponding chiral supermultiplet. They have fermionic superpartners that are referred to as gauginos. The $SU(3)_C$ color gauge interactions of QCD, which are a spin-$1/2$ color-octet, has a partner called a gluino $(\widetilde{g})$. The electroweak gauge theory $SU(2)_L\times U(1)_Y$ has the superpartners $\widetilde{\W}^+,\widetilde{\W}^0, \widetilde{\W}^-, \text{and } \widetilde{B}^0$ each with spin-$1/2$, called winos and bino, see Table \ref{GaugeSMultiplets}. The gaugino mixtures of $\widetilde{\W}^0$ and $\widetilde{B}^0$ give the corresponding zino $(\widetilde{Z}^0)$ and photino $(\widetilde{\gamma})$. The chiral supermultiplets shown in Table \ref{ChiralSMultiplets} and \ref{GaugeSMultiplets} give the particles of the MSSM. These are part of a simplified model for SUSY \cite{alwall_simplified_2009, alwall_model-independent_2009, alves_simplified_2012, alves_where_2011, PhysRevD.88.052017}.
 
 The five higgsinos and electroweak gauginos mix with each other because of electroweak symmetry breaking \cite{martin_supersymmetry_1997}. The neutral higgsinos $(\widetilde{H}_u^0 \text{ and } \widetilde{H}_d^0)$ and neutral gauginos $(\widetilde{B} \text{ and } \widetilde{W}^0)$ mix into four mass eigenstates, which are called neutralinos, $\neutralino, \widetilde{\chi}^0_2, \widetilde{\chi}^0_3, \text{ and }\widetilde{\chi}^0_4$. The charged higgsinos $(\widetilde{H}_u^+ \text{ and } \widetilde{H}_d^-)$ and charged gauginos $(\widetilde{W}^+\text{ and } \widetilde{W}^-)$ can mix into two mass eigenstates with charge $\pm1$ called charginos,  $\widetilde{\chi}^\pm_1 \text{ and } \widetilde{\chi}^\pm_2$. 
 
@@ -481,62 +483,33 @@ The SM of particle physics has been a powerful model for predicting interactions
 
 \section{Current SUSY Results}\label{CurrentResults}
 
-Here we see the most current results from searches for the top squark from CMS. These have been completed with data from 2016 with $35.9 \text{ fb}^{-1}$. This analysis was completed with the most up-to-date identification methods for particles in the SM. From this Analysis \cite{cms_collaboration_search_2016}, all 104 search region bins, as well as the corresponding single-lepton control region bins, the $\gamma+$jets control region bins and the QCD control regions, are fit simultaneously in order to evaluate the cross section excluded at 95\% confidence level for each signal benchmark point. There are similar searches using data from 2016 in Ref. \cite{atlas_collaboration_search_2017, cms_collaboration_search_2017, sirunyan_search_2017-1, sirunyan_search_2017, cms_collaboration_search_2017-1}
-
-The easiest way to think about the plots shown in Figs. \ref{T2ttANLimits}, \ref{T2bWANLimits}, \ref{T2tbANLimits}, \ref{T2fbdANLimits}, \ref{T2bWCANLimits}, \ref{T1ttttANLimits} \cite{alwall_simplified_2009, alwall_model-independent_2009, feng_dark_2010}, is that there is a calculated limit for each mass point. The $x$-axis is the possible mass range for the \st, $m_{\st}$ and the y-axis is the possible range for the \neutralino, $m_{\neutralino}$. Each point in this 2D space has a color representation for the value of the upper limit on the cross section at a confidence level of 95\%. 
-
-With the comprehensive analysis that was performed in 2016, we have various limits on the multiple decay modes of the \st{} which will be covered completely in Section \ref{ch:Search}. The comprehensive limits on the \st{} mass range from values of 550 to 1.1 \TeV{} for all of the all-hadronic decay modes. The CMS Collaboration has also combined the limits from the separate analyses which concentrate on the 1-lep, 2-lep, MT2, and HT missing analyses. The combination of these has shown that we can set limits on the \st{} mass range for masses of 800 to 1100 \GeV. 
+Here we see the most current results from searches for the top squark from CMS, A Toroidal LHC Apparatus (ATLAS), and combined results from the Large Electron-Positron Collider (LEP). These have been completed with data from 2016 with $35.9 \text{ fb}^{-1}$, Run 2 with \datalumi, and $2.7 \text{ fb}^{-1}$, respectively. There are similar searches using data from 2016 in Ref. \cite{atlas_collaboration_search_2017, cms_collaboration_search_2017, sirunyan_search_2017-1, sirunyan_search_2017, cms_collaboration_search_2017-1}
 
 \begin{figure}
 \centering
-	\includegraphics[width=0.50\textwidth]{T2tt_AN16.png}
- 	\caption[T2tt Limits]{Limits for the mass parameter space for $\st\rightarrow t \neutralino$ (T2tt) decays. With a current limit of 1.05 \TeV{} for a minimal neutralino mass \cite{sirunyan_search_2017}.}
- 	\label{T2ttANLimits} 
-\end{figure}
-
-\begin{figure}
-\centering
-	\includegraphics[width=0.50\textwidth]{T2bW_AN16.png}
- 	\caption[T2bW Limits]{Limits for the mass parameter space for $\st\rightarrow b \chargino$ (T2bW) decays. With a current limit of 750 \GeV{} for a minimal neutralino mass \cite{sirunyan_search_2017}.}
- 	\label{T2bWANLimits} 
-\end{figure}
-
-\begin{figure}
-\centering
-	\includegraphics[width=0.50\textwidth]{T2tb_AN16.png}
- 	\caption[T2tb Limits]{Limits for the mass parameter space for $\st\rightarrow b \chargino\rightarrow bW^\pm\neutralino$ or $\st\rightarrow t\neutralino$ (T2tb) decays. With a current limit of 850 \GeV{} for a minimal neutralino mass \cite{sirunyan_search_2017}.}
- 	\label{T2tbANLimits} 
-\end{figure}
-
-\begin{figure}
-\centering
-	\includegraphics[width=0.50\textwidth]{T2fbd_AN16.png}
- 	\caption[T2fbd Limits]{Limits for the mass parameter space for $\st\rightarrow b W^+ \neutralino$ (T2fbd) decays. Which has a range of 550 \GeV{} for a \neutralino{} mass of approx. 500 \GeV{} \cite{sirunyan_search_2017}.}
- 	\label{T2fbdANLimits} 
-\end{figure}
-
-\begin{figure}
-\centering
-	\includegraphics[width=0.50\textwidth]{T2bWC_AN16.png}
- 	\caption[T2bWC Limits]{Limits for the mass parameter space for $\st\rightarrow b\chargino, \chargino\rightarrow W ^\pm\neutralino$ (T2bWC) decays. Which has a range of 550 to 675 \GeV{} for a \neutralino{} mass of 600 \GeV{} \cite{sirunyan_search_2017}.}
- 	\label{T2bWCANLimits} 
-\end{figure}
-
-\begin{figure}
-\centering
-	\includegraphics[width=0.50\textwidth]{T1tttt_AN.png}
- 	\caption[T2bWC Limits]{Limits for the mass parameter space for $\widetilde{g}\rightarrow t\bar{t}\neutralino$ (T1tttt) decays. Which has a limit of 2050 GeV for a minimal neutralino mass \cite{cms_collaboration_search_2018}.}
- 	\label{T1ttttANLimits} 
+	\includegraphics[width=0.45\textwidth]{LEP_stopLimits.png}
+ 	\caption[T2tt Limits for all decay modes from LEP]{Limits for the mass parameter space for T2tt decays using results from all the analysis in LEP including Aleph, Delphi, Opal, and L3 searches and exlusions provided by the CDF collaboration. With a current limit of 80 GeV to 120 GeV for a minimal neutralino mass \cite{lipniacka_understanding_2002}.}
+ 	\label{T2ttLEPAll} 
 \end{figure}
 
 \begin{figure}
 \centering
 	\includegraphics[width=0.50\textwidth]{T2tt_limits_summary_cms.png}
- 	\caption[T2tt Limits for all decay modes]{Limits for the mass parameter space for T2tt decays using results from all the analysis in CMS. With a current limit of 1.05 TeV to 1.2 TeV for a minimal neutralino mass \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/cmspublic/physicsresultssus_nodate}.}
+ 	\caption[T2tt Limits for all decay modes from CMS]{Limits for the mass parameter space for T2tt decays using results from all the analysis in CMS. With a current limit of 1.05 TeV to 1.2 TeV for a minimal neutralino mass \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/cmspublic/physicsresultssus_nodate}.}
  	\label{T2ttCMSAll} 
 \end{figure}
 
-From the Fig. \ref{T2ttANLimits}, \ref{T2bWANLimits}, \ref{T2tbANLimits}, \ref{T2fbdANLimits}, \ref{T2bWCANLimits}, and \ref{T2ttCMSAll} \cite{sirunyan_search_2017, noauthor_https://twiki.cern.ch/twiki/bin/view/cmspublic/physicsresultssus_nodate}, we know that we are able to exclude a large mass range for the \st{} and \neutralino{}. Since this is for a luminosity of 36.8 \fb, we can expect improved limits with all of the data from Run 2, which is \datalumi. The new version of the analysis also has a redesigned search region to allow for more sensitive results, while also improving various object definitions.
+\begin{figure}
+\centering
+	\includegraphics[width=0.60\textwidth]{ATLAS_topsquark_results.pdf}
+ 	\caption[T2tt Limits for all decay modes from ATLAS]{Limits for the mass parameter space for top squark decays using results from all the analysis in ATLAS. With a current limit of 700 GeV to 1.0 TeV for a minimal neutralino mass \cite{the_atlas_collaboration_susy_2019}.}
+ 	\label{T2ttATLASAll} 
+\end{figure}
+
+
+Searches for SUSY have been performed at many different detectors. In Figures \ref{T2ttLEPAll}, \ref{T2ttCMSAll}, \ref{T2ttATLASAll}, we have the 95\% confidence level exclusion limits for LEP including Aleph, Delphi, Opal, L3, and the CDF collaboration \cite{lipniacka_understanding_2002}, CMS detector \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/cmspublic/physicsresultssus_nodate}, and ATLAS detector \cite{the_atlas_collaboration_susy_2019} at the LHC. The results from LEP are only considering the top squark decaying to a charm quark and neutralino and assuming a 100\% branching fraction with limits on the top squark at 80 GeV to 120 GeV. The results from CMS are including analysis on \datalumi{} for a few all-hadronic and leptonic decay modes of the top squark with limits of 1.05 TeV to 1.2 TeV for minimal neutralino mass. Another experiment at the LHC, called ATLAS, has performed searches for the top squark with limits on the mass as 700 GeV to 1.0 TeV at minimal neutralino mass using a combination of either 36.1 $\text{fb}^{-1}$ to \datalumi. 
+
+From the Figures \ref{T2ttCMSAll} and \ref{T2ttATLASAll} \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/cmspublic/physicsresultssus_nodate, the_atlas_collaboration_susy_2019}, we know that we are able to exclude a large mass range for the \st{} and \neutralino{}. Since this is for a range of luminosities, $36.1 \text{ fb}^{-1}$ to $139$ \fb, we can expect improved limits with all of the data from Run 2, which is \datalumi. The new version of the analysis also has a redesigned search region to allow for more sensitive results, while also improving various object definitions.
 
 \section{What are we looking for? And why?}
 As discussed in Sec. \ref{sec:SM}, the SM is a robust theory that is useful for describing the iterations of visable matter in the universe. It has been through many robust tests, while also able to make many predictions. Unfortunately, we have seen that a few unknowns, such as: dark matter, the hierarchy problem, and a possible GUT, are currently unexplained. We then showed that a possible solution to these is SUSY, Sec. \ref{sec:SUSY}, which provides a good dark matter candidate, LSP, which allows for the convergence of the EM, Weak, and Strong force at large energy scales, and allows the Higgs mass to be renormalizable without fine tuning. 
