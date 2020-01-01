@@ -21,7 +21,7 @@ d_{iB}&=k_{ti}^{2p} \\
 \end{equation}
 where $\Delta^2_{ij}=(y_i-y_j)^2+(\phi_i-\phi_j)^2$, $k_{ti}$ is the transverse momentum, $y_i$ is the rapidity, $\phi_i$ is the azimuthal angle, and $R$ is the radius parameter of the pseudojet. The above becomes the \antikt{} algorithm when $p=-1$. The jet area of the reconstructed jets are circular since the \antikt{} jets are unaffected by soft radiation. It is also insensitive to pileup which is of particular importance in CMS. An additional feature is that it is infrared safe, such that soft emissions of particles will not effect the reconstructed jets. 
 
-A charged hadron subtraction is also used to correct for the pileup, the number of collisions seen during a single proton beam crossing \cite{cacciari_pileup_2008, noauthor_pileup_2014}. For AK8 jets the pileup contribution is accounted for using the "pileup per particle identification" method \cite{bertolini_pileup_2014, noauthor_pileup_2014}, where each particle is weighted by its probability of originating from the primary vertex. Once the jets have been identified, we can analyze their respective properties to determine the likelihood of the particle it originated from, such as a $b, t,$ or \W. 
+A charged hadron subtraction is also used to correct for the pileup, the number of collisions seen during a single proton beam crossing \cite{cacciari_pileup_2008, noauthor_pileup_2014}. For AK8 jets the pileup contribution is accounted for using the "pileup per particle identification" method \cite{bertolini_pileup_2014, noauthor_pileup_2014}, where each particle is weighted by its probability of originating from the primary vertex. Once the jets have been identified, we can analyze their respective properties to determine the likelihood of the particle it originated from, such as a $b, t,$ or $W$. 
 
 \begin{figure}
  	\centering
@@ -82,7 +82,7 @@ Another interesting quantity is \Ht, which is the scalar sum of the \pt{} of all
 \begin{equation}
 \Ht=\sum_{i\in\text{jets}}p_{i,T}.
 \end{equation}
-This quantity is quite useful when trying to identify massive particles and is quite good at suppressing QCD multijet background. Since \Ht{} is a sum of all jets, it is specifically good at identifying particles that are massive and produce jets that can be measured in the CMS calorimeters. For QCD events that mainly contain quark(gluon) jets that are not $t$ tend to not have as much energy as such that the \Ht{} is small. 
+This quantity is quite useful when trying to identify massive particles and is quite good at suppressing QCD multijet background. Since \Ht{} is a sum of all jets, it is specifically good at identifying particles that are massive and produce jets that can be measured in the CMS calorimeters. For QCD events that mainly contain quark(gluon) jets that are not $t$ tend to not have as much energy such that the \Ht{} is small. 
 
 \subsection{Soft $b$-Tagging}\label{SV} 
 
@@ -112,10 +112,10 @@ Initial-state radiation (ISR) may be clustered into one of the large-$R$ jets cl
 \subsection{Electron and Muon Identification}\label{EleMuonID}
  This is a search for all-hadronic decays so no leptons are expected in the search region, however, for some control regions we require exactly one lepton so an efficient tagging method is necessary. There are two sets of selection criteria used in the analysis for electrons \cite{noauthor_performance_2015} and muons \cite{collaboration_performance_2013, cms_collaboration_performance_2018}. The set of criteria used to efficiently reject events with an isolated electron is done with a "Veto" ID. An electron with a Veto ID must pass the following cuts for the barrel (endcap) regions of the detector:
  \begin{itemize}
-	 \item $|\Delta\eta|<0.007(0.01),|\Delta\phi|<0.8(0.7)$ for the EM showers in the ECAL,
-	 \item $\sigma_{i\eta i\eta}=\frac{\sum(\eta_i-\overline{\eta})^2w_i}{\sum w_i}<0.01(0.03)$ where $\overline{\eta}=\frac{\sum\eta_iw_i}{\sum w_i}$ and $w_i=\text{max}(0,4.7+log(E_i/E_{5\times5}))$ where the sum is over a $5\times5$ crystal matrix centered arount the most energetic crystal in the ECAL \cite{collaboration_missing_2011},
-	 \item $H/E<0.15$ (not applicable) the ratio of hadronic energy over electromagnetic energy,
-	 \item $\text{PF isolation}/\pt(\Delta R=0.3)<0.15(0.15)$ where we are calculating the \pt{} of the various energy deposits (charged hadrons, photons, and neutral hadrons) as the \pt{} for the PF Isolation and dividing it by the sum of the \pt{} of the listed candidates in a cone with a size of $\Delta R=0.3$,
+	 \item $|\Delta\eta|<0.007(0.01),|\Delta\phi|<0.8(0.7)$ for the EM showers in the ECAL;
+	 \item $\sigma_{i\eta i\eta}=\frac{\sum(\eta_i-\overline{\eta})^2w_i}{\sum w_i}<0.01(0.03)$ where $\overline{\eta}=\frac{\sum\eta_iw_i}{\sum w_i}$ and $w_i=\text{max}(0,4.7+log(E_i/E_{5\times5}))$ where the sum is over a $5\times5$ crystal matrix centered arount the most energetic crystal in the ECAL \cite{collaboration_missing_2011};
+	 \item $H/E<0.15$ (not applicable) the ratio of hadronic energy over electromagnetic energy;
+	 \item $\text{PF isolation}/\pt(\Delta R=0.3)<0.15(0.15)$ where we are calculating the \pt{} of the various energy deposits (charged hadrons, photons, and neutral hadrons) as the \pt{} for the PF Isolation and dividing it by the sum of the \pt{} of the listed candidates in a cone with a size of $\Delta R=0.3$; and 
 	 \item $|d_{0}|<0.04(0.04),|d_z|<0.2(0.2)$ where $d_0$ is the distance in the $xy$ plane and $d_z$ is the distance along the $z$-axis for the reconstructed candidate.
  \end{itemize}
 This veto ID is chosen such that the search region is most likely to be devoid of electrons, since it has a 95\% efficiency \cite{noauthor_https://twiki.cern.ch/twiki/bin/view/cms/cutbasedelectronidentificationrun2_nodate}.
@@ -127,8 +127,8 @@ Identification of taus, which is a long lived particle $\tau_\tau=2.9\times10^{-
 
 The IsoTrack requirements are:
 \begin{itemize}
-	\item pdgId = 11 or 13 (211) where pdgId is the particle data group Id from the reconstructed particle and 11 = electron, 13 = muon, and 211 = pion,
-	\item $\pt\geq5(10)$ GeV and $iso>0.2(0.1)$ for electrons and muons (pions) where the isolation is the separation from other particle for a cone of $\Delta R=0.2$,
+	\item pdgId = 11 or 13 (211) where pdgId is the particle data group Id from the reconstructed particle and 11 = electron, 13 = muon, and 211 = pion;
+	\item $\pt\geq5(10)$ GeV and $iso>0.2(0.1)$ for electrons and muons (pions) where the isolation is the separation from other particle for a cone of $\Delta R=0.2$; and
 	\item $m_T(l,\met)\leq100$ GeV is the transverse mass between the candidate lepton and \met, see Sec. \ref{sec:transverseMass}
 \end{itemize}
 
@@ -136,8 +136,8 @@ The Tau ID has been studied extensively in tests which looked into the custom mu
 
 For the IsoTrack method we require the following:
 \begin{itemize}
-	\item $\pt\geq5(10) \text{GeV}, \text{iso}\leq0.2(0.1)$ for electrons and muons(pions);
-	\item $m_T(\text{IsoTrack},\met)<100$ GeV;
+	\item $\pt\geq5(10) \text{GeV}, \text{iso}\leq0.2(0.1)$ for electrons and muons(pions); and
+	\item $m_T(\text{IsoTrack},\met)<100$ GeV
 \end{itemize}
 where $m_T(\text{IsoTrack},\met)$ is the transverse mass between the IsoTrack and \met. For the Tau POG method we require:
 \begin{itemize}
@@ -173,7 +173,7 @@ The HEM Veto is required due to a failure of two sectors of the HCAL endcaps on 
 In addition to this, we allow for two separate sets of additional selections to apply to the low and high \dm{} search regions to further reduce background where the $\Delta m=m_{\st}-m_{\neutralino}$, see Fig. \ref{StopParameterSpace}. The high \dm{} baseline selection includes the baseline selection and additionally:
 \begin{itemize}
 	\item $N_j\geq 5, (\pt \geq30$ \GeV, $|\eta|<2.4)$;
-	\item $N_b\geq 1, (\pt\geq20$ \GeV, $|\eta|<2.4)$, medium DeepCSV working point;
+	\item $N_b\geq 1, (\pt\geq20$ \GeV, $|\eta|<2.4)$, medium DeepCSV working point; and
 	\item $\text{Min}[|\Delta\phi(\met,j_1)|,|\Delta\phi(\met,j_2)|,|\Delta\phi(\met,j_3)|,|\Delta\phi(\met,j_4)|]\equiv\highdm$, where $j_1, j_2, j_3, j_4$ are the four leading jets in $p_T$. This requirement is to reduce the QCD multijet background since QCD events with \met{} are typically due to mis-measurement of the quark-gluon jets. 
 \end{itemize}
 Next, the low \dm{} baseline selection has the following addition selections:
@@ -186,7 +186,7 @@ Next, the low \dm{} baseline selection has the following addition selections:
 
 \subsection{Search Regions}\label{SearchRegions}
 
-After applying the baseline selection criteria, we categorize events in the search sample into exclusive search regions that exploit the kinematic properties of different signal topologies, see \cite{cms_collaboration_search_2016, alwall_simplified_2009, alwall_model-independent_2009}. The search regions will be binned using the physics objects and kinematics variables explained above, such as, \nj, \nb, \nt, \nrt, \nw, \met, \Ht, \nsv, \mtb, and $N_{lep}=0$
+After applying the baseline selection criteria, we categorize events in the search sample into exclusive search regions that exploit the kinematic properties of different signal topologies, see \cite{cms_collaboration_search_2016, alwall_simplified_2009, alwall_model-independent_2009}. The search regions will be binned using the physics objects and kinematics variables explained above, such as, \nj, \nb, \nt, \nrt, \nw, \met, \Ht, \nsv, \mtb, and $N_{lep}=0$.
 
 For the search regions that mainly target high \dm{} signal models, we define two event categories in \mtb, see Section \ref{TransverseMass}, and a variable defined as:
 \begin{equation}
